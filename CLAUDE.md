@@ -86,6 +86,14 @@ are unusually full of overclaimed, contested and failed-replication results.
 - **No claim survives on plausibility alone.** Cite the study. If a source
   can't be produced, the claim is speculation and must be labelled as such.
 
+**Keep the process log as we go.** `docs/process-log.md` records my prompts
+verbatim — typos included, since paraphrase destroys their value as evidence —
+with an annotation written at the time saying what happened and which commit it
+produced. Add an entry whenever a decision is made, reversed, or a problem is
+found; not for routine edits. Reversals and corrections are the most valuable
+entries, so never tidy them out. `PROCESS.md` is drawn from this later and runs
+400–600 words, so the log is raw material and not a draft of it.
+
 **Research comes before outline.** The first major component of this work is
 wide reading across the four fields, consolidated into a unified outline. Do not
 draft weeks before that research exists — an outline invented first and
