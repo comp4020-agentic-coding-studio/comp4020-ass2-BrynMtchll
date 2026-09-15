@@ -28,6 +28,66 @@ Read both before planning or building.
   generate a week's content by pattern-filling the week before it.
 - **No AI slop prose.** One voice, held all semester. If a paragraph could sit
   in any course on any topic, it's wrong. Read it back before accepting it.
+- **Meticulousness and precision, over volume.** A shorter page that is exactly
+  right beats a longer one that is roughly right. Refine ideas before writing
+  them up; a first draft of a thought is not a week of a course.
+- **Reason about the model, don't describe the topic.** Every claim earns its
+  place by what it adds to the model of intelligence this course is building.
+  If a paragraph doesn't change the model, cut it.
+
+## The course: a model of intelligence
+
+The subject is **natural intelligence** — starting from the simplest living
+systems that can be said to do anything cognitive at all, building outward
+through the kinds of intelligence that exist, and ending in disciplined
+speculation about what else could.
+
+**Cohesion comes from the model, not the topic.** This course is not a survey
+and not a tour of clever animals. Each week adds a named component to one
+cumulative model, and later weeks may only use components earlier weeks have
+already established. If week 9 needs something week 4 never introduced, that is
+a defect in the course, not a detail — fix the order.
+
+**Four lenses, pooled — this is non-negotiable.** No account of intelligence
+here stands on one discipline:
+
+- **evolutionary** — when the capacity appeared, under what selection pressure,
+  and how many times independently
+- **neuroscientific** — what physically implements it, and in what kinds of
+  nervous system (or none)
+- **psychological** — how it is behaviourally identified and measured, and what
+  the experiment can and cannot distinguish
+- **philosophical** — what the capacity would mean, and whether the concept
+  survives being pressed on
+
+A claim supported by only one of these is incomplete, and should be marked as
+such rather than quietly asserted.
+
+**But the lenses are a checklist for the model, not a template for the page.**
+Running all four in the same order every week produces twelve pages with one
+shape, which is the failure this brief names explicitly. Lead each week with
+whichever lens actually carries the weight; let the others speak only where they
+have something to say.
+
+**Precision rules for this subject.** Animal cognition and consciousness studies
+are unusually full of overclaimed, contested and failed-replication results.
+
+- **Name the mechanism, not the vibe.** "Learns" is not a claim; habituation,
+  associative learning and model-based planning are different claims with
+  different evidence.
+- **Mark the boundary between evidence, inference and speculation.** The course
+  ends in speculation on purpose, and that only works if the reader can always
+  tell which register they are in. Never let the three blur inside a paragraph.
+- **Flag contested claims as contested.** Clever Hans effects, mirror
+  self-recognition, ape language studies, cephalopod pain — where the field
+  disagrees, the disagreement is the content. Don't resolve it silently.
+- **No claim survives on plausibility alone.** Cite the study. If a source
+  can't be produced, the claim is speculation and must be labelled as such.
+
+**Research comes before outline.** The first major component of this work is
+wide reading across the four fields, consolidated into a unified outline. Do not
+draft weeks before that research exists — an outline invented first and
+justified afterwards is exactly the failure mode this course is about.
 
 ## How to work in here
 
