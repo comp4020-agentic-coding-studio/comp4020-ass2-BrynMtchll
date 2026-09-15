@@ -10,7 +10,7 @@ compression has a shape you cannot see from inside it.**
 
 Three consequences the course has to earn, not assert:
 
-1. Every capacity that buys predictive power does so by discarding something.
+1. Any finite system must leave most of the world out.
 2. The discarded part is invisible from inside the system that discarded it.
 3. Therefore no model — including this one, and including the science of
    models — is assumption-free. Models are comparable by track record, not by
@@ -22,28 +22,15 @@ wrong.
 
 ## Why this is not a ladder
 
-The build ascends in *capacity dependency*, not in *evolutionary rank*. There is
-no scala naturae here: a nematode is not a draft of a human. Later weeks depend
-on earlier capacities logically — you cannot plan without a forward model — and
-that is the only sense in which anything is "higher".
+The order is logical, not a ranking of organisms. There is no scala naturae
+here: a nematode is not a draft of a human. Later weeks depend on earlier ones
+because the ideas do — you cannot discuss planning before prediction — and that
+is the only sense in which anything is "higher".
 
 The branch weeks (8–10) exist to enforce this. They are the **control group**:
 lineages that compressed the same world differently, and whose bounds are
 visible to us precisely because we are outside them. That asymmetry is the
 course's closing move.
-
-## The unit of a week
-
-Every week declares four things, and the site's own spec tests enforce the first
-three:
-
-- **capacity** — what the model can now do
-- **depends on** — the capacities it requires (must already be introduced)
-- **approximation** — the shortcut that buys it
-- **gap** — what the shortcut makes invisible
-
-A week that adds a capacity with no named approximation and no named gap is a
-defect: it has broken the thesis.
 
 ## Evidence grading
 
@@ -67,8 +54,9 @@ plant associative learning, mirror self-recognition in fish, IIT's testability.
 ## Part I — The premise (weeks 1–2)
 
 ### Week 1 — A world too large
-**Capacity:** none yet; the frame. **Approximation:** that "intelligence" can be
-defined at all. **Gap:** every definition smuggles in a criterion.
+Establishes the problem the whole course answers: any finite system faces a
+world larger than it can represent. Also sets up the evidence-grading scheme
+students use all semester.
 
 Sets up compression as the organising idea, and the Umwelt as the claim that an
 organism's world *is* its sensory bandwidth. Establishes the evidence-grading
@@ -83,9 +71,8 @@ scheme students use all semester.
 - Godfrey-Smith, P. (2016). *Other Minds*. Farrar, Straus and Giroux. ch. 1–2.
 
 ### Week 2 — Measurement and valuation
-**Capacity:** sense a gradient; collapse it to better/worse. **Depends on:**
-nothing. **Approximation:** a multidimensional world reduced to one scalar.
-**Gap:** no representation of *why* anything is good.
+The minimal case: sensing a gradient and acting on it, with no representation
+of anything beyond better or worse than a moment ago.
 
 *E. coli* chemotaxis as the minimal case: run-and-tumble, a memory of
 milliseconds, no representation at all.
@@ -97,8 +84,8 @@ milliseconds, no representation at all.
 ## Part II — Interior models (weeks 3–7)
 
 ### Week 3 — The trace: memory without a brain
-**Capacity:** the past constrains the present. **Approximation:** history
-compressed into a single trace. **Gap:** a trace cannot distinguish causes.
+How the past can constrain the present without anything that looks like a
+brain, or any internal state at all.
 
 *Physarum* externalises its memory into slime — memory as environmental
 modification rather than internal state. Paired with the pea-plant learning
@@ -119,9 +106,9 @@ dispute as the semester's first worked example of grading contested evidence.
 - Markel, K. (2020). Response to comment. *eLife*, 9, e61689.
 
 ### Week 4 — Association: correlation standing in for cause
-**Capacity:** link events. **Depends on:** trace, valuation. **Approximation:**
-co-occurrence treated as connection. **Gap:** superstition — the mechanism
-cannot tell a real cause from a reliable coincidence.
+Linking events so one predicts another, and the standing problem that follows:
+the mechanism has access to correlation, not to causal structure. Skinner's
+pigeons are the clean demonstration.
 
 - Kandel, E. R. (2001). The molecular biology of memory storage: a dialogue
   between genes and synapses. *Science*, 294(5544), 1030–1038.
@@ -131,9 +118,8 @@ cannot tell a real cause from a reliable coincidence.
   founding lesson in experimenter artefact.
 
 ### Week 5 — The map: compressing space
-**Capacity:** represent structure not currently sensed. **Depends on:**
-association. **Approximation:** space as graph or metric. **Gap:** systematic,
-predictable distortion — the map is not the territory.
+Representing structure that isn't currently being sensed, and the specific,
+predictable ways spatial judgement distorts.
 
 - Tolman, E. C. (1948). Cognitive maps in rats and men. *Psychological Review*,
   55(4), 189–208.
@@ -143,9 +129,9 @@ predictable distortion — the map is not the territory.
   memory. *PNAS*, 102(8), 3040–3045.
 
 ### Week 6 — Prediction: perception as inference
-**Capacity:** generate the world before sensing it. **Depends on:** map.
-**Approximation:** perception is mostly top-down construction. **Gap:** you
-experience your prediction, not the world. The master gap of the course.
+The week the course turns on. Perception as largely top-down construction
+rather than reception, which makes illusions the mechanism working rather than
+failing.
 
 - Clark, A. (2013). Whatever next? Predictive brains, situated agents, and the
   future of cognitive science. *Behavioral and Brain Sciences*, 36(3), 181–204.
@@ -157,9 +143,9 @@ experience your prediction, not the world. The master gap of the course.
   28(9), 1059–1074.
 
 ### Week 7 — The self-model
-**Capacity:** model the modeller. **Depends on:** prediction. **Approximation:**
-the self as a low-dimensional summary. **Gap:** introspection reports the
-summary, not the process — so the system cannot audit itself.
+Modelling the modeller, and why introspection reports a summary rather than
+the process that produced it. The mirror-test literature runs here as a method
+critique.
 
 The mirror-test literature runs here as a method critique: what a behavioural
 assay can and cannot license.
@@ -183,8 +169,9 @@ These weeks exist to establish the asymmetry the course closes on: **a bound is
 visible from outside and invisible from inside.**
 
 ### Week 8 — Small brains, full repertoires
-**Convergence evidence:** capacities from Part II implemented on ~10⁶ neurons.
-**Gap visible from outside:** we can state the bee's bounds precisely.
+Everything from Part II, implemented on roughly a million neurons. We can
+state a bee's limits precisely, which is the point of putting these weeks
+here.
 
 - Chittka, L., & Niven, J. (2009). Are bigger brains better? *Current Biology*,
   19(21), R995–R1008. doi:10.1016/j.cub.2009.08.023
@@ -196,8 +183,8 @@ visible from outside and invisible from inside.**
   Physiology*, 41, 115–174.
 
 ### Week 9 — Alien architecture
-**Convergence evidence:** a differently-organised nervous system, largely
-outside the brain. Nagel's question stops being rhetorical.
+A nervous system organised on a different plan, most of it outside the brain.
+Nagel's question stops being rhetorical.
 
 - Godfrey-Smith, P. (2016). *Other Minds*. FSG.
 - Nagel, T. (1974). What is it like to be a bat? *The Philosophical Review*,
@@ -206,9 +193,9 @@ outside the brain. Nagel's question stops being rhetorical.
   Biology*, 22(20), R887–R892.
 
 ### Week 10 — Offloaded and collective compression
-**Capacity:** externalise the model — into the environment, the group, the
-artefact. **Approximation:** trust a process you do not hold. **Gap:** the group
-has blind spots no member can see, and they are not the sum of individual ones.
+Cognition pushed outside the individual, into the environment, the group and
+the artefact — and the fact that a group's failures are not the sum of its
+members'.
 
 - Clark, A., & Chalmers, D. (1998). The extended mind. *Analysis*, 58(1), 7–19.
 - Seeley, T. D. (2010). *Honeybee Democracy*. Princeton University Press.
@@ -220,10 +207,7 @@ has blind spots no member can see, and they are not the sum of individual ones.
 ## Part IV — The human case and its limits (weeks 11–12)
 
 ### Week 11 — The catalogue, and the catalogue's own problem
-**Capacity:** language and symbolic compression; heuristics tuned to
-environments. **Approximation:** discrete tokens for continuous states; fast
-rules for expensive inference. **Gap:** what tokens cannot carry, and rules
-misfiring outside the environment that shaped them.
+Language and the heuristics literature, and the week that turns on itself.
 
 The week deliberately turns on itself: much of the canonical "you are
 irrational" literature has not replicated. A course with this title that recited
@@ -250,8 +234,7 @@ it uncritically would be committing its own subject.
   796–815.
 
 ### Week 12 — The blind spot
-**Capacity:** none added. The model is turned on itself. **Gap:** structural and
-unclosable.
+Nothing is added. The account built over eleven weeks is turned on itself.
 
 Three moves, in order:
 
@@ -294,7 +277,7 @@ Three moves, in order:
 
 | Task | Weight | What it tests |
 | --- | --- | --- |
-| **The Ledger** — cumulative capacity/approximation/gap model, submitted three times across semester | 40% | Whether the model was built rather than recited. Graded on dependency correctness and on named gaps, not coverage. |
+| **The Ledger** — a running account of the model as it is built, submitted three times across semester | 40% | Whether the model was built rather than recited. Graded on whether the account holds together, not on coverage. |
 | **Evidence audit** — take one canonical claim about intelligence, grade it [E]/[C]/[S], defend the grade | 25% | The course's actual skill: telling a satisfying story from a supported one. |
 | **A possible mind** — specify a mind the model permits, derive its blind spots, and state what would falsify your derivation | 35% | Uses the model predictively. Cannot be answered by summary. |
 
@@ -308,8 +291,8 @@ it predicts the shape of gaps in minds that do not exist yet.
 1. **Title.** "How and Why You're Dumb" is a strong provocation and risks
    licensing the deficiency reading the content rejects. Alternative framings
    should keep the provocation and name the compression idea.
-2. **Week 1 vs Week 2 merge.** Week 1 adds no capacity. Defensible as a frame,
-   but it is the weakest week structurally.
+2. **Week 1 vs Week 2 merge.** Week 1 is framing rather than content, which
+   makes it the weakest week structurally.
 3. **Whether artificial systems appear at all.** Currently absent by design.
    They could enter week 10 (offloaded cognition) or week 12 (possible minds) —
    but only as a case *tested against* the model, never as a bolt-on.

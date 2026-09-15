@@ -43,22 +43,24 @@ through the kinds of intelligence that exist, and ending in disciplined
 speculation about what else could.
 
 **Cohesion comes from the model, not the topic.** This course is not a survey
-and not a tour of clever animals. Each week adds a named component to one
-cumulative model, and later weeks may only use components earlier weeks have
-already established. If week 9 needs something week 4 never introduced, that is
-a defect in the course, not a detail — fix the order.
+and not a tour of clever animals. It builds one account of intelligence across
+the semester, and the later weeks depend on the earlier ones having done their
+work. If a week could be moved anywhere in the order without loss, it isn't
+carrying its part of the argument.
+
+There is no per-week template. Each week is written for what it is about.
 
 **Four lenses, pooled — this is non-negotiable.** No account of intelligence
 here stands on one discipline:
 
-- **evolutionary** — when the capacity appeared, under what selection pressure,
-  and how many times independently
+- **evolutionary** — when it appeared, under what selection pressure, and how
+  many times independently
 - **neuroscientific** — what physically implements it, and in what kinds of
   nervous system (or none)
 - **psychological** — how it is behaviourally identified and measured, and what
   the experiment can and cannot distinguish
-- **philosophical** — what the capacity would mean, and whether the concept
-  survives being pressed on
+- **philosophical** — what it would mean, and whether the concept survives
+  being pressed on
 
 A claim supported by only one of these is incomplete, and should be marked as
 such rather than quietly asserted.
