@@ -89,6 +89,79 @@ wide reading across the four fields, consolidated into a unified outline. Do not
 draft weeks before that research exists — an outline invented first and
 justified afterwards is exactly the failure mode this course is about.
 
+## Voice — write like me, not like an assistant
+
+Derived from my own reports: `comp3320-2026-assignment-1/report.md`,
+`comp2310-2024-assignment-2/report.md`, `comp2300-2024-assignment-2/report.md`.
+All course content for this assignment follows these.
+
+### Do
+
+- **Claim first, in bold, as a sentence.** My headings-within-prose are
+  assertions, not labels: "**Forces dominate, increasingly so with problem
+  size.**", "**The speedup is constant in N, not growing.**", "**Opt reframes
+  the result.**" Bold the claim, never keywords scattered mid-sentence.
+- **Attach the reason with `since`, `as`, or `given that`** — in the same
+  sentence as the claim. "Linear, as expected, since each iteration performs
+  identical work." Not "Therefore, it is important to note that..."
+- **Own decisions in the first person, name the alternative, justify the
+  rejection.** "The alternative approach I considered was to minimise the
+  request size in favour of efficiency... I chose not to do this as I decided
+  the efficiency increase this offered would not be worth the additional
+  processing required."
+- **Say what a thing does not show.** I do this constantly: "says little about
+  memory bandwidth", "**Not assessed.** Memory bandwidth... Cache-hierarchy
+  transitions... Parallel scaling..." For this course that is the E/C/S
+  register — the habit is already mine.
+- **Admit when something is unnecessary, rough, or unresolved.** "Adding read
+  locks was not actually necessary." "Fully investigating the efficiency
+  increase on offer I garnered to be outside the assignment scope, so this is a
+  rough assumption." "The apparent rise from 46.9x to 55.0x is a measurement
+  artefact."
+- **Hedge only with a stated cause.** "This is likely explained by the type of
+  operations being performed..." Never "may potentially somewhat".
+- **Show the evidence inline** — the number, the output, the code, the actual
+  wrong result. Don't describe evidence, produce it.
+- **Fragments are fine when the claim is short.** "Flat." "The dominant
+  source." "Linear, as expected."
+- **Australian/British spelling.** optimised, normalised, analysed, favour,
+  whilst, utilise, behaviour.
+
+### Don't
+
+- **No triads.** Three-item parallel lists for rhythm are the strongest tell.
+  Two reasons or four, not three.
+- **No `—` em-dash parentheticals.** I use a plain `--` or restructure the
+  sentence. An em-dash aside mid-sentence is not how I write.
+- **No throat-clearing.** Cut "It's important to note", "It's worth
+  considering", "Let's explore", "In this section we will". My sections open on
+  the claim or the measurement.
+- **No summary paragraph that restates what was just said.** The comp3320
+  report simply ends on its last list. No "In conclusion", no "Overall, this
+  demonstrates".
+- **No section opening that restates its own heading.**
+- **No inflated vocabulary.** delve, leverage, crucial, vital, pivotal,
+  profound, tapestry, landscape, realm, testament, underscore, myriad,
+  navigate (figurative), unlock, harness (as a verb), foster, robust (unless
+  literally about robustness).
+- **No "not only X, but also Y"**, no "isn't just X — it's Y", no rhetorical
+  questions as transitions.
+- **No hype adverbs.** remarkably, incredibly, surprisingly, fundamentally,
+  deeply, truly, simply.
+- **Don't gloss terms the reader of this course would know.** I write for a
+  competent reader and leave the term unexplained.
+- **No second-person coaching.** The course has a position; it does not
+  cheerlead the student through it.
+
+### Register for this site
+
+The reports are technical and number-dense; course prose cannot be. What
+transfers is the *discipline*, not the density: a claim, its support, and an
+honest statement of what is not established. A lecture page that asserts
+without support is off-voice even though no number belongs in it.
+
+Read every paragraph back and cut the half that carries no claim.
+
 ## How to work in here
 
 - Keep the dev server running (`pnpm dev`) so you see changes as you make them.
