@@ -91,74 +91,110 @@ justified afterwards is exactly the failure mode this course is about.
 
 ## Voice — write like me, not like an assistant
 
-Derived from my own reports: `comp3320-2026-assignment-1/report.md`,
-`comp2310-2024-assignment-2/report.md`, `comp2300-2024-assignment-2/report.md`.
+Derived from: `Recurrent_Interface_Network_for_Single_Image_Generation.pdf`
+(COMP4528, sections 1-3), `comp4620 Assignment 1.pdf` (Aug 2025), `COMP4620
+Assignment 2.pdf` (Oct 2025). The comp3320 report is **not** a source and its
+patterns were deliberately removed: bolded claim-sentences and one-word
+paragraph fragments came from there, and they are not mine.
+
 All course content for this assignment follows these.
 
-### Do
+### Sentence shape
 
-- **Claim first, in bold, as a sentence.** My headings-within-prose are
-  assertions, not labels: "**Forces dominate, increasingly so with problem
-  size.**", "**The speedup is constant in N, not growing.**", "**Opt reframes
-  the result.**" Bold the claim, never keywords scattered mid-sentence.
-- **Attach the reason with `since`, `as`, or `given that`** — in the same
-  sentence as the claim. "Linear, as expected, since each iteration performs
-  identical work." Not "Therefore, it is important to note that..."
-- **Own decisions in the first person, name the alternative, justify the
-  rejection.** "The alternative approach I considered was to minimise the
-  request size in favour of efficiency... I chose not to do this as I decided
-  the efficiency increase this offered would not be worth the additional
-  processing required."
-- **Say what a thing does not show.** I do this constantly: "says little about
-  memory bandwidth", "**Not assessed.** Memory bandwidth... Cache-hierarchy
-  transitions... Parallel scaling..." For this course that is the E/C/S
-  register — the habit is already mine.
-- **Admit when something is unnecessary, rough, or unresolved.** "Adding read
-  locks was not actually necessary." "Fully investigating the efficiency
-  increase on offer I garnered to be outside the assignment scope, so this is a
-  rough assumption." "The apparent rise from 46.9x to 55.0x is a measurement
-  artefact."
-- **Hedge only with a stated cause.** "This is likely explained by the type of
-  operations being performed..." Never "may potentially somewhat".
-- **Show the evidence inline** — the number, the output, the code, the actual
-  wrong result. Don't describe evidence, produce it.
-- **Fragments are fine when the claim is short.** "Flat." "The dominant
-  source." "Linear, as expected."
-- **Australian/British spelling.** optimised, normalised, analysed, favour,
-  whilst, utilise, behaviour.
+- **Flowing prose paragraphs, not bullet fragments.** My paragraphs run several
+  sentences and carry the argument. Bullets are for enumerated items
+  (parameters, metrics, list of cases), not for chopping up reasoning.
+- **Open sentences with the connective.** This is the most distinctive habit:
+  "Intuitively, shorter horizons... converge faster". "Conversely, when γ ≥ 1".
+  "Thus for any state". "Hence with a linear increase in the number of
+  obstacles". "In contrast, for fixed altitudes". "Regarding shortcomings in
+  the planner design". "Experimentally, the UCT constant". "Overall,
+  performance decreases as the action space increases."
+- **Restate precisely with "That is," or "That is to say,".** "This suggests a
+  greater presence of narrow passages, denoting a lower ε value, that is, a
+  reduced field of view through the obstacles." Used to sharpen a claim
+  immediately after making it.
+- **Attach reasons inline** with `since`, `as`, `due to`, `given that`,
+  `as such`. "since values that are farther apart influence one another less".
+- **Contractions are fine in formal writing.** I write "it's expected",
+  "doesn't require". Don't formalise them out.
+- **`i.e.` and `e.g.` inline**, not "that is to say" spelled out every time.
+- **Bold is a label, not an assertion.** I bold a defined term and then define
+  it: "**State space.** The state space S = ...", "**Reward function.** The
+  reward structure encourages...", "**Pre-processing.**" Never bold a claim
+  mid-paragraph for emphasis.
+- **Short answer first, then the reasoning** — but only when answering a posed
+  question: "Yes. One such example of this is...", "Well suited. We can
+  superimpose...". Not as a prose device.
+
+### Intellectual habits
+
+- **Own design decisions in the first person.** "I've chosen the Single-query
+  Bi-directional... planner for my design." "for my approximate online solver
+  I've designed a Factored Value Monte Carlo Tree Search." "I introduced a goal
+  distance heuristic." "I employed the strategy of multi step steering."
+- **Mark speculation as speculation, plainly.** "I hypothesize that this leads
+  to faster convergence of the two trees." "Perhaps the difficulties mentioned
+  above could be further combated if, say, various different targets in the
+  opposing tree were selected." The `if, say,` construction is mine.
+- **State anomalies bluntly and refuse to explain them away.** "the SIFID
+  scores reported are better than the current SOTA by an unreasonably large
+  margin... and so are likely erroneous. I was unable to determine a cause of
+  error." "seem good beyond reason, and so are included for completeness but
+  not considered in the performance evaluation of my model." This is the single
+  most characteristic thing in my writing. Never smooth over a result that
+  doesn't make sense.
+- **Name what was omitted, and why.** "This was omitted due to the little
+  influence drones have on one another, though it could potentially reduce the
+  number of vehicle collisions." "No other rollout heuristics are employed that
+  could potentially offset this, such as history heuristics." A limitations
+  section lists specific things not done, each with a reason — it does not
+  restate the findings.
+- **Name the alternative considered and why it lost.** "The alternative
+  approach I considered was to minimise the request size in favour of
+  efficiency... I chose not to do this as I decided the efficiency increase
+  this offered would not be worth the additional processing required."
+- **Tie quantitative claims to the actual figure.** "the success rate declines
+  from 100% to 27% across 1 to 7 drones for 3 second of PTPS".
 
 ### Don't
 
-- **No triads.** Three-item parallel lists for rhythm are the strongest tell.
-  Two reasons or four, not three.
-- **No `—` em-dash parentheticals.** I use a plain `--` or restructure the
-  sentence. An em-dash aside mid-sentence is not how I write.
 - **No throat-clearing.** Cut "It's important to note", "It's worth
-  considering", "Let's explore", "In this section we will". My sections open on
-  the claim or the measurement.
-- **No summary paragraph that restates what was just said.** The comp3320
-  report simply ends on its last list. No "In conclusion", no "Overall, this
-  demonstrates".
+  considering", "Let's explore", "In this section we will".
 - **No section opening that restates its own heading.**
+- **No closing paragraph that restates what was just said.** My closing
+  sections add material — limitations, what I'd try next — they don't summarise.
 - **No inflated vocabulary.** delve, leverage, crucial, vital, pivotal,
   profound, tapestry, landscape, realm, testament, underscore, myriad,
-  navigate (figurative), unlock, harness (as a verb), foster, robust (unless
-  literally about robustness).
-- **No "not only X, but also Y"**, no "isn't just X — it's Y", no rhetorical
-  questions as transitions.
+  navigate (figurative), unlock, foster.
 - **No hype adverbs.** remarkably, incredibly, surprisingly, fundamentally,
   deeply, truly, simply.
-- **Don't gloss terms the reader of this course would know.** I write for a
-  competent reader and leave the term unexplained.
-- **No second-person coaching.** The course has a position; it does not
-  cheerlead the student through it.
+- **No triads for rhythm.** When I list reasons there are two or four of them,
+  not a balanced three.
+- **No second-person coaching.** The course holds a position; it does not
+  cheerlead the reader through it.
+- **Don't gloss terms a competent reader of this course would know.**
 
-### Register for this site
+### The known off-voice sample
 
-The reports are technical and number-dense; course prose cannot be. What
-transfers is the *discipline*, not the density: a claim, its support, and an
-honest statement of what is not established. A lecture page that asserts
-without support is off-voice even though no number belongs in it.
+Section 4 (Reflection) of the RIN paper is the one place my own writing goes
+padded, and it is a useful negative example: "highlights critical ethical and
+practical concerns", "poses significant risks", "Moreover... Finally...", "must
+be carefully considered alongside technical innovation". Ethics-and-implications
+prose is where the inflation creeps in. Watch for it hardest in exactly those
+passages — on this site, the philosophical weeks.
+
+### Two things not derived, decided
+
+- **Spelling is genuinely inconsistent in my sources** — "maximises" and
+  "memoise" alongside "discretized", "hypothesize", "centralized", sometimes in
+  one document. Since inconsistency on a published site reads as sloppiness
+  rather than voice, use **-ise/-isation throughout**, and keep "whilst" and
+  "learnt", which are consistent in my writing.
+- **Em-dashes are allowed but rare.** I use one occasionally ("centralized
+  motion planning—the planner's effort grows not just linearly but often
+  exponentially"). Not banned; just not a habitual device, and never as the
+  main way a sentence is built.
 
 Read every paragraph back and cut the half that carries no claim.
 
