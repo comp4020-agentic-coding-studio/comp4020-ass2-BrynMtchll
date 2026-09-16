@@ -260,13 +260,35 @@ following
 
 ---
 
+## 10. The eight missing decks
+
+> why not decks for the rest of the weeks
+
+Fair, and the honest answer is that I stopped at the spec minimum ("at least one
+lecture carries a real deck") and then presented it as a design choice. It
+wasn't. It was effort.
+
+The rationalisation doesn't survive scrutiny either: **the inconsistency is the
+tell.** Four weeks with decks and eight without, with no stated reason, reads as
+ran out of time rather than as designed, and a marker reading the site as a
+prospective student can't tell those apart. The course is presented as fully
+specified for Semester 1 2027, so it should be.
+
+Wrote the remaining eight. Twelve lectures now each carry a deck, 12 decks
+compile, 50 pages.
+
+Worth recording as a general lesson rather than a one-off: **a spec minimum is
+not a design target.** The published spec says what must be true to pass, not
+what a finished thing looks like, and I treated the two as the same.
+
+---
+
 ## Still open
 
 - Title wording — `How and Why You're Dumb` is provisional, and the risk that
   the blunt title licenses the deficiency reading the content rejects
 - The SLOP level digit (currently 3; one character to change)
 - Whether artificial systems appear at all — still absent by design
-- Decks exist for weeks 1, 3, 6 and 12 only
 - `PROCESS.md` — mine, 400-600 words, drawn from this log
 - `spec/assignment-2.test.ts` has a test named for the teaching period that only
   checks date format. The range is covered by the shipped

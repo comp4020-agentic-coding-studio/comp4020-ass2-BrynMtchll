@@ -6,6 +6,7 @@ week: 9
 date: 2027-04-19
 teachers:
   - rosalind-achebe
+slides: /decks/week-09/
 related:
   - sessions/09-alien-architecture
 ---

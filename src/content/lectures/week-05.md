@@ -6,6 +6,7 @@ week: 5
 date: 2027-03-22
 teachers:
   - tuyet-nabarro
+slides: /decks/week-05/
 related:
   - sessions/05-structure-not-sensed
 ---

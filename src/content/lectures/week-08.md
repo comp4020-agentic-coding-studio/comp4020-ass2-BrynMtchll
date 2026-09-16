@@ -6,6 +6,7 @@ week: 8
 date: 2027-04-12
 teachers:
   - rosalind-achebe
+slides: /decks/week-08/
 related:
   - sessions/08-small-brains
 ---
