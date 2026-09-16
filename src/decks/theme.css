@@ -11,3 +11,131 @@
  * slide class you reach for (`_class: quote`), a code-heavy layout, a
  * background. */
 @import url("astro-theme-university/styles/deck.css");
+
+/* ---- Diagram helpers -------------------------------------------------------
+ * Every visual in these decks is inline SVG, so it is generated from source,
+ * scales at both marking viewports, and inherits the brand tokens rather than
+ * restating any colour. Strokes use currentColor unless they carry meaning.
+ *
+ * The max-height on .fig svg is the important rule: a diagram that overflows
+ * the slide is invisible at 390px and nothing in the build checks for it. */
+
+.fig {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.4rem auto 0;
+  width: 100%;
+}
+
+.fig svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 52vh;
+  overflow: visible;
+}
+
+.fig figcaption,
+.fig-note {
+  color: var(--at-text-secondary);
+  font-size: 0.62em;
+  line-height: 1.35;
+  text-align: center;
+  max-width: 34ch;
+  margin: 0;
+}
+
+/* Semantic stroke and fill roles, so a diagram means the same thing in
+ * every deck: accent = the thing under discussion, muted = context,
+ * warn = the failure or the discarded part. */
+.fig svg {
+  --d-line: color-mix(in srgb, currentColor 55%, transparent);
+  --d-accent: var(--at-primary);
+  --d-warn: var(--at-tertiary);
+  --d-muted: color-mix(in srgb, currentColor 28%, transparent);
+}
+
+.fig .d-line {
+  fill: none;
+  stroke: var(--d-line);
+  stroke-width: 2;
+}
+.fig .d-accent {
+  fill: none;
+  stroke: var(--d-accent);
+  stroke-width: 3;
+}
+.fig .d-warn {
+  fill: none;
+  stroke: var(--d-warn);
+  stroke-width: 3;
+  stroke-dasharray: 6 4;
+}
+.fig .d-muted {
+  fill: none;
+  stroke: var(--d-muted);
+  stroke-width: 1.5;
+}
+.fig .d-fill-accent {
+  fill: var(--d-accent);
+  stroke: none;
+}
+.fig .d-fill-muted {
+  fill: var(--d-muted);
+  stroke: none;
+}
+.fig .d-box {
+  fill: color-mix(in srgb, currentColor 6%, transparent);
+  stroke: var(--d-line);
+  stroke-width: 2;
+  rx: 4;
+}
+
+.fig text {
+  fill: currentColor;
+  font-family: var(--r-main-font, inherit);
+  font-size: 13px;
+  dominant-baseline: middle;
+}
+.fig text.d-sm {
+  font-size: 11px;
+  fill: var(--at-text-secondary);
+}
+.fig text.d-lg {
+  font-size: 17px;
+  font-weight: 600;
+}
+.fig text.d-hi {
+  fill: var(--at-primary);
+  font-weight: 600;
+}
+.fig text.d-warn-t {
+  fill: var(--at-tertiary);
+  font-weight: 600;
+}
+
+/* Two-column slide: visual beside a short claim. Collapses on narrow
+ * viewports so the phone frame never scrolls sideways. */
+.cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
+  align-items: center;
+  width: 100%;
+}
+
+.cols > * {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .cols {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  .fig svg {
+    max-height: 38vh;
+  }
+}

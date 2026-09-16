@@ -1,13 +1,11 @@
 ---
 title: Too large to represent
-description: Week 1 — the constraint the course runs on, and the card trick that makes it personal
+description: Week 1 — the constraint the course runs on, drawn three ways, and the card trick that makes it personal
 ---
 
 # How and Why You're Dumb
 
-SLOP3233 · Week 1
-
-Halvard Emms
+SLOP3233 · Week 1 · Halvard Emms
 
 ---
 
@@ -17,43 +15,103 @@ You are a finite thing inside a world that is not.
 
 ---
 
-## The constraint
+## A system smaller than its world must throw things away
 
-A finite system cannot hold a world larger than itself.
+<figure class="fig">
+<svg viewBox="0 0 520 190" role="img" aria-label="A large region labelled world states contains a much smaller region labelled states the system can distinguish; the difference is labelled discarded.">
+  <ellipse cx="230" cy="95" rx="200" ry="80" class="d-line" />
+  <text x="60" y="35" class="d-sm">world states</text>
+  <circle cx="175" cy="100" r="42" class="d-accent" />
+  <text x="175" y="100" text-anchor="middle" class="d-hi">held</text>
+  <path d="M300 60 q40 35 0 70" class="d-warn" />
+  <text x="360" y="60" class="d-warn-t">discarded</text>
+  <text x="360" y="80" class="d-sm">not represented,</text>
+  <text x="360" y="96" class="d-sm">and not flagged</text>
+</svg>
+<figcaption>The second line is the whole course. Nothing marks the boundary from inside.</figcaption>
+</figure>
 
-It holds a **compression**.
-
-Every compression throws something away.
+```notes
+Do not say "blind spot" yet. That lands with the card, twenty minutes from now.
+```
 
 ---
 
-## This is not yet about brains
+## Ashby, 1956: you cannot regulate what you cannot represent
 
-Ashby, 1956 — *the law of requisite variety*
-
-> A regulator needs at least as much variety as the disturbances it must counter.
-
-You cannot regulate what you cannot represent.
+<figure class="fig">
+<svg viewBox="0 0 540 210" role="img" aria-label="Eight disturbance types enter a regulator that has only four available responses; four disturbances pass through uncorrected.">
+  <text x="10" y="18" class="d-sm">disturbances</text>
+  <g class="d-line">
+    <line x1="10" y1="40" x2="150" y2="40" /><line x1="10" y1="62" x2="150" y2="62" />
+    <line x1="10" y1="84" x2="150" y2="84" /><line x1="10" y1="106" x2="150" y2="106" />
+    <line x1="10" y1="128" x2="150" y2="128" /><line x1="10" y1="150" x2="150" y2="150" />
+    <line x1="10" y1="172" x2="150" y2="172" /><line x1="10" y1="194" x2="150" y2="194" />
+  </g>
+  <rect x="150" y="30" width="110" height="80" class="d-box" />
+  <text x="205" y="62" text-anchor="middle" class="d-lg">regulator</text>
+  <text x="205" y="86" text-anchor="middle" class="d-sm">4 responses</text>
+  <g class="d-accent">
+    <line x1="260" y1="40" x2="420" y2="40" /><line x1="260" y1="62" x2="420" y2="62" />
+    <line x1="260" y1="84" x2="420" y2="84" /><line x1="260" y1="106" x2="420" y2="106" />
+  </g>
+  <text x="430" y="70" class="d-hi">countered</text>
+  <g class="d-warn">
+    <line x1="150" y1="128" x2="420" y2="128" /><line x1="150" y1="150" x2="420" y2="150" />
+    <line x1="150" y1="172" x2="420" y2="172" /><line x1="150" y1="194" x2="420" y2="194" />
+  </g>
+  <text x="430" y="160" class="d-warn-t">through</text>
+</svg>
+<figcaption>Requisite variety. The regulator's repertoire bounds what it can absorb — the rest arrives regardless.</figcaption>
+</figure>
 
 ---
 
-## And it gets worse
+## Conant & Ashby, 1970: so the model is not optional
 
-Conant & Ashby, 1970
+<div class="cols">
+<figure class="fig">
+<svg viewBox="0 0 260 180" role="img" aria-label="A regulator box contains a smaller box labelled model of system, with an arrow looping out to the system and back.">
+  <rect x="14" y="30" width="120" height="110" class="d-box" />
+  <text x="74" y="48" text-anchor="middle" class="d-sm">regulator</text>
+  <rect x="34" y="66" width="80" height="54" class="d-accent" />
+  <text x="74" y="86" text-anchor="middle" class="d-hi">model</text>
+  <text x="74" y="104" text-anchor="middle" class="d-sm">of system</text>
+  <rect x="170" y="56" width="76" height="60" class="d-box" />
+  <text x="208" y="86" text-anchor="middle">system</text>
+  <path d="M134 74 h36" class="d-line" />
+  <path d="M170 106 h-36" class="d-line" />
+</svg>
+</figure>
 
-Any successful regulator must **contain a model** of what it regulates.
+<div>
 
-So the model is not optional. Only its accuracy is negotiable.
+Any successful regulator **contains a model** of what it regulates.
+
+So only its accuracy is negotiable.
+
+</div>
+</div>
 
 ---
 
 ## Shannon gave us the price list
 
-**Rate–distortion theory**
-
-Given a fixed capacity: what is the least damage you can do?
-
-Every organism in this course is answering that question. None of them knows it.
+<figure class="fig">
+<svg viewBox="0 0 460 230" role="img" aria-label="A rate-distortion curve falling from high rate at zero distortion towards zero rate at maximum distortion, with a marked operating point.">
+  <line x1="60" y1="20" x2="60" y2="185" class="d-line" />
+  <line x1="60" y1="185" x2="420" y2="185" class="d-line" />
+  <text x="24" y="100" class="d-sm">rate</text>
+  <text x="240" y="212" text-anchor="middle" class="d-sm">distortion (information lost)</text>
+  <path d="M70 28 C140 40 180 120 260 152 S360 180 410 183" class="d-accent" />
+  <circle cx="260" cy="152" r="6" class="d-fill-accent" />
+  <text x="276" y="140" class="d-hi">every organism</text>
+  <text x="276" y="158" class="d-sm">sits somewhere on this curve</text>
+  <text x="74" y="40" class="d-sm">perfect fidelity,</text>
+  <text x="74" y="56" class="d-sm">unaffordable</text>
+</svg>
+<figcaption>Rate–distortion theory: given a fixed capacity, the least damage you can do. Schematic curve, not measured data.</figcaption>
+</figure>
 
 ---
 
@@ -63,51 +121,140 @@ Every organism in this course is answering that question. None of them knows it.
 
 ---
 
-## Nine full moons
+## The optic disc: no photoreceptors, no report
 
-The optic nerve leaves your retina through a patch with no photoreceptors.
+<div class="cols">
+<figure class="fig">
+<svg viewBox="0 0 250 200" role="img" aria-label="Cross-section of an eye showing the retina lining the back, with a gap where the optic nerve exits, labelled no receptors.">
+  <circle cx="120" cy="100" r="76" class="d-line" />
+  <path d="M60 46 A76 76 0 0 0 60 154" class="d-muted" stroke-width="9" />
+  <path d="M120 24 A76 76 0 0 1 120 176" class="d-accent" stroke-width="7" />
+  <circle cx="176" cy="132" r="11" class="d-warn" />
+  <line x1="184" y1="140" x2="224" y2="168" class="d-line" stroke-width="5" />
+  <text x="150" y="182" class="d-warn-t">optic disc</text>
+  <text x="44" y="100" text-anchor="middle" class="d-sm">lens</text>
+</svg>
+</figure>
 
-Roughly the angular area of nine full moons.
+<div>
+
+Roughly the angular area of **nine full moons**.
 
 You have never seen a hole.
 
----
-
-## What you just watched
-
-Not the gap.
-
-The **filling** — generated continuously, never flagged, unavailable to inspection.
+</div>
+</div>
 
 ---
 
-## The notation
+## What you are about to watch is not the gap
 
-| Grade | Means |
-| --- | --- |
-| **[E]** | Established — replicated, or uncontested |
-| **[C]** | Contested — the field disagrees, and the disagreement is the content |
-| **[S]** | Speculative — reasoned beyond the evidence, and labelled |
-
-You will be assigning these yourself by week 3.
+<figure class="fig">
+<svg viewBox="0 0 520 150" role="img" aria-label="Three panels: a dot at fifteen degrees from a fixation cross; the dot vanishing; and the region filled with surrounding pattern rather than showing a hole.">
+  <g>
+    <rect x="10" y="20" width="150" height="100" class="d-box" />
+    <text x="30" y="46" class="d-lg">+</text>
+    <circle cx="128" cy="70" r="7" class="d-fill-accent" />
+    <text x="85" y="138" text-anchor="middle" class="d-sm">fixate the cross</text>
+  </g>
+  <g>
+    <rect x="185" y="20" width="150" height="100" class="d-box" />
+    <text x="205" y="46" class="d-lg">+</text>
+    <circle cx="303" cy="70" r="7" class="d-warn" />
+    <text x="260" y="138" text-anchor="middle" class="d-sm">move the card in</text>
+  </g>
+  <g>
+    <rect x="360" y="20" width="150" height="100" class="d-box" />
+    <text x="380" y="46" class="d-lg">+</text>
+    <text x="435" y="138" text-anchor="middle" class="d-sm">the dot is gone</text>
+  </g>
+</svg>
+<figcaption>Panel three has no hole in it. Your visual system generated the ground and did not tell you.</figcaption>
+</figure>
 
 ---
 
-## Four claims
+{/* _class: quote */}
 
-Two of them are wrong.
-
-The field took a long time to notice.
+Not the gap. The filling.
 
 ---
 
-## Before next week
+## The notation you will use every week
 
-Write the position statement **first**.
+<figure class="fig">
+<svg viewBox="0 0 560 200" role="img" aria-label="Decision flowchart: has it replicated, leading to established; does the field disagree, leading to contested; otherwise speculative.">
+  <rect x="8" y="78" width="104" height="44" class="d-box" />
+  <text x="60" y="100" text-anchor="middle">a claim</text>
+  <path d="M112 100 h40" class="d-line" />
+  <rect x="152" y="70" width="128" height="60" class="d-box" />
+  <text x="216" y="90" text-anchor="middle" class="d-sm">replicated, or</text>
+  <text x="216" y="110" text-anchor="middle" class="d-sm">uncontested?</text>
+  <path d="M280 88 h48" class="d-accent" />
+  <text x="336" y="88" class="d-hi">[E]</text>
+  <path d="M216 130 v40 h112" class="d-line" />
+  <rect x="328" y="146" width="128" height="48" class="d-box" />
+  <text x="392" y="170" text-anchor="middle" class="d-sm">field disagrees?</text>
+  <path d="M456 170 h34" class="d-accent" />
+  <text x="498" y="170" class="d-hi">[C]</text>
+  <path d="M392 146 v-24 h98" class="d-warn" />
+  <text x="498" y="118" class="d-warn-t">[S]</text>
+</svg>
+<figcaption>Established, contested, speculative. By week 3 you assign these yourself.</figcaption>
+</figure>
 
-Then do the reading.
+---
 
-It is the only work in this course that is better for being uninformed.
+## Where [C] actually sits
+
+| Grade | Not this | But this |
+| --- | --- | --- |
+| **[E]** | "true" | replicated, or nobody is arguing |
+| **[C]** | "we don't know yet" | **the disagreement is the content** |
+| **[S]** | "guessing" | reasoned past the evidence, and labelled |
+
+```notes
+The middle row is the one they get wrong all semester. [C] is not a shrug.
+```
+
+---
+
+## Four claims. Two are wrong.
+
+<figure class="fig">
+<svg viewBox="0 0 480 130" role="img" aria-label="Four claim cards in a row, two marked with a tick and two with a cross, above a note that the field took decades to notice.">
+  <g>
+    <rect x="8" y="20" width="104" height="58" class="d-box" />
+    <text x="60" y="49" text-anchor="middle" class="d-sm">claim 1</text>
+    <rect x="128" y="20" width="104" height="58" class="d-box" />
+    <text x="180" y="49" text-anchor="middle" class="d-sm">claim 2</text>
+    <rect x="248" y="20" width="104" height="58" class="d-box" />
+    <text x="300" y="49" text-anchor="middle" class="d-sm">claim 3</text>
+    <rect x="368" y="20" width="104" height="58" class="d-box" />
+    <text x="420" y="49" text-anchor="middle" class="d-sm">claim 4</text>
+  </g>
+  <text x="240" y="106" text-anchor="middle" class="d-sm">the field took decades to notice which</text>
+</svg>
+<figcaption>Nobody gets all four. Finding that out in week 1 is cheaper than in week 10.</figcaption>
+</figure>
+
+---
+
+## Before next week, in this order
+
+<figure class="fig">
+<svg viewBox="0 0 500 120" role="img" aria-label="A two-step sequence: write the position statement first, then do the reading, with a crossed-out arrow showing the reverse order is wrong.">
+  <rect x="14" y="34" width="180" height="52" class="d-accent" />
+  <text x="104" y="52" text-anchor="middle" class="d-hi">1. position statement</text>
+  <text x="104" y="72" text-anchor="middle" class="d-sm">~500 words, no reading</text>
+  <path d="M200 60 h56" class="d-line" />
+  <rect x="262" y="34" width="180" height="52" class="d-box" />
+  <text x="352" y="60" text-anchor="middle">2. the week 2 reading</text>
+  <path d="M262 100 h-56" class="d-warn" />
+  <text x="352" y="104" text-anchor="middle" class="d-warn-t">not this way round</text>
+</svg>
+<figcaption>The only work in this course that is better for being uninformed. Hurdle: no statement, no revision mark.</figcaption>
+</figure>
 
 ---
 
@@ -115,4 +262,4 @@ It is the only work in this course that is better for being uninformed.
 
 ## Week 12 asks this again
 
-With no card.
+with no card
