@@ -8,9 +8,10 @@
     "build": "astro build",
     "preview": "astro preview",
     "typecheck": "astro check",
-    "check": "pnpm typecheck && pnpm test",
+    "check": "pnpm typecheck && pnpm test:decks && pnpm test",
     "check:evidence": "node scripts/check-evidence.ts",
     "test": "pnpm build && vitest run spec",
+    "test:decks": "vitest run spec/deck-tables.test.ts",
     "test:template": "vitest run scripts"
   },
   "dependencies": {
