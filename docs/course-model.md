@@ -1,5 +1,23 @@
 # The course model — research consolidation
 
+> **Status note, added after the site was built.** This document is the research
+> artefact the outline was derived from, and it is kept as the record of that
+> phase rather than updated to match. Three things have changed since:
+>
+> - the per-week capacity/approximation/gap framing was **removed** entirely; it
+>   fitted weeks 2-7 and 11 and failed on the rest, and it was a template of the
+>   kind the brief punishes
+> - the assessment scheme below was **replaced** — the three tasks here were all
+>   descriptions of the thesis rather than encounters with it. The site now runs
+>   News and Views (25), position statement and revision (20), calibrated
+>   quizzes (15), cognitive profile (40)
+> - several weeks were **rebuilt** around findings from the later literature
+>   sweep: the mantis shrimp into week 2, *Stentor* into week 3, relational
+>   codes reframing week 5, Olkowicz and Herculano-Houzel into week 8, and
+>   Ashby / rate-distortion / No Free Lunch as formal anchors in weeks 1 and 12
+>
+> `src/content/` is authoritative for what the course actually is.
+
 Working document. Not site content. This is the artefact the outline is derived
 from, per the research-before-outline rule in `CLAUDE.md`.
 

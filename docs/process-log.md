@@ -210,12 +210,64 @@ No commit to the site yet — assessment scheme still open.
 
 ---
 
+## 9. Building the site
+
+> ok yep and get underway with expanding out all content and drafting up the entire course including all lecture decks etc.
+
+Built in four staged commits, checking after each rather than generating
+everything and hoping.
+
+Two decisions taken without asking, both flagged as cheap to reverse: the title
+**How and Why You're Dumb** and code **SLOP3233** (keeping the allocated 233),
+and an **image-free treatment** — the README sanctions it, `socialImage` is
+optional in the theme, and I can't produce course-specific artwork. All four
+starter images deleted rather than deferred.
+
+Structural decisions worth citing:
+
+- **Lectures Monday, seminars Thursday**, with a division of labour that stops
+  the two page types repeating: a lecture page says what the argument is, a
+  seminar page says what you do with it. Nothing is explained twice.
+- **No per-week template**, per the harness rule. Week 3 is built around a
+  replication failure, week 6 ends with the lecturer arguing against their own
+  lecture, week 12 adds no mechanism at all.
+- **Three staff, one per discipline** the four-lens rule requires, which puts
+  the rule in the staffing rather than only in the prose.
+- **The position statement is a 0% hurdle folded into the revision entry**,
+  because the schema requires a positive weight. It can't be extended past week
+  3, since a statement written in week 8 has already been contaminated by the
+  thing it is meant to predate.
+
+**Problem found on the way.** The build runs axe over the *slides* as well as
+the pages, and an empty table header in the week 3 deck failed it. Worth
+knowing: a deck is not exempt from the accessibility check.
+
+**Where the research sweep changed the outline rather than filling it.** The
+mantis shrimp carries week 2 because the popular claim inverts the finding.
+*Stentor* carries week 3 because a correct result was discarded for ninety years
+over a species mismatch with nobody behaving badly — a better failure case than
+fraud or statistics. Constantinescu reframed week 5 from space to relational
+structure. Olkowicz and Herculano-Houzel dissolve the small-brain puzzle in week
+8 rather than marvelling at it.
+
+**State:** 42 pages, 32 API nodes, 22 graph edges, four decks, no accessibility
+violations, no broken links, 12/12 spec tests green. `check:evidence` passes on
+starter content and imagery; only `PROCESS.md` remains, and that one is mine to
+write.
+
+`f065b88` frame · `00d00e6` seminars, lectures, decks · assessments commit
+following
+
+---
+
 ## Still open
 
-- Title wording, and the risk the blunt title licenses the deficiency reading
-- Week 1 adds only framing — merge into week 2?
-- Whether artificial systems appear at all
-- Assessment scheme, per §7
+- Title wording — `How and Why You're Dumb` is provisional, and the risk that
+  the blunt title licenses the deficiency reading the content rejects
+- The SLOP level digit (currently 3; one character to change)
+- Whether artificial systems appear at all — still absent by design
+- Decks exist for weeks 1, 3, 6 and 12 only
+- `PROCESS.md` — mine, 400-600 words, drawn from this log
 - `spec/assignment-2.test.ts` has a test named for the teaching period that only
   checks date format. The range is covered by the shipped
   `data-integrity.test.ts`, but the name overclaims.
