@@ -1,0 +1,20 @@
+# Week 7. Why introspection reports a summary.
+# A model of a process cannot run inside that process at full resolution, so
+# what is available to report is necessarily lossy -- and nothing marks the loss.
+
+...@_style
+
+direction: down
+
+system: "The whole system\nbillions of parameters, continuous, parallel" { class: node }
+model: "The self-model\nlow-dimensional, serial, reportable" { class: accent }
+report: "What introspection returns" { class: node }
+
+system -> model: "compressed by\nnecessity" { class: edge-accent }
+model -> report: "" { class: edge }
+
+missing: "Everything the compression dropped" { class: warn }
+system -> missing: "" { class: edge-warn }
+missing -> report: "no channel" { class: edge-warn; style.stroke-dash: 6 }
+
+note: "The summary does not carry a note\nsaying what it left out." { class: muted }

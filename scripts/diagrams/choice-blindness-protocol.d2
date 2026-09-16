@@ -1,0 +1,23 @@
+# Johansson, Hall, Sikstrom & Olsson (2005), Science 310(5745), 116-119.
+# Week 7. The design, drawn so the swap is visibly the only manipulation.
+
+...@_style
+
+direction: right
+
+show: "Two face photographs\npresented" { class: node }
+choose: "Participant chooses\nthe more attractive" { class: node }
+swap: "Experimenter covertly\nhands back the OTHER one" { class: accent }
+ask: "'Why did you\nchoose this one?'" { class: node }
+
+show -> choose: "" { class: edge }
+choose -> swap: "" { class: edge-accent }
+swap -> ask: "" { class: edge }
+
+detect: "Detected\nunder 20%" { class: warn }
+explain: "Explained the choice\nciting features of the\nface they rejected" { class: warn }
+
+ask -> detect: "" { class: edge-warn }
+ask -> explain: "over 80%" { class: edge-warn }
+
+predict: "Asked in advance:\n84% said they\nwould notice" { class: muted }
