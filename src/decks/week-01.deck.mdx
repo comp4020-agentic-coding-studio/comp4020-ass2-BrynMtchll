@@ -39,31 +39,24 @@ Do not say "blind spot" yet. That lands with the card, twenty minutes from now.
 
 ## Ashby, 1956: you cannot regulate what you cannot represent
 
-<figure class="fig">
-<svg viewBox="0 0 540 210" role="img" aria-label="Eight disturbance types enter a regulator that has only four available responses; four disturbances pass through uncorrected.">
-  <text x="10" y="18" class="d-sm">disturbances</text>
-  <g class="d-line">
-    <line x1="10" y1="40" x2="150" y2="40" /><line x1="10" y1="62" x2="150" y2="62" />
-    <line x1="10" y1="84" x2="150" y2="84" /><line x1="10" y1="106" x2="150" y2="106" />
-    <line x1="10" y1="128" x2="150" y2="128" /><line x1="10" y1="150" x2="150" y2="150" />
-    <line x1="10" y1="172" x2="150" y2="172" /><line x1="10" y1="194" x2="150" y2="194" />
-  </g>
-  <rect x="150" y="30" width="110" height="80" class="d-box" />
-  <text x="205" y="62" text-anchor="middle" class="d-lg">regulator</text>
-  <text x="205" y="86" text-anchor="middle" class="d-sm">4 responses</text>
-  <g class="d-accent">
-    <line x1="260" y1="40" x2="420" y2="40" /><line x1="260" y1="62" x2="420" y2="62" />
-    <line x1="260" y1="84" x2="420" y2="84" /><line x1="260" y1="106" x2="420" y2="106" />
-  </g>
-  <text x="430" y="70" class="d-hi">countered</text>
-  <g class="d-warn">
-    <line x1="150" y1="128" x2="420" y2="128" /><line x1="150" y1="150" x2="420" y2="150" />
-    <line x1="150" y1="172" x2="420" y2="172" /><line x1="150" y1="194" x2="420" y2="194" />
-  </g>
-  <text x="430" y="160" class="d-warn-t">through</text>
-</svg>
-<figcaption>Requisite variety. The regulator's repertoire bounds what it can absorb — the rest arrives regardless.</figcaption>
-</figure>
+![Three lines showing variety that a regulator cannot remove, falling with a slope of exactly minus one against regulator variety, for disturbance varieties of 3, 5 and 8 bits, each reaching zero only when regulator variety matches disturbance variety.](./figures/requisite-variety.svg)
+
+**H(outcome) ≥ H(disturbance) − H(regulator)**
+
+The slope is −1 by construction. One bit of repertoire removes one bit of
+variety, and not a fraction more.
+
+---
+
+## Read the left-hand region
+
+A regulator with fewer distinguishable responses than the world has
+distinguishable disturbances leaves the remainder standing —
+
+**however cleverly it is organised.**
+
+No amount of architecture substitutes for repertoire. That is what makes it a
+law rather than a design guideline.
 
 ---
 
@@ -105,6 +98,33 @@ Past D = σ² the rate is zero — you send nothing and guess the mean.
 
 ---
 
+## Three results, one claim
+
+| Year | Result | What it forbids |
+| --- | --- | --- |
+| 1948 | Rate–distortion (Shannon) | fidelity beyond your channel capacity |
+| 1956 | Requisite variety (Ashby) | regulating variety you cannot represent |
+| 1970 | Good regulator (Conant & Ashby) | regulating without a model at all |
+
+None of the three is about biology. All three constrain it.
+
+---
+
+## Why start here rather than with an animal
+
+Because the alternative is circular.
+
+If you begin by asking "how intelligent is this organism", you have already
+assumed intelligence is a quantity on a single scale — which is the assumption
+week 8 destroys and week 12 turns on us.
+
+Beginning with the constraint means the question becomes: **what did this system
+decide not to represent, and what did that buy?**
+
+That question has an answer for a bacterium and for you.
+
+---
+
 {/* _class: impact */}
 
 # Take out your card
@@ -113,27 +133,18 @@ Past D = σ² the rate is zero — you send nothing and guess the mean.
 
 ## The optic disc: no photoreceptors, no report
 
-<div class="cols">
-<figure class="fig">
-<svg viewBox="0 0 250 200" role="img" aria-label="Cross-section of an eye showing the retina lining the back, with a gap where the optic nerve exits, labelled no receptors.">
-  <circle cx="120" cy="100" r="76" class="d-line" />
-  <path d="M60 46 A76 76 0 0 0 60 154" class="d-muted" stroke-width="9" />
-  <path d="M120 24 A76 76 0 0 1 120 176" class="d-accent" stroke-width="7" />
-  <circle cx="176" cy="132" r="11" class="d-warn" />
-  <line x1="184" y1="140" x2="224" y2="168" class="d-line" stroke-width="5" />
-  <text x="150" y="182" class="d-warn-t">optic disc</text>
-  <text x="44" y="100" text-anchor="middle" class="d-sm">lens</text>
-</svg>
-</figure>
+![The optic disc drawn to scale in degrees of visual angle: an ellipse five degrees wide and seven tall, centred about fifteen and a half degrees temporal from fixation, with nine half-degree circles representing full moons fitted inside it.](./figures/blind-spot-geometry.svg)
 
-<div>
+Roughly 15° temporal, about 5° × 7°. The full moon subtends half a degree.
 
-Roughly the angular area of **nine full moons**.
+---
 
-You have never seen a hole.
+## Which is to say
 
-</div>
-</div>
+**Nine full moons of nothing**, in each eye, about fifteen degrees out from
+wherever you are looking.
+
+Present since birth. Never once reported.
 
 ---
 
@@ -167,6 +178,39 @@ You have never seen a hole.
 {/* _class: quote */}
 
 Not the gap. The filling.
+
+---
+
+## But be careful what you conclude from it
+
+There is a real dispute here, and it is a good first taste of what this course
+does with disputes.
+
+**Ramachandran** and others describe the visual system as actively *filling in*
+— generating plausible content across the gap, like an interpolation.
+
+**Dennett** argues nothing is filled in. The system simply **does not represent
+the absence**, and there is no need to paint anything, because nobody is
+looking at an internal canvas.
+
+---
+
+## The two accounts predict differently
+
+| Question | Filling-in | Not-representing-absence |
+| --- | --- | --- |
+| Is content generated? | yes | no |
+| What would you find in cortex? | activity coding the interpolated pattern | nothing where the gap is |
+| Why no hole is seen | the hole was painted over | there is no mechanism that reports holes |
+
+Some V1 studies do find responses consistent with interpolation, which pushes
+toward the first. Grade **[C]** — and notice that both accounts explain your
+experience equally well, which is exactly why the experience cannot settle it.
+
+```notes
+This is the first time they see that introspection does not adjudicate between
+two theories of introspection. Say so.
+```
 
 ---
 
@@ -245,6 +289,54 @@ The middle row is the one they get wrong all semester. [C] is not a shrug.
 </svg>
 <figcaption>The only work in this course that is better for being uninformed. Hurdle: no statement, no revision mark.</figcaption>
 </figure>
+
+---
+
+## What this course is not
+
+- **Not a survey of clever animals.** Weeks 8–10 are a control group, and they exist to test whether the account generalises.
+- **Not a ladder.** There is no scale with bacteria at one end and us at the other. *Scala naturae* is what evolutionary biology spent a century dismantling.
+- **Not a list of your cognitive biases.** Week 11 is largely about why that literature is less secure than its popularity suggests.
+
+---
+
+## What is assessed, and when
+
+| Piece | Weight | Due |
+| --- | --- | --- |
+| Position statement | hurdle, 0% | end of week 3 |
+| News and Views investigation | 25% | week 7 |
+| Revision and memo | 20% | week 11 |
+| Calibrated quizzes | 15% | weekly, best 8 of 10 |
+| Cognitive profile | 40% | week 12 |
+
+Two of those are unusual enough to explain now.
+
+---
+
+## The quizzes will make your score look bad
+
+They use **certainty-based marking**: you declare how sure you are, and a
+confident error costs six marks where a hedged one costs nothing.
+
+Students at 80% accuracy typically collect about half the available marks.
+
+That gap is not a scoring quirk. It is the subject of week 12, arriving in week
+2 and in your own results.
+
+---
+
+## And the position statement is deliberately uninformed
+
+~500 words, before you do any reading, on what you currently think intelligence
+is and where it starts.
+
+**Not marked.** Submitting it is a hurdle. It cannot be extended past week 3,
+because a statement written in week 8 has already been contaminated by the
+thing it is meant to predate.
+
+In week 11 you revise it, and the **memo** explaining what moved is what earns
+the marks.
 
 ---
 

@@ -11,29 +11,27 @@ SLOP3233 · Week 2 · Rosalind Achebe
 
 ## A bacterium solves this with one number
 
-<figure class="fig">
-<svg viewBox="0 0 520 210" role="img" aria-label="A nutrient gradient increasing to the right, with a bacterium's path shown as short straight runs separated by random turns, drifting rightwards up the gradient.">
-  <defs>
-    <linearGradient id="g2a" x1="0" x2="1">
-      <stop offset="0" stop-color="currentColor" stop-opacity="0.03" />
-      <stop offset="1" stop-color="currentColor" stop-opacity="0.22" />
-    </linearGradient>
-  </defs>
-  <rect x="8" y="16" width="504" height="150" fill="url(#g2a)" />
-  <text x="16" y="182" class="d-sm">low nutrient</text>
-  <text x="504" y="182" text-anchor="end" class="d-sm">high nutrient</text>
-  <path d="M40 120 L96 104 L88 140 L146 126 L138 88 L196 100 L214 68 L268 84 L258 120 L318 108 L338 74 L396 88 L412 60 L464 72"
-        class="d-accent" />
-  <circle cx="464" cy="72" r="6" class="d-fill-accent" />
-  <g class="d-muted">
-    <circle cx="96" cy="104" r="4" /><circle cx="146" cy="126" r="4" />
-    <circle cx="196" cy="100" r="4" /><circle cx="268" cy="84" r="4" />
-    <circle cx="318" cy="108" r="4" /><circle cx="396" cy="88" r="4" />
-  </g>
-  <text x="150" y="36" class="d-sm">run · tumble · run — turns are random, run length is not</text>
-</svg>
-<figcaption>No map, no target, no direction sensing. Run longer when things improve; tumble when they don't.</figcaption>
-</figure>
+![Left, seven simulated bacteria tracking up a concentration gradient by run and tumble, producing wandering paths that drift rightwards. Right, the mean position of three hundred cells climbing steadily over nine hundred time steps.](./figures/chemotaxis.svg)
+
+The entire decision rule: **if things are improving, keep going; otherwise turn
+at random.**
+
+---
+
+## What is and is not in that rule
+
+| Not present | Present |
+| --- | --- |
+| a direction to the food | receptor occupancy now |
+| a representation of the target | occupancy a few seconds ago |
+| a map, a plan, a goal | two motor states |
+
+It climbs a gradient with no ability to sense which way the gradient points.
+
+```notes
+Simulated with tumble probability 0.35 when worsening, 0.06 when improving.
+Three hundred cells reach a mean displacement of ~140 units in 900 steps.
+```
 
 ---
 
@@ -57,6 +55,54 @@ Spend real time here. Every projection students make later starts in this table.
 
 ---
 
+## Where the memory actually is
+
+The comparison needs a stored past, and in *E. coli* it is **receptor
+methylation**.
+
+Ligand binding drives a fast response; methylation state adapts on a slower
+timescale, restoring the baseline. The difference between the two timescales
+*is* the memory — a few seconds of it.
+
+So "is it getting better?" is implemented as "does current occupancy exceed
+what the methylation state has adapted to?"
+
+---
+
+## Which is worth dwelling on
+
+The memory is not a record. It is an **adaptation offset** — a moving baseline
+that the current signal is compared against.
+
+Nothing stores a value. Nothing is retrieved. And it is enough.
+
+Macnab & Koshland, *PNAS* 69(9), 2509–2512 (1972); Berg, *E. coli in Motion*
+(2004).
+
+---
+
+## Von Uexküll's term for this
+
+The **Umwelt**: not the environment, but the world *as it exists for that
+organism* — built entirely from the distinctions its receptors can make.
+
+His example is a tick, whose world reduces to butyric acid, warmth, and hair.
+Not an impoverished version of our world. A different one, complete in itself.
+
+*A Foray into the Worlds of Animals and Humans* (1934).
+
+---
+
+## So the question changes shape
+
+Not "how much of the world does this organism perceive?"
+
+But **"which distinctions did it commit to paying for?"**
+
+That reframing is what makes the next animal comprehensible rather than absurd.
+
+---
+
 {/* _class: impact */}
 
 # Now the useful animal
@@ -65,55 +111,31 @@ Spend real time here. Every projection students make later starts in this table.
 
 ## Twelve channels against your three
 
-<figure class="fig">
-<svg viewBox="0 0 540 230" role="img" aria-label="Upper panel shows three broad overlapping human cone sensitivity curves; lower panel shows twelve narrow non-overlapping mantis shrimp receptor bands across a wider spectral range.">
-  <text x="8" y="14" class="d-sm">human — 3 broad, overlapping</text>
-  <g class="d-muted" stroke-width="2.5">
-    <path d="M60 78 C100 78 110 30 150 30 C190 30 200 78 240 78" />
-    <path d="M150 78 C190 78 200 24 250 24 C300 24 310 78 350 78" />
-    <path d="M250 78 C300 78 320 34 370 34 C420 34 440 78 480 78" />
-  </g>
-  <line x1="40" y1="78" x2="510" y2="78" class="d-line" />
-  <text x="8" y="112" class="d-sm">mantis shrimp — 12 narrow, barely overlapping</text>
-  <g class="d-accent" stroke-width="2.5">
-    <path d="M46 186 l10 -46 l10 46" /><path d="M84 186 l10 -46 l10 46" />
-    <path d="M122 186 l10 -46 l10 46" /><path d="M160 186 l10 -46 l10 46" />
-    <path d="M198 186 l10 -46 l10 46" /><path d="M236 186 l10 -46 l10 46" />
-    <path d="M274 186 l10 -46 l10 46" /><path d="M312 186 l10 -46 l10 46" />
-    <path d="M350 186 l10 -46 l10 46" /><path d="M388 186 l10 -46 l10 46" />
-    <path d="M426 186 l10 -46 l10 46" /><path d="M464 186 l10 -46 l10 46" />
-  </g>
-  <line x1="40" y1="186" x2="510" y2="186" class="d-line" />
-  <text x="40" y="206" class="d-sm">300 nm</text>
-  <text x="510" y="206" text-anchor="end" class="d-sm">720 nm</text>
-</svg>
-<figcaption>Thoen et al., 2014 · <em>Haptosquilla trispinosa</em>. The inference from this picture is reasonable. It is also wrong.</figcaption>
-</figure>
+![Upper panel: three broad overlapping human cone sensitivity curves peaking near 420, 530 and 560 nanometres, annotated as informative for ratio comparison. Lower panel: twelve narrow barely overlapping stomatopod channels evenly spaced from 310 to 700 nanometres, annotated as carrying little ratio information.](./figures/mantis-spectra.svg)
+
+Gaussian approximations at published peak positions — for channel shape and
+spacing, not digitised microspectrophotometry.
+
+---
+
+## Why channel shape decides what you can resolve
+
+Colour discrimination in us works by **comparing across channels**. Broad,
+overlapping sensitivities mean a small wavelength shift changes the ratio
+between two channels measurably.
+
+Narrow, barely-overlapping channels give you excellent *identification* of
+which band a wavelength fell in — and almost no information about where inside
+the band it fell.
 
 ---
 
 ## Discrimination, measured
 
-<figure class="fig">
-<svg viewBox="0 0 470 210" role="img" aria-label="Bar chart of wavelength discrimination thresholds: human, bird, butterfly and goldfish all between one and four nanometres, mantis shrimp between twelve and twenty-five nanometres, roughly ten times worse.">
-  <line x1="120" y1="14" x2="120" y2="164" class="d-line" />
-  <line x1="120" y1="164" x2="440" y2="164" class="d-line" />
-  <g>
-    <text x="112" y="32" text-anchor="end" class="d-sm">human</text>
-    <rect x="120" y="24" width="26" height="16" class="d-fill-muted" />
-    <text x="112" y="62" text-anchor="end" class="d-sm">bird</text>
-    <rect x="120" y="54" width="30" height="16" class="d-fill-muted" />
-    <text x="112" y="92" text-anchor="end" class="d-sm">butterfly</text>
-    <rect x="120" y="84" width="38" height="16" class="d-fill-muted" />
-    <text x="112" y="122" text-anchor="end" class="d-sm">goldfish</text>
-    <rect x="120" y="114" width="42" height="16" class="d-fill-muted" />
-    <text x="112" y="152" text-anchor="end" class="d-hi">mantis shrimp</text>
-    <rect x="120" y="144" width="290" height="16" class="d-fill-accent" />
-  </g>
-  <text x="240" y="186" text-anchor="middle" class="d-sm">worse discrimination →  (Δλ threshold, schematic scale)</text>
-</svg>
-<figcaption>Roughly ten times worse than every animal it was compared against. Bars are indicative of the reported ratio, not digitised from the paper.</figcaption>
-</figure>
+![Horizontal bars of wavelength discrimination threshold: human about 2 nanometres, bird 3, butterfly 4, goldfish 4, and stomatopod about 30 — roughly ten times worse than any of them.](./figures/mantis-discrimination.svg)
+
+Thoen et al., *Science* 343(6169), 411–413 (2014). Bars are indicative of the
+reported ten-fold ratio rather than digitised values.
 
 ---
 
@@ -184,6 +206,34 @@ Mechanism still unresolved — a 2021 review says so. **[C]**
 
 </div>
 </div>
+
+---
+
+## The thing they can do that we cannot
+
+Stomatopods are sensitive to **polarisation**, including *circular*
+polarisation — the only animals known to be.
+
+Which is the same story from the other side: the channels they built are
+excellent for a distinction we cannot make at all, and poor for one we make
+easily.
+
+Neither system is better. They are priced differently.
+
+---
+
+## A case where nobody knows the answer
+
+**Magnetoreception.** Many animals demonstrably use the geomagnetic field to
+navigate. Two candidate mechanisms have been argued for decades:
+
+| Mechanism | Idea | Problem |
+| --- | --- | --- |
+| Radical pair | light-dependent quantum effect in cryptochrome | hard to demonstrate *in vivo* |
+| Magnetite | ferrous particles acting as a compass needle | receptor cells not conclusively identified |
+
+A sense we are certain exists and cannot explain. **[C]**, and a useful
+reminder that this course's confidence varies by topic.
 
 ---
 
