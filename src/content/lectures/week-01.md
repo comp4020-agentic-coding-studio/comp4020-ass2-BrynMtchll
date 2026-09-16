@@ -1,30 +1,18 @@
 ---
-title: Opening lecture
+title: Too large to represent
 description:
-  The first lecture — what the course is, why it is shaped this way, and what
-  happens in week 1
+  The lecture sets the constraint and nothing else. A finite system inside a larger world cannot hold that world, so it holds a compression, and compressions lose things.
 week: 1
 date: 2027-02-22
 teachers:
   - halvard-emms
 slides: /decks/week-01/
 related:
-  - sessions/01-getting-started
+  - sessions/01-a-world-too-large
 ---
 
-<!-- STARTER_CONTENT: replace this lecture, then remove this comment. -->
+Two formal results do the work, both older than the cognitive science that needs them. Ashby's law of requisite variety (1956) says a regulator needs at least as much variety as the disturbances it must counter — so you cannot regulate what you cannot represent. Conant and Ashby (1970) go further: any successful regulator must contain a model of what it regulates.
 
-Replace this page. A lecture entry says what was covered and links to the pages
-that own the detail, so the lecture stays short and nothing is explained twice.
+Shannon supplies the other half. Rate-distortion theory is the mathematics of deliberate loss: given a fixed capacity, what is the least damage you can do? That is the question every system in this course is answering, whether or not it knows it.
 
-The `related:` ref above is a graph edge: it renders on this page and on the
-session's, so declare a connection once, on whichever side is convenient.
-
-The page renders its `slides:` link automatically. Decks are markdown too,
-under `src/decks/`; the path is part of the lecture's API metadata.
-
-## Outline
-
-- what the course is for
-- how the weeks are shaped
-- what to do before the first session
+I close on the evidence-grading notation, which is the only piece of housekeeping in the lecture programme and the one you will use most.

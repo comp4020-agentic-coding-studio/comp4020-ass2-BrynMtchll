@@ -1,23 +1,17 @@
 ---
-title: Second lecture
+title: What a sense organ is for
 description:
-  Week 2 — the first substantive material, and the run-up to the first review
+  Sensing is not reception. It is a commitment about which distinctions are worth paying for, and the mantis shrimp is the case that makes this undeniable.
 week: 2
 date: 2027-03-01
 teachers:
   - rosalind-achebe
 related:
-  - sessions/02-first-review
-  - assessments/assignment-1
+  - sessions/02-measurement
 ---
 
-<!-- STARTER_CONTENT: replace this lecture, then remove this comment. -->
+We start below representation entirely, with chemotaxis, and establish what a system can do with a measurement and a comparison and nothing else.
 
-Replace this page. It exists so the lectures listing sorts by week and the
-related block has more than one edge to draw.
+Then the argument turns on Thoen and colleagues (2014). Twelve photoreceptor types, and wavelength discrimination roughly ten times worse than a goldfish. The proposal is recognition rather than discrimination — narrow labelled bins read for which fires hardest, traded against the ability to tell close hues apart.
 
-## Outline
-
-- the first substantive material, and where it shows up in practice
-- what the first review is looking for
-- reading before next week
+Which means the popular claim about this animal inverts the finding. That is worth noticing early, because it will not be the last time.
