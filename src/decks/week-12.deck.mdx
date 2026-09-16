@@ -1,21 +1,33 @@
 ---
 title: The blind spot
-description: Week 12 — the account from eleven weeks, aimed at the person holding it
+description: Week 12 — the famous curve reconstructed from noise, the formal shape of the regress, and the week 1 question with no card
 ---
 
 # The blind spot
 
-SLOP3233 · Week 12
-
-Halvard Emms
+SLOP3233 · Week 12 · Halvard Emms
 
 ---
 
 ## Nothing new today
 
-Everything is already on the table.
-
-The job is to point it at ourselves.
+<figure class="fig">
+<svg viewBox="0 0 520 120" role="img" aria-label="Eleven small blocks representing weeks one to eleven, all feeding arrows into a single block labelled us.">
+  <g class="d-muted">
+    <rect x="8" y="20" width="26" height="30" /><rect x="40" y="20" width="26" height="30" />
+    <rect x="72" y="20" width="26" height="30" /><rect x="104" y="20" width="26" height="30" />
+    <rect x="136" y="20" width="26" height="30" /><rect x="168" y="20" width="26" height="30" />
+    <rect x="200" y="20" width="26" height="30" /><rect x="232" y="20" width="26" height="30" />
+    <rect x="264" y="20" width="26" height="30" /><rect x="296" y="20" width="26" height="30" />
+    <rect x="328" y="20" width="26" height="30" />
+  </g>
+  <text x="8" y="66" class="d-sm">weeks 1–11</text>
+  <path d="M180 78 v14 h180" class="d-accent" />
+  <rect x="384" y="72" width="128" height="40" class="d-accent" />
+  <text x="448" y="93" text-anchor="middle" class="d-hi">aimed at us</text>
+</svg>
+<figcaption>Everything is already on the table. The job is to point it somewhere.</figcaption>
+</figure>
 
 ---
 
@@ -27,28 +39,71 @@ The job is to point it at ourselves.
 
 ## What you expect this week to be
 
-The famous curve. Incompetent people don't know they're incompetent.
+<figure class="fig">
+<svg viewBox="0 0 440 210" role="img" aria-label="The familiar Dunning-Kruger chart: a flat high line for self-assessment across all quartiles crossing a steeply rising line for actual performance.">
+  <line x1="56" y1="16" x2="56" y2="166" class="d-line" />
+  <line x1="56" y1="166" x2="410" y2="166" class="d-line" />
+  <text x="20" y="90" class="d-sm">score</text>
+  <path d="M90 66 L170 62 L250 58 L330 52" class="d-accent" />
+  <text x="340" y="42" class="d-hi">self-estimate</text>
+  <path d="M90 150 L170 116 L250 76 L330 30" class="d-line" stroke-width="3" />
+  <text x="340" y="24" class="d-sm">actual</text>
+  <g class="d-sm">
+    <text x="90" y="186" text-anchor="middle">Q1</text><text x="170" y="186" text-anchor="middle">Q2</text>
+    <text x="250" y="186" text-anchor="middle">Q3</text><text x="330" y="186" text-anchor="middle">Q4</text>
+  </g>
+  <text x="230" y="204" text-anchor="middle" class="d-sm">actual performance quartile</text>
+</svg>
+<figcaption>The bottom quartile overrates itself enormously; the top underrates slightly. A metacognitive deficit, apparently.</figcaption>
+</figure>
 
 ---
 
-## Krueger & Mueller, 2002
+## Krueger & Mueller, 2002: build it from nothing
 
-The curve is largely reproducible from:
+<figure class="fig">
+<svg viewBox="0 0 540 220" role="img" aria-label="Left panel: a scatter of actual versus estimated score with a weak positive correlation, all points shifted above the midline. Right panel: the same points averaged within quartiles, producing the familiar crossing lines.">
+  <text x="8" y="14" class="d-sm">1 · noisy estimates, everyone above average</text>
+  <line x1="30" y1="24" x2="30" y2="164" class="d-line" />
+  <line x1="30" y1="164" x2="230" y2="164" class="d-line" />
+  <line x1="30" y1="164" x2="230" y2="34" class="d-muted" stroke-dasharray="4 4" />
+  <g class="d-fill-muted">
+    <circle cx="52" cy="92" r="4" /><circle cx="64" cy="118" r="4" /><circle cx="70" cy="74" r="4" />
+    <circle cx="88" cy="104" r="4" /><circle cx="96" cy="66" r="4" /><circle cx="110" cy="96" r="4" />
+    <circle cx="124" cy="120" r="4" /><circle cx="132" cy="70" r="4" /><circle cx="148" cy="88" r="4" />
+    <circle cx="160" cy="58" r="4" /><circle cx="172" cy="104" r="4" /><circle cx="186" cy="72" r="4" />
+    <circle cx="198" cy="50" r="4" /><circle cx="210" cy="86" r="4" /><circle cx="218" cy="62" r="4" />
+  </g>
+  <text x="36" y="182" class="d-sm">actual →</text>
+  <text x="8" y="200" class="d-sm">imperfect correlation + better-than-average</text>
 
-- regression to the mean
-- a better-than-average effect
+  <text x="300" y="14" class="d-sm">2 · average within quartiles</text>
+  <line x1="316" y1="24" x2="316" y2="164" class="d-line" />
+  <line x1="316" y1="164" x2="520" y2="164" class="d-line" />
+  <path d="M340 84 L386 80 L432 76 L478 70" class="d-accent" />
+  <path d="M340 142 L386 118 L432 82 L478 42" class="d-line" stroke-width="3" />
+  <text x="332" y="182" class="d-sm">Q1  Q2  Q3  Q4</text>
+  <text x="418" y="200" text-anchor="middle" class="d-warn-t">the same chart</text>
+</svg>
+<figcaption>Regression to the mean plus a better-than-average effect reproduces the shape. No metacognitive deficit required. Illustrative, not their figures.</figcaption>
+</figure>
 
-**No metacognitive deficit required.**
+```notes
+Ask before revealing panel 2: what would you expect if self-estimates were pure noise plus a constant?
+```
 
 ---
 
-## The exchange
+## The exchange, unresolved
 
-Kruger & Dunning replied, same issue.
+| Year | Who | Claim |
+| --- | --- | --- |
+| 1999 | Kruger & Dunning | the unskilled are unaware |
+| 2002 | Krueger & Mueller | regression + BTA predict the pattern |
+| 2002 | Kruger & Dunning, reply | unreliable tests, bad mediators |
+| 2006 | Burson, Larrick & Klayman | task difficulty drives miscalibration |
 
-Burson, Larrick & Klayman, 2006 — related objections.
-
-Unresolved. **[C]**
+**[C]** — the effect that survives is real, weaker, and differently shaped.
 
 ---
 
@@ -58,11 +113,19 @@ The most famous claim about not knowing what you don't know is itself not fully 
 
 ---
 
-## That is the right week 12
+## That is the right week 12 for this course
 
-Not an embarrassment for the course.
-
-The course, happening to the course.
+<figure class="fig">
+<svg viewBox="0 0 480 120" role="img" aria-label="A loop from the course's subject to the course's own literature and back, labelled no exterior.">
+  <rect x="14" y="40" width="150" height="46" class="d-box" />
+  <text x="89" y="63" text-anchor="middle" class="d-sm">claims about error</text>
+  <path d="M164 52 h110" class="d-accent" />
+  <rect x="274" y="40" width="190" height="46" class="d-accent" />
+  <text x="369" y="63" text-anchor="middle" class="d-hi">are subject to error</text>
+  <path d="M369 86 v18 h-280 v-18" class="d-warn" />
+  <text x="229" y="116" text-anchor="middle" class="d-warn-t">and there is no exterior</text>
+</svg>
+</figure>
 
 ---
 
@@ -74,35 +137,71 @@ The course, happening to the course.
 
 ## Nothing tests alone
 
-Duhem, sharpened by Quine, 1951.
-
-No observation confronts a hypothesis by itself.
-
-*And read Laudan & Leplin against it — our own rules require it.*
+<figure class="fig">
+<svg viewBox="0 0 520 190" role="img" aria-label="One observation connects to a bundle containing a hypothesis plus auxiliary assumptions about instruments, background theory and initial conditions; a failed prediction cannot say which element is at fault.">
+  <circle cx="70" cy="96" r="34" class="d-accent" />
+  <text x="70" y="96" text-anchor="middle" class="d-hi">obs.</text>
+  <path d="M104 96 h56" class="d-line" />
+  <rect x="160" y="26" width="220" height="140" class="d-box" />
+  <text x="270" y="46" text-anchor="middle" class="d-sm">the bundle under test</text>
+  <g class="d-muted">
+    <rect x="178" y="60" width="184" height="24" /><rect x="178" y="92" width="184" height="24" />
+    <rect x="178" y="124" width="184" height="24" />
+  </g>
+  <text x="270" y="72" text-anchor="middle" class="d-sm">hypothesis</text>
+  <text x="270" y="104" text-anchor="middle" class="d-sm">instrument assumptions</text>
+  <text x="270" y="136" text-anchor="middle" class="d-sm">background theory</text>
+  <path d="M380 96 h50" class="d-warn" />
+  <text x="440" y="86" class="d-warn-t">fails —</text>
+  <text x="440" y="106" class="d-sm">but which one?</text>
+</svg>
+<figcaption>Duhem, sharpened by Quine, 1951. Read Laudan &amp; Leplin against it — our own rules require the counterargument.</figcaption>
+</figure>
 
 ---
 
 ## Agrippa's trilemma
 
-Any justification is:
-
-1. circular
-2. infinite
-3. stops somewhere arbitrary
-
-Pick a horn. Defend it in the seminar.
+<figure class="fig">
+<svg viewBox="0 0 520 200" role="img" aria-label="A claim branches into three options: a circular chain returning to itself, an infinite regress, and a chain terminating at an arbitrary stopping point.">
+  <rect x="196" y="8" width="120" height="36" class="d-accent" />
+  <text x="256" y="26" text-anchor="middle" class="d-hi">justify this</text>
+  <path d="M256 44 v20 M256 64 h-160 v18 M256 64 h160 v18 M256 64 v18" class="d-line" />
+  <g>
+    <circle cx="96" cy="126" r="30" class="d-warn" />
+    <path d="M78 112 l10 -8 l2 12" class="d-warn" />
+    <text x="96" y="178" text-anchor="middle" class="d-sm">circular</text>
+  </g>
+  <g>
+    <path d="M226 100 h60 M234 118 h52 M242 136 h44 M250 154 h36" class="d-warn" />
+    <text x="266" y="178" text-anchor="middle" class="d-sm">infinite</text>
+  </g>
+  <g>
+    <path d="M416 100 v46" class="d-warn" />
+    <line x1="396" y1="146" x2="436" y2="146" class="d-accent" />
+    <text x="416" y="178" text-anchor="middle" class="d-sm">stops arbitrarily</text>
+  </g>
+</svg>
+<figcaption>Via Sextus. Pick a horn in the seminar and defend it — you are already standing on one.</figcaption>
+</figure>
 
 ---
 
-## No Free Lunch
+## No Free Lunch: the bias is not optional
 
-Wolpert & Macready, 1997
-
-Averaged over all problems, every learner performs identically.
-
-Any bias that helps somewhere **must hurt elsewhere.**
-
-There is no assumption-free learner. This is a theorem.
+<figure class="fig">
+<svg viewBox="0 0 500 200" role="img" aria-label="Two learners plotted across a space of problems: each has peaks where it performs well and troughs where it performs badly, and the area under both curves is identical.">
+  <line x1="50" y1="14" x2="50" y2="150" class="d-line" />
+  <line x1="50" y1="150" x2="470" y2="150" class="d-line" />
+  <text x="16" y="82" class="d-sm">skill</text>
+  <path d="M60 40 C110 40 120 132 170 132 C220 132 230 44 280 44 C330 44 340 130 390 130 C430 130 440 60 465 56" class="d-accent" />
+  <path d="M60 130 C110 130 120 40 170 40 C220 40 230 128 280 128 C330 128 340 46 390 46 C430 46 440 120 465 124" class="d-line" stroke-width="2.5" />
+  <text x="230" y="176" text-anchor="middle" class="d-sm">all possible problems →</text>
+  <text x="62" y="28" class="d-hi">learner A</text>
+  <text x="62" y="146" class="d-sm">learner B</text>
+</svg>
+<figcaption>Wolpert &amp; Macready, 1997. Averaged over all problems the areas are equal — any bias that helps somewhere must hurt elsewhere. A theorem, not a sentiment.</figcaption>
+</figure>
 
 ---
 
@@ -114,29 +213,46 @@ There is no assumption-free learner. This is a theorem.
 
 ## I will be strict about this
 
-"All models rest on assumptions"
-
-does **not** license
-
-"all models are equal".
+<figure class="fig">
+<svg viewBox="0 0 520 170" role="img" aria-label="Left: four models at the same height, labelled all equal and marked wrong. Right: the same four models at different heights ordered by track record, marked correct.">
+  <text x="10" y="16" class="d-warn-t">relativism</text>
+  <g class="d-muted">
+    <rect x="16" y="60" width="34" height="54" /><rect x="58" y="60" width="34" height="54" />
+    <rect x="100" y="60" width="34" height="54" /><rect x="142" y="60" width="34" height="54" />
+  </g>
+  <line x1="16" y1="58" x2="176" y2="58" class="d-warn" />
+  <text x="96" y="140" text-anchor="middle" class="d-sm">"all models rest on assumptions,</text>
+  <text x="96" y="156" text-anchor="middle" class="d-sm">so all models are equal"</text>
+  <line x1="260" y1="20" x2="260" y2="150" class="d-muted" />
+  <text x="320" y="16" class="d-hi">fallibilism</text>
+  <g class="d-fill-accent">
+    <rect x="326" y="30" width="34" height="84" /><rect x="368" y="52" width="34" height="62" />
+    <rect x="410" y="74" width="34" height="40" /><rect x="452" y="94" width="34" height="20" />
+  </g>
+  <text x="406" y="140" text-anchor="middle" class="d-sm">ranked by track record</text>
+  <text x="406" y="156" text-anchor="middle" class="d-sm">and the ranking is measurable</text>
+</svg>
+</figure>
 
 ---
 
-## Models are ranked by track record
+## Calibration is a measurement, not a mood
 
-Tetlock — twenty years of scored forecasts.
-
-Calibration is measurable. Some people are reliably better.
-
-The best update **frequently, in small increments**.
-
----
-
-## If you leave thinking nothing can be known
-
-You have the argument backwards.
-
-Argue with me now rather than believing it quietly.
+<figure class="fig">
+<svg viewBox="0 0 420 210" role="img" aria-label="A calibration plot with a diagonal representing perfect calibration, an overconfident curve sagging below it, and a well-calibrated forecaster's curve close to the diagonal.">
+  <line x1="60" y1="16" x2="60" y2="166" class="d-line" />
+  <line x1="60" y1="166" x2="380" y2="166" class="d-line" />
+  <line x1="60" y1="166" x2="370" y2="26" class="d-muted" stroke-dasharray="5 4" />
+  <text x="284" y="34" class="d-sm">perfect</text>
+  <path d="M60 166 C140 150 200 132 270 108 S340 86 370 78" class="d-warn" />
+  <text x="300" y="120" class="d-warn-t">overconfident</text>
+  <path d="M60 166 C130 138 200 106 268 66 S346 34 370 28" class="d-accent" />
+  <text x="150" y="70" class="d-hi">superforecaster</text>
+  <text x="220" y="196" text-anchor="middle" class="d-sm">stated confidence →   (schematic)</text>
+  <text x="26" y="90" class="d-sm">actual</text>
+</svg>
+<figcaption>Tetlock: twenty years of scored forecasts. The best update frequently, in small increments, and hold views loosely.</figcaption>
+</figure>
 
 ---
 
@@ -146,19 +262,31 @@ Argue with me now rather than believing it quietly.
 
 ---
 
-## September 2023
+## A field arguing about its own testability
 
-124 researchers signed a letter calling integrated information theory
-pseudoscience.
-
----
-
-## The Cogitate consortium
-
-Adversarial collaboration. Predictions agreed **in advance** by proponents of
-two rival theories.
-
-Results challenged both.
+<figure class="fig">
+<svg viewBox="0 0 520 150" role="img" aria-label="A timeline: June 2023 the adversarial collaboration preprint, September 2023 a letter signed by 124 researchers, then the Nature publication challenging both theories.">
+  <line x1="30" y1="76" x2="496" y2="76" class="d-line" />
+  <g>
+    <circle cx="90" cy="76" r="8" class="d-fill-muted" />
+    <text x="90" y="46" text-anchor="middle" class="d-sm">Jun 2023</text>
+    <text x="90" y="108" text-anchor="middle" class="d-sm">Cogitate preprint</text>
+  </g>
+  <g>
+    <circle cx="256" cy="76" r="10" class="d-fill-accent" />
+    <text x="256" y="46" text-anchor="middle" class="d-hi">Sep 2023</text>
+    <text x="256" y="108" text-anchor="middle" class="d-sm">124 signatories:</text>
+    <text x="256" y="124" text-anchor="middle" class="d-sm">"pseudoscience"</text>
+  </g>
+  <g>
+    <circle cx="430" cy="76" r="8" class="d-fill-muted" />
+    <text x="430" y="46" text-anchor="middle" class="d-sm">published</text>
+    <text x="430" y="108" text-anchor="middle" class="d-sm">both theories</text>
+    <text x="430" y="124" text-anchor="middle" class="d-sm">challenged</text>
+  </g>
+</svg>
+<figcaption>Predictions agreed in advance by proponents of two rival theories. Then the results went against both.</figcaption>
+</figure>
 
 ---
 
