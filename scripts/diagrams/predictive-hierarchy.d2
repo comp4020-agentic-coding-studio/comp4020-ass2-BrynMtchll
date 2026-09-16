@@ -1,0 +1,23 @@
+# The canonical predictive processing architecture. Week 6.
+# Predictions descend, only errors ascend. Drawn so the asymmetry is the
+# visible feature, because the asymmetry is the whole claim.
+
+...@_style
+
+direction: down
+
+high: "Higher level\nabstract, slow, wide context" { class: accent }
+mid: "Intermediate level" { class: node }
+low: "Sensory cortex" { class: node }
+world: "The world" { class: muted }
+
+high -> mid: "prediction" { class: edge-accent }
+mid -> low: "prediction" { class: edge-accent }
+low -> world: "" { style.opacity: 0 }
+
+low -> mid: "error only" { class: edge-warn }
+mid -> high: "error only" { class: edge-warn }
+world -> low: "input" { class: edge }
+
+note: "What travels up is what the level below\ncould not already account for.\n\nA perfect prediction sends nothing." { class: muted }
+high -> note: "" { style.opacity: 0 }
