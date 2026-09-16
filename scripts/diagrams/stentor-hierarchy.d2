@@ -1,0 +1,29 @@
+# Jennings (1906), replicated by Dexter, Prabakaran & Gunawardena,
+# Current Biology 29, 4323-4329 (2019). Week 3.
+#
+# One cell, escalating through an ordered sequence of responses to repeated
+# aversive stimulation. Drawn as a state machine because that is what it is --
+# and because the ordering is the claim that was doubted for ninety years.
+
+...@_style
+
+direction: right
+
+stim: "Aversive particles\nin the water" { class: muted }
+
+bend: "1 · Bend away\ncheapest, most reversible" { class: node }
+cilia: "2 · Alter ciliary beat\nreject the current" { class: node }
+contract: "3 · Contract into tube\ncostly, interrupts feeding" { class: node }
+detach: "4 · Detach and swim off\nabandons the tube entirely" { class: accent }
+
+stim -> bend: "" { class: edge }
+bend -> cilia: "stimulus persists" { class: edge }
+cilia -> contract: "still persists" { class: edge }
+contract -> detach: "still persists" { class: edge-accent }
+
+bend -> stim: "stops" { class: edge-warn }
+cilia -> stim: "stops" { class: edge-warn }
+contract -> stim: "stops" { class: edge-warn }
+
+note: "Order is fixed. Cost rises.\nNo nervous system, no neurons,\none nucleus." { class: muted }
+detach -> note: "" { style.opacity: 0 }

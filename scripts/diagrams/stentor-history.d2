@@ -1,0 +1,20 @@
+# Why a correct result was discarded for ninety years. Week 3.
+# The failure is a species mismatch, and nobody in the chain behaved badly.
+
+...@_style
+
+direction: right
+
+jennings: "1906 — Jennings\nreports the hierarchy\nin S. roeseli" { class: accent }
+doubt: "Behaviourist era\nresult treated as\nnon-reproducible" { class: warn }
+repl: "Replication attempts\nuse S. coeruleus" { class: node }
+why: "S. coeruleus is motile\nand builds no tube —\na different problem" { class: warn }
+dexter: "2019 — Dexter,\nPrabakaran & Gunawardena\nreplicate in S. roeseli" { class: accent }
+
+jennings -> doubt: "" { class: edge }
+doubt -> repl: "" { class: edge }
+repl -> why: "" { class: edge-warn }
+why -> dexter: "90 years" { class: edge-accent }
+
+lesson: "No fraud. No bad statistics.\nA species name nobody checked." { class: muted }
+dexter -> lesson: "" { style.opacity: 0 }

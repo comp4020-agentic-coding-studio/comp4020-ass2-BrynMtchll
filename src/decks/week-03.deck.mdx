@@ -1,109 +1,340 @@
 ---
 title: Memory outside the head
-description: Week 3 — Physarum, and a correct result discarded for ninety years
+description: Week 3 — memory smeared on the substrate, a correct result discarded for ninety years, and two plant papers that do not get the same grade
 ---
 
 # Memory outside the head
 
-SLOP3233 · Week 3
-
-Rosalind Achebe
+SLOP3233 · Week 3 · Rosalind Achebe
 
 ---
 
-## No neurons. Solves the trap.
+## What week 2 left us with
 
-*Physarum polycephalum* escapes a U-shaped barrier — a standard robot navigation
-test.
+A system that measures, compares, and holds nothing.
 
-It does this by **refusing to cross its own slime**.
+*E. coli* has a memory of seconds and no representation of anything.
 
----
-
-## Where is the memory?
-
-On the substrate.
-
-Reid et al., 2012 — disguise the trail and the behaviour breaks.
-
-**[E]**
-
----
-
-## What that architecture buys
-
-- unlimited capacity
-- no maintenance cost
-- total vulnerability to anyone with a pipette
+Today: the past starts to constrain the present. Without neurons.
 
 ---
 
 {/* _class: impact */}
 
-# 1906
+# Part 1 — the slime
 
 ---
 
-## Jennings, on one cell
+## *Physarum polycephalum*
 
-*Stentor roeseli*, under repeated stimulation:
+A single-celled organism, though one that can cover a square metre.
 
-bend away → alter cilia → contract → detach
+No neurons. No nervous system. One enormous multinucleate cell, flowing
+through a network of tubes it builds and dismantles continuously.
 
-A hierarchy of responses. In a single cell.
+---
+
+## The U-shaped trap
+
+A standard test in robot navigation.
+
+Place a chemoattractant behind a U-shaped barrier. Gradient-following alone
+gets you into the U and **cannot get you out** — every local improvement leads
+back in.
+
+---
+
+## Reid et al., 2012
+
+*Physarum* solves it. And the mechanism is not internal.
+
+It refuses to cross **its own extracellular slime trail**. Explored ground is
+marked as explored, on the ground.
+
+*PNAS* 109(43), 17490–17494. **[E]**
+
+---
+
+## How they established that it is the trail
+
+Not by observing avoidance — by **removing the cue**.
+
+Disguise the trail and the behaviour breaks. Performance on the U-trap collapses
+to gradient-following.
+
+That is the difference between a correlation and a claim.
+
+```notes
+Point out the structure: an intervention on the proposed mechanism, not a
+richer description of the behaviour.
+```
+
+---
+
+## What this architecture buys, and costs
+
+| | |
+| --- | --- |
+| **Capacity** | effectively unlimited — the substrate is the store |
+| **Maintenance** | none — no metabolic cost to holding it |
+| **Read speed** | immediate, it is already where it is needed |
+| **Vulnerability** | total. Anyone with a pipette can rewrite your memory |
+| **Cannot distinguish** | its own trail from another organism's, or fresh from stale |
+
+---
+
+## And there is a follow-up worth knowing
+
+Smith-Ferguson, Reid, Latty & Beekman found the externalised memory helps in
+**open or simply-bounded** environments —
+
+and in **complex bounded** environments it confers no advantage and can
+actively hinder navigation.
+
+A memory you cannot switch off is not always an asset.
+
+---
+
+## The theoretical suggestion
+
+That externalised spatial memory may be the **functional precursor** to
+internalised memory.
+
+Attractive, and speculative. Grade **[S]** — it is a plausible ordering, not
+an established lineage.
+
+---
+
+{/* _class: impact */}
+
+# Part 2 — the best case study on this course
+
+---
+
+## Jennings, 1906
+
+*Stentor roeseli* — a sessile trumpet-shaped ciliate that builds itself a tube
+and feeds by drawing water in.
+
+Jennings subjected it to repeated irritation and described something nobody
+expected in a single cell.
+
+---
+
+## An ordered hierarchy of avoidance
+
+![A state diagram. Aversive particles trigger bending away; if the stimulus persists the cell alters its ciliary beat, then contracts into its tube, then finally detaches and swims off. At any stage, if the stimulus stops, the cell returns to normal. The order is fixed and the cost rises.](./figures/stentor-hierarchy.svg)
+
+---
+
+## Why this is a strong claim
+
+Each response is **more costly and less reversible** than the last. Detaching
+abandons the tube entirely.
+
+And the order is **fixed**. The cell does not sample randomly from a repertoire;
+it escalates.
+
+In one cell. One nucleus. No neurons.
 
 ---
 
 ## Then it was discredited
 
-The behaviourist era could not reproduce it.
+During the behaviourist era the result was treated as non-reproducible, and it
+stayed that way for most of a century.
 
-It stayed discredited for most of a century.
+Which, on the face of it, is science working correctly. A surprising claim
+failed to replicate, so it was set aside.
 
 ---
 
 ## Dexter, Prabakaran & Gunawardena, 2019
 
-Replicated it.
+They replicated it. Video microscopy, statistical analysis of response
+sequences, and the hierarchy is there.
 
-And found why the replications failed.
+*Current Biology* 29, 4323–4329.
+
+And they found why the replications had failed.
+
+---
+
+{/* _class: impact */}
+
+# They used the wrong species
+
+---
+
+## The mismatch
+
+![A timeline: Jennings reports the hierarchy in S. roeseli in 1906; the behaviourist era treats it as non-reproducible; replication attempts use S. coeruleus, which is motile and builds no tube, so faces a different problem; Dexter and colleagues replicate in S. roeseli in 2019. No fraud and no bad statistics — a species name nobody checked.](./figures/stentor-history.svg)
+
+---
+
+## Why the mismatch matters mechanically
+
+*S. coeruleus* is **motile** and builds **no tube**.
+
+An organism that can simply leave has no reason to escalate through
+increasingly costly attempts to stay. The hierarchy exists because *roeseli* is
+anchored and detaching is expensive.
+
+So the failed replications were not testing a weaker version of the claim. They
+were testing a different animal with a different problem.
+
+---
+
+## Sit with this one
+
+No misconduct. No p-hacking. No motivated reasoning.
+
+Everyone in the chain behaved reasonably, and a correct result was thrown away
+for **ninety years** because a species name went unchecked.
 
 ---
 
 {/* _class: quote */}
 
-They used the wrong species.
+This is the failure mode the course is actually about. It is much harder to guard against than dishonesty.
 
 ---
 
-## *coeruleus* is not *roeseli*
+## One methodological detail worth having
 
-| Species | Mode of life |
+Dexter and colleagues also found Jennings's original protocol — carmine powder
+in pond water — **rarely elicited the behaviour** in their hands.
+
+They had to adjust the stimulation to get it at all.
+
+Which is its own lesson about what "following the published method" secures.
+
+---
+
+{/* _class: impact */}
+
+# Part 3 — two plant papers
+
+---
+
+## The same year. The same plant. Different grades.
+
+Both 2016. Both *Pisum sativum*. Both claiming something cognitive.
+
+One has held up. One has not. The seminar is about why.
+
+---
+
+## Gagliano et al., 2016 — associative learning
+
+Pavlovian design adapted for a plant. Pea seedlings in Y-mazes, blue LEDs as
+the unconditioned stimulus, a fan as the neutral stimulus.
+
+Three days of training with wind reliably preceding light from one arm.
+
+**Result:** at the choice point, the fan alone influenced growth direction.
+Untrained plants were unaffected by it.
+
+*Scientific Reports* 6, 38427.
+
+---
+
+## Markel, 2020 — the replication
+
+Same paradigm. One crucial addition: **blinded scoring.**
+
+Plants were removed from the chamber with fans and lights detached, placed in
+random order, and scored by an independent observer while the experimenter was
+in another room.
+
+**Result:** no effect. *eLife* 9, e57614.
+
+---
+
+## The exchange, and neither side conceded
+
+**Gagliano et al.** (*eLife* 9, e61141): the protocol was unsuitable. Their own
+unconditioned stimulus produced a 100% phototropic response; Markel's produced
+only a slight bias, so there was nothing reliable to condition.
+
+**Markel** (*eLife* 9, e61689): the differences cannot account for the failure.
+And it is surprising to claim plants *always* grow toward a one-hour light
+presentation that followed presentations from the opposite side.
+
+---
+
+## Grade: [C]
+
+Not "we don't know yet". Not a shrug.
+
+**The disagreement is the content**, and both positions are on the record with
+their reasoning. This is what a live methodological dispute looks like from the
+outside.
+
+Older attempts at plant conditioning — Holmes & Gruenberg 1965, Haney 1969,
+Levy et al. 1970, Armus 1970 — mostly failed to observe it, and those that
+claimed it lacked controls.
+
+---
+
+## Dener, Kacelnik & Shemesh, 2016 — risk sensitivity
+
+A split-root design. One root system, two pots.
+
+Both pots have the **same mean** nutrient concentration. One is constant, one
+varies over time. The measure is relative root mass in each.
+
+---
+
+## The result, and why it is the interesting one
+
+| Mean nutrient level | Root growth favours |
 | --- | --- |
-| *S. coeruleus* | motile, builds no tube |
-| *S. roeseli* | sessile |
+| Low | the **variable** pot — risk-prone |
+| High | the **constant** pot — risk-averse |
 
-Different problem. Different behaviour. Of course.
+That is the **energy budget rule** from animal foraging theory. Gamble when
+you cannot survive the average; don't when you can.
 
----
-
-## Why this case and not a fraud case
-
-No misconduct. No statistical trickery.
-
-A species name nobody checked, and **everyone behaved reasonably.**
-
-This is the failure mode the course is about.
+*Current Biology* 26(13), 1763–1767. **[E]**
 
 ---
 
-## Two plant papers, 2016
+## Kacelnik's own framing
 
-| Claim | Status |
-| --- | --- |
-| Pea plants learn associatively (Gagliano) | **[C]** — Markel failed to replicate, blinded; neither side conceded |
-| Pea plants are risk-sensitive (Dener, Kacelnik & Shemesh) | **[E]** |
+Not that plants are intelligent.
 
-Same plant. Same year. Different grades.
+That an adaptive response to risk **does not require a nervous system** — and
+that complex behaviour can be predicted as a biological adaptation without
+invoking anything cognitive.
 
-Seminar: why?
+The restraint in that claim is why it survived.
+
+---
+
+## So: why do these two get different grades?
+
+Ask this in the seminar before you answer it.
+
+"One replicated" is the **start** of the answer. The rest involves: which claim
+was more surprising relative to prior work, which result depended on
+unblinded judgement, and which framing made the smaller demand on the reader.
+
+---
+
+## What week 3 established
+
+1. Memory can live **outside** the organism, and doing so changes what it can and cannot distinguish.
+2. A single cell can run an **ordered, escalating** response hierarchy.
+3. A correct result can be discarded for ninety years by people behaving reasonably.
+4. Two claims about the same organism can deserve different grades, and saying why is a skill.
+
+---
+
+{/* _class: centered */}
+
+## Next week
+
+The first mechanism that can be systematically fooled —
+
+and a horse that could do arithmetic.
