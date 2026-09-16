@@ -152,6 +152,64 @@ Open at time of writing.
 
 ---
 
+## 8. Research participation — explored and rejected
+
+> what are some common assignment formats (look at the ANU) for biology, neuroscience, psychology and philosophy
+
+> explore the research participation feasiblity
+
+Pulled real assessment tables off ANU Programs and Courses (PHIL2061, PHIL3075,
+PHIL1008, PHIL2057, BIOL3109, BIOL6142, BIOL8700, NEUR8701, NEUR6102, PSYC1003/4).
+Useful format vocabulary: annotated bibliography, journal club presentation,
+"news and views" short review article, peer review as its own graded item,
+research proposal you never run, reading response journal, seen exam, hurdle,
+and the Honours Pathway Option — which is branching paths solved
+institutionally, with weights redistributed rather than a free-for-all.
+
+ANU's psychology **research participation requirement** (5 hours as an
+experimental subject, or read an article and summarise it in lieu) looked
+thematically perfect: a course arguing you can't see your own bounds from
+inside, assessed by making you the subject.
+
+**It doesn't survive feasibility, and not for the reason I expected.** The
+blocker isn't ethics paperwork, it's that ANU can only do this because the
+Research School of Psychology runs a continuous research programme with SONA
+managing sign-ups. A single niche course has no lab and no stream of approved
+studies to fill 150 participant-hours.
+
+Ethics findings worth keeping anyway:
+
+- the alternative task is **mandatory**, not a courtesy (45 CFR 46.116 / OHRP,
+  and Canada's TCPS) — ANU's Option 2 exists for that reason
+- Walker (2020, *Science and Engineering Ethics*) argues for abolishing
+  compulsory pools outright: an alternative task doesn't make a compulsory pool
+  voluntary, since the student still faces a forced choice between two unchosen
+  options
+- so the real risk was looking **dated** — designing a 2027 course around a
+  mechanism a live literature calls coercive is exactly the failure this course
+  is about
+
+**What replaced it.** Predict-then-measure: commit to predicting your own result
+before taking a known instrument, then take it, and the graded object is the
+gap — scoreable, no pool, and it connects to Tetlock's calibration work.
+
+**The by-product worth more than the assessment.** Self-administration has a
+methodological limit that is itself course content: perceptual effects survive
+knowing about them, judgement effects mostly don't. You can know the Adelson
+checker-shadow and still see it wrong; you cannot self-administer an anchoring
+study. So the blind spots that survive self-knowledge are the structural ones,
+which is the category the course actually cares about. Mapping your own retinal
+blind spot with a card is mechanism and metaphor in five minutes.
+
+**Structural constraint found:** participation can never be a graded
+percentage. ANU treats it as a requirement, not a weighted item, because
+"having had an experience" doesn't scale-grade. Participation is a hurdle; the
+graded item is derived from it.
+
+No commit to the site yet — assessment scheme still open.
+
+---
+
 ## Still open
 
 - Title wording, and the risk the blunt title licenses the deficiency reading
