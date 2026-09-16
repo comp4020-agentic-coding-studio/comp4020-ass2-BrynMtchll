@@ -283,6 +283,59 @@ what a finished thing looks like, and I treated the two as the same.
 
 ---
 
+## 11. Figures from data, and week 8 as the depth template
+
+> i dont like the inline svgs i want you to use (properly cited) figures and images from the literature, or use matplotlib or other programming to create actual graphs using sourced data
+
+> yes i want diagrams too, but properly made diagrams using diagram tools ... and lots more examples with imagery (pull images from the internet) ... i won't be publishing the figures from journals as my own, just credit the journals/papers
+
+> each lecture deck needs to be much longer and cover a lot more content in greater depth and detail
+
+Replaced hand-drawn inline SVG with two generators, both committing their
+outputs so CI needs neither: **matplotlib** for anything with data or a
+computation, and **D2** (a real layout engine, installed via brew) for
+structure with no data to plot.
+
+**Two figures are computations rather than depictions.** No Free Lunch is
+exhaustive — all 256 target labellings of eight binary points, three learners
+with different biases, all averaging exactly 0.500000. Rate-distortion is the
+exact closed form for a Gaussian source. And the Dunning-Kruger figure is a
+seeded simulation in which Q1 "overrates" itself by 44 percentile points from a
+model containing no metacognitive deficit at all.
+
+**A finding I did not expect, from the path integration simulation.** I built it
+assuming the point would be that error compounds badly. It doesn't — errors
+partly cancel on a wandering path, so the miss stays within a few body lengths.
+The integrator is *good*. It is still not good enough, because the target is a
+hole: past roughly fifty steps the expected error exceeds the nest entrance. So
+the ant's terminal spiral is not a failure of the mechanism, it is the only
+available remedy. The figure was reframed around target size rather than error
+magnitude, and it makes a better argument than the one I set out to make.
+
+**What I cannot do.** Pull images from the internet. I have no tool that fetches
+binary files and could not verify an image if I had the bytes. Saying otherwise
+would be inventing a capability. What did emerge is that WebFetch saves binary
+responses locally, so I can *read* PDFs — which is how the Chittka & Niven
+numbers below were obtained rather than recalled.
+
+**On journal figures.** Crediting them settles plagiarism, which is the half
+that gets marked. It does not settle copyright, which is a different thing —
+attribution is not a licence. The genuinely reusable subset is CC-BY: Gagliano
+2016, Markel 2020, Kohda 2019/2022, de Waal 2019, Galpayage Dona 2022.
+
+**Week 8 rebuilt as the depth template: 52 slides**, from real numbers read out
+of Chittka & Niven (2009) rather than paraphrased — the bee's neuron budget
+(optic lobes are 64% of it), glomeruli and V1 scaling, skeletal muscle counts
+putting a locust inside the mammalian range, the 59-behaviour repertoire against
+a million-fold brain mass difference, and the Dujardin/Pandazis mushroom-body
+episode where the largest ones turn out to belong to horseshoe crabs.
+
+**Recurring trap, third time now:** an empty leading table header (`| | units |`)
+fails axe, and axe runs over decks. Worth a pre-commit grep rather than
+discovering it at build time.
+
+---
+
 ## Still open
 
 - Title wording — `How and Why You're Dumb` is provisional, and the risk that

@@ -1,53 +1,349 @@
 ---
 title: A million neurons is plenty
-description: Week 8 — the brain-size puzzle dissolves, and an ant on stilts
+description: Week 8 — what is actually inside a small brain, what a big one buys, and an ant that counts its own strides
 ---
 
 # A million neurons is plenty
 
-SLOP3233 · Week 8
-
-Rosalind Achebe
+SLOP3233 · Week 8 · Rosalind Achebe
 
 ---
 
-## From here we stop adding
+## Where we are
 
-Weeks 8 to 10 **test** the account.
+Seven weeks built an account. From here to week 10 we stop adding to it and
+start **testing** it.
 
-If seven weeks only described vertebrates, it was never an account of
-intelligence.
+If it only describes vertebrates, it was never an account of intelligence.
+
+```notes
+Say this plainly. Students treat 8-10 as a tour. They are a control group.
+```
 
 ---
 
 {/* _class: impact */}
 
-# The puzzle
+# Part 1 — the puzzle
 
 ---
 
-## Corvids and parrots
+## Darwin already had it, 1871
 
-Doing things comparable to great apes.
+{/* _class: quote */}
 
-With brains a fraction of the size.
+"The brain of an ant is one of the most marvellous atoms of matter in the
+world, perhaps more so than the brain of man."
 
-A deep problem for any information-processing view.
+---
+
+## And the intuition it cuts against
+
+<div class="cols">
+<div>
+
+| System | Mass | Neurons |
+| --- | --- | --- |
+| Blue whale | up to 9 kg | >200 billion |
+| Human | 1250–1450 g | ~85 billion |
+| Honeybee | ~1 mm³ | **fewer than 10⁶** |
+
+</div>
+<div>
+
+Corvids and parrots perform comparably to great apes on some tasks.
+
+Bees learn abstract rules.
+
+A million-fold shortfall in hardware, and not a million-fold shortfall in
+behaviour.
+
+</div>
+</div>
+
+Counts from Chittka & Niven, *Current Biology* 19(21), 2009.
+
+---
+
+## An old and bad answer
+
+**1850** — Dujardin proposes the *mushroom bodies* are the "organs of
+intelligence" in arthropods, partly because they are enlarged in social
+insects.
+
+**1929** — Pandazis notes the largest mushroom bodies belong to **horseshoe
+crabs**.
+
+```notes
+Let the second date land. The structure-equals-faculty move fails immediately.
+```
+
+---
+
+## Pandazis's own resolution
+
+Size doesn't matter; **wiring** does.
+
+Insect mushroom bodies contain cells with extensive dendritic ramifications and
+connections to all major brain centres — as a centre of higher-order
+integration requires. *Limulus* mushroom bodies do not.
+
+That is the move this whole lecture makes, repeatedly.
+
+---
+
+{/* _class: impact */}
+
+# Part 2 — open the bee
+
+---
+
+## Where a bee's neurons actually go
+
+![Two panels. Left, a single stacked bar of a honeybee's roughly one million neurons, dominated by the optic lobes. Right, the same components on a logarithmic axis: optic lobes 648,000, mushroom bodies 340,000, protocerebrum 19,000, antennal lobes 4,500, motor neurons 2,500.](./figures/bee-neuron-budget.svg)
+
+Counts from Chittka & Niven 2009, Fig. 1.
+
+---
+
+## Read that again
+
+**64% of the budget is optic lobes.**
+
+Lamina, medulla and lobula: ~216,000 cells *each*.
+
+Two-thirds of the brain is spent before any integration happens at all.
+
+---
+
+## What is left to think with
+
+| Region | Neurons | Job |
+| --- | --- | --- |
+| Mushroom bodies | ~170,000 × 2 | learning and memory |
+| Protocerebrum remainder | ~19,000 | integration, projections to pre-motor |
+| Antennal lobes | ~4,500 in ~160 glomeruli | olfaction |
+| Deutocerebrum | ~2,500 | motor output |
+
+Nineteen thousand neurons, for everything the mushroom bodies don't do.
+
+---
+
+## And it runs 59 distinct behaviours
+
+Chittka and Niven enumerate them. A sample:
+
+*aggressive flight · alarm fanning · antennation · attend dance · beg food ·
+brief piping · brood incubation · build comb · buzz run · cap brood · colony
+fission · corpse removal · dorsoventral abdominal vibration · expulsion of
+drones · guarding · lateral shake · robbing other hives · scouting for food ·
+sickle dance · sterzeln · tremble dance · waggle dance · worker policing*
+
+```notes
+Read six of these out loud. The list is the argument; paraphrase kills it.
+```
+
+---
+
+{/* _class: impact */}
+
+# Part 3 — so what does a big brain buy?
+
+---
+
+## Mostly: more of the same
+
+<div class="cols">
+<div>
+
+**Visual sampling**
+
+| Eye | Sampling units |
+| --- | --- |
+| Fruit fly eye | 700 ommatidia |
+| Large dragonfly | 30,000 |
+| Human fovea alone | 60,000 cones |
+| Human retina | ~400,000 "pixels" |
+
+</div>
+<div>
+
+**Olfactory sampling**
+
+| Species | Glomeruli |
+| --- | --- |
+| Fruit fly | 43 |
+| Honeybee | ~160 |
+| Human | ~350 |
+| Mouse | ~1000 |
+
+</div>
+</div>
+
+Finer resolution, higher sensitivity, more precision. Not new operations.
+
+---
+
+## The same pattern centrally
+
+Primary visual cortex area:
+
+**mouse 4.5 mm²  →  macaque 1200 mm²  →  human 3000 mm²**
+
+A ~670-fold increase, largely engaged in low-level feature extraction — without
+necessarily increasing the *diversity* of ways information is processed.
+
+---
+
+## Convergence worth noticing
+
+Insects and vertebrates independently arrived at the same architecture for this:
+**retinotopic maps** built from local circuits — "cartridges" or columns —
+repeated hundreds or thousands of times.
+
+Same solution. No common ancestor that had it.
+
+---
+
+{/* _class: impact */}
+
+# Part 4 — and the motor system isn't simpler
+
+---
+
+## Skeletal muscle counts
+
+| Animal | Muscles |
+| --- | --- |
+| Weasel | 322 |
+| Primates | 316 |
+| **Migratory locust** | **296** |
+| Rat, hare | ~215 |
+| Opossum | 159 |
+
+An insect sits inside the mammalian range. Chittka & Niven 2009, Fig. 3.
+
+---
+
+## With strikingly few neurons controlling them
+
+Desert locust flight:
+
+- **72 motor neurons** innervating **34 muscles**
+- the flight central pattern generator is **3 neurons**
+
+Vertebrate limb muscles are typically innervated by tens of motor neurons;
+highly innervated insect muscles have fewer than fifteen.
+
+---
+
+## Why that matters for the account
+
+Novel behaviour does not require novel hardware.
+
+It can come from few neurons **recruiting existing motor circuits in a
+different order** — which is cheap, and which is why repertoire size does not
+track brain size.
+
+---
+
+{/* _class: impact */}
+
+# Part 5 — the comparison that settles it
+
+---
+
+## Repertoire against brain mass
+
+![Scatter of behavioural repertoire size against brain mass on a logarithmic axis. Honeybee at 59 behaviours sits within the same band as moose at 22, De Brazza's monkey at 44 and bottlenose dolphin at 123, across roughly six orders of magnitude of brain mass.](./figures/repertoire-vs-brain.svg)
+
+---
+
+## The number to remember
+
+A million-fold increase in brain mass buys a mammal **two to three times** the
+number of behaviour types.
+
+Not a million times. Two to three.
+
+```notes
+Flag the caveat honestly: ethograms are classified at different hierarchical
+levels and the counts were collated by different researchers. The bias, if
+anything, favours insects because more people have counted bee behaviours.
+```
+
+---
+
+{/* _class: impact */}
+
+# Part 6 — but is it cognition?
+
+---
+
+## Delayed matching-to-sample, in a bee
+
+Train: see pattern **A**, then choose between **A** and **B**. A is rewarded.
+
+Then: bees generalise to *"choose the same one"* with entirely different
+stimuli — pattern **C**, then C and D — having never seen them.
+
+They transfer the sameness rule **across modalities**, from olfactory
+entrainment to visual test. And they learn the inverse: *choose the odd one*.
+
+---
+
+## Two objections you must be able to state
+
+<div class="cols">
+<div>
+
+**Horridge**
+
+Bees may extract only low-level cues — edge orientation, contour length,
+spectral content — and never represent "sameness" at all.
+
+</div>
+<div>
+
+**Dennett's *Sphex***
+
+The digger wasp, its provisioning interrupted, repeats the whole routine
+indefinitely. Complex behaviour, no comprehension.
+
+</div>
+</div>
+
+Grade the sameness-concept claim **[C]** and say what would move it.
+
+---
+
+## Srinivasan's inversion
+
+The interesting possibility isn't that bees manage rules *despite* small brains.
+
+It's that rule learning, concept formation and categorisation may be adaptive
+**because** of miniaturisation — combining objects under one category economises
+on memory, rather than storing each instance.
+
+Constraint as the cause of abstraction. Keep that for week 12.
+
+---
+
+{/* _class: impact */}
+
+# Part 7 — count the right thing
 
 ---
 
 ## Olkowicz et al., 2016
 
-Isotropic fractionator. 28 avian species. Count the neurons.
+28 avian species, isotropic fractionator.
 
----
+- Parrot and songbird brains hold **roughly twice** the neurons of primate brains of equal mass
+- A **higher proportion** sits in the pallial telencephalon
+- So large parrots and corvids match or exceed monkeys with far larger brains on forebrain neuron count
 
-## The answer
-
-Parrot and songbird brains carry **roughly twice** the neurons of primate brains
-of equal mass.
-
-And a higher proportion sits in the forebrain.
+*PNAS* 113(26), 7255–7260.
 
 ---
 
@@ -57,65 +353,140 @@ They were never small in the currency that matters.
 
 ---
 
-## The complementary argument
+## And the same argument, pointed at us
 
-Herculano-Houzel — a co-author on that paper — on us:
+Herculano-Houzel — a co-author on that paper — on the human brain:
 
-the human brain is an **ordinary primate brain scaled up**. No special
-encephalisation.
+an **ordinary primate brain scaled up**, with no special encephalisation.
 
-What is unusual is the cortical neuron count, and the metabolic budget to run it.
+What is unusual is the absolute cortical neuron count, and the metabolic budget
+required to run it.
 
----
-
-## And in insects
-
-Chittka & Niven, 2009.
-
-Differentiated behaviour, social structure and something like categorisation
-need far fewer neurons than anyone assumed.
+```notes
+Also kill the 10:1 glia myth here if anyone raises it. It is about 1:1.
+```
 
 ---
 
 {/* _class: impact */}
 
-# The best experiment on this course
+# Part 8 — the ant
 
 ---
 
-## *Cataglyphis fortis*
+## Two quantities, two mechanisms
 
-Path integration.
+*Cataglyphis fortis*, Saharan salt-pan forager. No pheromone trail — too hot,
+too volatile.
 
-Direction from polarised skylight. Distance from **counting its own strides**.
-
----
-
-## Wittlinger, Wehner & Wolf, 2006
-
-After the outbound run, glue pig-bristle **stilts** to the legs.
-
-Or trim the legs to **stumps**.
-
----
-
-## Result
-
-| Manipulation | Homeward run |
+| Quantity | Source |
 | --- | --- |
-| Stilts, after outbound | overshoots the nest |
-| Stumps, after outbound | undershoots |
-| Either, **before** outbound | correct |
+| Direction | celestial compass, polarised skylight |
+| Distance | **a stride integrator** |
 
-Same stride counted both ways. It's a pedometer.
+The second one is the claim that needed proving.
 
 ---
 
-## What is stored
+## The design is the argument
 
-A **vector**. Not a route.
+![A flow diagram: ants trained to a feeder complete an outbound run, then have their legs altered. Stilts produce overshoot and stumps produce undershoot, because the same stride count is applied to a different stride length. Ants altered before the outbound run navigate correctly. The conclusion is that distance is measured by counting strides.](./figures/stilts-and-stumps.svg)
 
-So it always knows where home is, and never knows how it got where it is.
+Wittlinger, Wehner & Wolf, *Science* 312, 1965–1967 (2006).
+
+---
+
+## Why the control is the clever part
+
+Manipulating **before** the outbound run leaves navigation intact.
+
+The ant counts the same stride length in both directions, so the error cancels.
+
+That single condition rules out optic flow, energy expenditure and elapsed time
+in one move.
+
+```notes
+Ask them to design the control before showing it. Most propose a sham operation,
+which does not dissociate the mechanism.
+```
+
+---
+
+## Robust in ways that are informative
+
+The distance estimate survives:
+
+- carrying heavy prey
+- walking backwards
+- losing one or two legs
+
+It's a **stride integrator** that compensates for stride length and walking
+speed, not a naive step counter. Follow-up: *J Exp Biol* 210(2), 198–207 (2007).
+
+---
+
+## And bees do it completely differently
+
+Walking insects integrate strides. **Flying insects use optic flow.**
+
+Same computational problem, two unrelated solutions, chosen by what the body
+makes available.
+
+---
+
+{/* _class: impact */}
+
+# What is stored is a vector
+
+---
+
+## Not a route
+
+<div class="cols">
+<div>
+
+**A route** would let you retrace, cross-check, and recognise where you had
+been.
+
+**A vector** is a bearing and a distance, continuously updated.
+
+</div>
+<div>
+
+So the ant always knows where home is —
+
+and never knows how it got where it is.
+
+</div>
+</div>
+
+---
+
+## Which has a consequence you can compute
+
+![Two panels. Left, a simulated wandering outbound path from the nest, with the true direction home and the slightly wrong homeward vector the ant actually runs, missing by a couple of body lengths. Right, mean miss distance against outbound path length, crossing the width of the nest entrance at around fifty steps.](./figures/path-integration-error.svg)
+
+Simulation: per-step heading error SD 6°, step-length error SD 4%, seeded.
+
+---
+
+## The result is not what you would guess
+
+The integrator is **good**. Errors partly cancel on a wandering path, so the
+miss grows roughly as √n and stays within a few body lengths.
+
+It is still not good enough — **because the target is a hole.**
+
+Past ~50 steps the expected error exceeds the nest entrance.
+
+---
+
+## So the spiral is not a failure
+
+Arriving in the right place stops being the same as finding it.
+
+The systematic search at the end of the homeward run is the **only available
+remedy** for an accumulator with no external reference.
 
 ---
 
@@ -125,20 +496,85 @@ An ant that is lost behaves exactly like an ant that is not.
 
 ---
 
-## Carry that to week 12
+## Take that sentence to week 12
 
-The integrator has no independent reference against which to check itself.
+No independent reference means no error signal.
 
-No better engineering **inside** that design fixes it.
+No error signal means the failure is **invisible from inside**, and no amount of
+better engineering within that design removes it.
+
+You can see the ant's bound because you are outside it.
 
 ---
 
-## Two things with no obvious function
+{/* _class: impact */}
 
-Bumblebees roll wooden balls with no reward, detouring to do it. Younger ones
-more. Meets criteria for play.
+# Part 9 — two things with no obvious function
 
-Jumping spiders show regular retinal movement bouts with limb twitching,
-lengthening through the night. Looks like REM.
+---
 
-**[C]** and **[C]**. Seminar: what would move either?
+## Bumblebees roll balls
+
+Galpayage Dona et al., *Animal Behaviour* 194, 239–251 (2022).
+
+- 45 tagged bees; individuals rolled between **1 and 117** times
+- they **detoured** into a ball chamber past a clear path to food
+- a second experiment (42 bees) showed colour-chamber preference for balls
+- younger bees rolled more; males rolled for longer
+
+No proboscis extension, no biting — so not food-directed. Frequency rose then
+fell, matching play rather than exploration.
+
+---
+
+## Jumping spiders may dream
+
+Rößler et al., *PNAS* 119(33), e2204754119 (2022).
+
+The method is the finding: salticids cannot move their lenses, but they *can*
+move their retinal tubes — and newly emerged spiderlings are unpigmented
+enough to watch it happen.
+
+34 spiders showed regular bouts of retinal movement with limb and spinneret
+twitching, lengthening through the night.
+
+---
+
+## Grade both honestly
+
+**[C]** and **[C]**.
+
+Neither tells us what we want it to. "Play" and "REM" are both defined by
+criteria developed on mammals, and the question of whether those criteria
+travel is exactly the question.
+
+Seminar: what evidence would move either?
+
+---
+
+{/* _class: impact */}
+
+# What this week established
+
+---
+
+## Four things
+
+1. **A small brain is not a scaled-down large one** — it is differently
+   apportioned, and mostly it is sensors.
+2. **Scaling buys resolution, not new operations** — more glomeruli, more
+   ommatidia, more cortex doing low-level extraction.
+3. **Counting neurons rather than grams dissolves the corvid puzzle** — and
+   makes our own brain unremarkable for its lineage.
+4. **A system with no external reference cannot detect its own error** — the
+   ant, stated once, and the whole of week 12.
+
+---
+
+{/* _class: centered */}
+
+## Next week
+
+An animal whose nervous system is mostly not in its brain.
+
+And a famous question that may be the wrong shape.

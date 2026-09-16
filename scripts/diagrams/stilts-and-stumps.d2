@@ -1,0 +1,36 @@
+# Wittlinger, Wehner & Wolf (2006), Science 312, 1965-1967.
+# Week 8. The design is the argument: manipulating stride length AFTER the
+# outbound run dissociates distance measurement from everything else.
+
+...@_style
+
+direction: right
+
+train: "Train to a feeder\nin a channel" { class: node }
+
+outbound: "Outbound run\ncompleted" { class: node }
+train -> outbound: "" { class: edge }
+
+manip: "Legs altered\nbefore homeward run" { class: accent }
+outbound -> manip: "" { class: edge-accent }
+
+stilts: "Stilts\npig bristles glued on\n→ longer strides" { class: node }
+stumps: "Stumps\nlegs shortened\n→ shorter strides" { class: node }
+
+manip -> stilts: "" { class: edge }
+manip -> stumps: "" { class: edge }
+
+over: "Overshoots the nest" { class: warn }
+under: "Undershoots" { class: warn }
+
+stilts -> over: "counts the same\nnumber of strides" { class: edge-warn }
+stumps -> under: "same count,\nshorter strides" { class: edge-warn }
+
+control: "Altered BEFORE\nthe outbound run" { class: muted }
+correct: "Navigates correctly" { class: accent }
+control -> correct: "same stride\nboth directions" { class: edge-accent }
+
+verdict: "Distance is measured by counting strides,\nnot by optic flow or energy use" { class: accent }
+over -> verdict: "" { class: edge }
+under -> verdict: "" { class: edge }
+correct -> verdict: "" { class: edge }
