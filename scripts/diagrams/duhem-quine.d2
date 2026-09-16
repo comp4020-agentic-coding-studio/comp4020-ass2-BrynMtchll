@@ -1,0 +1,20 @@
+# Week 12. Underdetermination: a failed prediction indicts the bundle, not the
+# hypothesis. Drawn so the arrow of blame has nowhere specific to land.
+...@_style
+direction: right
+obs: "One observation" { class: accent }
+bundle: Bundle actually under test {
+  style.fill: transparent
+  style.stroke: "#5c5850"
+  h: "Hypothesis" { class: node }
+  inst: "Instrument assumptions" { class: node }
+  bg: "Background theory" { class: node }
+  init: "Initial conditions" { class: node }
+}
+obs -> bundle: "" { class: edge-accent }
+fail: "Prediction fails" { class: warn }
+bundle -> fail: "" { class: edge-warn }
+which: "But which element?\nThe observation does not say." { class: warn }
+fail -> which: "" { class: edge-warn }
+counter: "Laudan & Leplin:\nthe thesis is far weaker\nthan usually claimed" { class: muted }
+which -> counter: "read this too" { class: edge }

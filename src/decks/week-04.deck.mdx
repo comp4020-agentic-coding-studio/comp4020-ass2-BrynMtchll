@@ -59,6 +59,106 @@ Hold that distinction. It returns in week 11 about us.
 
 ---
 
+## Say it formally
+
+The contingency between action and outcome is not co-occurrence. It is a
+*difference*:
+
+```
+ΔP = P(outcome | action) − P(outcome | no action)
+```
+
+On a fixed-interval schedule, food arrives on a timer. So both terms are equal
+and **ΔP = 0**, exactly, for every action the animal could make.
+
+---
+
+## And yet
+
+![Left, six action strengths over four thousand steps: one action rises to near-certainty while the others collapse below chance. Right, a bar chart comparing the true contingency of zero against the learned strength of the winning action.](./figures/superstition.svg)
+
+Simulated agent with access to co-occurrence only. Reward on a fixed interval,
+unaffected by anything it does.
+
+---
+
+## Why it happens, mechanically
+
+Whichever action happens to be **in progress** when the timer fires gains
+strength.
+
+Gaining strength means being emitted more often. Being emitted more often means
+being more likely to be in progress next time.
+
+**Positive feedback on a coincidence.** The winner reaches near-certainty at a
+true contingency of exactly zero.
+
+---
+
+## So superstition is not a bug
+
+It is what the mechanism does when running correctly on input that happens to
+be misleading.
+
+Skinner (1948) reported exactly this in pigeons: turning, head-thrusting,
+pendulum motions — elaborate, stereotyped, and from the bird's position,
+working.
+
+---
+
+## But the mechanism is cleverer than pure contiguity
+
+Here is the refinement, and it is the reason associative learning is a serious
+theory rather than a caricature.
+
+**Rescorla & Wagner (1972)**: learning is driven not by co-occurrence but by
+**prediction error** — how surprising the outcome was given everything already
+predicting it.
+
+```
+ΔV = αβ(λ − ΣV)
+```
+
+---
+
+## Which predicts blocking, and blocking happens
+
+**Kamin's design:**
+
+| Phase | Training | Result |
+| --- | --- | --- |
+| 1 | cue A → shock | A becomes predictive |
+| 2 | A **and** B together → shock | B learns almost nothing |
+
+B co-occurs with the shock perfectly. On a contiguity account it should be
+learned. It is not — because A already predicted the shock, so there was no
+error left to drive learning.
+
+---
+
+## Note what that means for this course
+
+The mechanism tracks **unexplained variance**, not co-occurrence.
+
+Which is a prediction-error account in 1972, twenty-six years before week 6's
+literature, in a rat.
+
+```notes
+Point forward explicitly. Students otherwise treat week 6 as arriving from
+nowhere.
+```
+
+---
+
+## And it still cannot solve the original problem
+
+Prediction error tells you *that* something was unexplained. It does not tell
+you **why**, and it has no access to whether the relationship is causal.
+
+A reliable coincidence generates exactly the same error signal as a cause.
+
+---
+
 {/* _class: impact */}
 
 # A horse

@@ -1,0 +1,14 @@
+# Week 9. Nagel (1974) against Akins. The disjunction is the content: what our
+# failure to answer tells us depends on which branch is true.
+...@_style
+direction: down
+q: "What is it like\nto be a bat?" { class: accent }
+assume: "Presupposes: bat sensory states\nare representational in the way\nthe question requires" { class: node }
+q -> assume: "" { class: edge }
+yes: "If true\n\nour failure tells us about\nthe limits of imagination" { class: node }
+no: "If false (Akins)\n\nour failure tells us about\nthe question" { class: warn }
+assume -> yes: "holds" { class: edge }
+assume -> no: "fails" { class: edge-warn }
+note: "Same inability to answer.\nTwo completely different conclusions." { class: muted }
+yes -> note: "" { style.opacity: 0 }
+no -> note: "" { style.opacity: 0 }

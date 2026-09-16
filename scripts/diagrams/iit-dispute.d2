@@ -1,0 +1,13 @@
+# Week 12. A science arguing in public about whether its own central theory is
+# testable. Week 7's mirror-test structure, at field scale.
+...@_style
+direction: right
+jun: "Jun 2023\nCogitate preprint:\nadversarial collaboration" { class: node }
+sep: "Sep 2023\n124 researchers sign a letter\ncalling IIT pseudoscience" { class: accent }
+pub: "Published in Nature:\nresults challenge BOTH theories" { class: node }
+jun -> sep: "press coverage" { class: edge }
+sep -> pub: "" { class: edge }
+design: "Predictions agreed IN ADVANCE\nby proponents of two rival theories\n(Dehaene and Tononi)" { class: muted }
+design -> jun: "" { class: edge }
+defend: "Seth, Goff and others defend IIT:\ncalling a theory wrong is not\ncalling it pseudoscience" { class: warn }
+sep -> defend: "" { class: edge-warn }

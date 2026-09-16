@@ -1,0 +1,16 @@
+# Pfungst (1911). Week 4. The point is that no link in this chain involves
+# anyone intending to deceive, which is why it generalises to every experiment.
+...@_style
+direction: right
+q: "Questioner knows\nthe answer" { class: node }
+cue: "Involuntary postural cue\nbelow the questioner's notice" { class: accent }
+horse: "Horse reads the cue\nand stops tapping" { class: node }
+correct: "Correct answer" { class: node }
+q -> cue: "" { class: edge-accent }
+cue -> horse: "" { class: edge-accent }
+horse -> correct: "" { class: edge }
+blind: "Questioner does NOT\nknow the answer" { class: muted }
+fail: "Performance collapses" { class: warn }
+blind -> fail: "" { class: edge-warn }
+lesson: "The experimenter is part of the apparatus.\nNobody lied." { class: accent }
+correct -> lesson: "" { style.opacity: 0 }
