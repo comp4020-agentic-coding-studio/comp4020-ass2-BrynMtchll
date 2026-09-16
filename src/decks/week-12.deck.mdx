@@ -39,58 +39,22 @@ SLOP3233 · Week 12 · Halvard Emms
 
 ## What you expect this week to be
 
-<figure class="fig">
-<svg viewBox="0 0 440 210" role="img" aria-label="The familiar Dunning-Kruger chart: a flat high line for self-assessment across all quartiles crossing a steeply rising line for actual performance.">
-  <line x1="56" y1="16" x2="56" y2="166" class="d-line" />
-  <line x1="56" y1="166" x2="410" y2="166" class="d-line" />
-  <text x="20" y="90" class="d-sm">score</text>
-  <path d="M90 66 L170 62 L250 58 L330 52" class="d-accent" />
-  <text x="340" y="42" class="d-hi">self-estimate</text>
-  <path d="M90 150 L170 116 L250 76 L330 30" class="d-line" stroke-width="3" />
-  <text x="340" y="24" class="d-sm">actual</text>
-  <g class="d-sm">
-    <text x="90" y="186" text-anchor="middle">Q1</text><text x="170" y="186" text-anchor="middle">Q2</text>
-    <text x="250" y="186" text-anchor="middle">Q3</text><text x="330" y="186" text-anchor="middle">Q4</text>
-  </g>
-  <text x="230" y="204" text-anchor="middle" class="d-sm">actual performance quartile</text>
-</svg>
-<figcaption>The bottom quartile overrates itself enormously; the top underrates slightly. A metacognitive deficit, apparently.</figcaption>
-</figure>
+![A chart with a nearly flat self-estimate line sitting well above a steeply rising actual-performance line, the two crossing near the third quartile.](./figures/dunning-kruger-classic.svg)
+
+The bottom quartile overrates itself enormously. The top underrates slightly.
+
+A metacognitive deficit, apparently.
 
 ---
 
 ## Krueger & Mueller, 2002: build it from nothing
 
-<figure class="fig">
-<svg viewBox="0 0 540 220" role="img" aria-label="Left panel: a scatter of actual versus estimated score with a weak positive correlation, all points shifted above the midline. Right panel: the same points averaged within quartiles, producing the familiar crossing lines.">
-  <text x="8" y="14" class="d-sm">1 · noisy estimates, everyone above average</text>
-  <line x1="30" y1="24" x2="30" y2="164" class="d-line" />
-  <line x1="30" y1="164" x2="230" y2="164" class="d-line" />
-  <line x1="30" y1="164" x2="230" y2="34" class="d-muted" stroke-dasharray="4 4" />
-  <g class="d-fill-muted">
-    <circle cx="52" cy="92" r="4" /><circle cx="64" cy="118" r="4" /><circle cx="70" cy="74" r="4" />
-    <circle cx="88" cy="104" r="4" /><circle cx="96" cy="66" r="4" /><circle cx="110" cy="96" r="4" />
-    <circle cx="124" cy="120" r="4" /><circle cx="132" cy="70" r="4" /><circle cx="148" cy="88" r="4" />
-    <circle cx="160" cy="58" r="4" /><circle cx="172" cy="104" r="4" /><circle cx="186" cy="72" r="4" />
-    <circle cx="198" cy="50" r="4" /><circle cx="210" cy="86" r="4" /><circle cx="218" cy="62" r="4" />
-  </g>
-  <text x="36" y="182" class="d-sm">actual →</text>
-  <text x="8" y="200" class="d-sm">imperfect correlation + better-than-average</text>
+![Two panels. Left, a scatter of 2000 simulated people: actual percentile against self-estimated percentile, weakly correlated and shifted above the diagonal. Right, the same points averaged within actual-performance quartiles, reproducing the crossing lines from the previous slide.](./figures/dunning-kruger-artefact.svg)
 
-  <text x="300" y="14" class="d-sm">2 · average within quartiles</text>
-  <line x1="316" y1="24" x2="316" y2="164" class="d-line" />
-  <line x1="316" y1="164" x2="520" y2="164" class="d-line" />
-  <path d="M340 84 L386 80 L432 76 L478 70" class="d-accent" />
-  <path d="M340 142 L386 118 L432 82 L478 42" class="d-line" stroke-width="3" />
-  <text x="332" y="182" class="d-sm">Q1  Q2  Q3  Q4</text>
-  <text x="418" y="200" text-anchor="middle" class="d-warn-t">the same chart</text>
-</svg>
-<figcaption>Regression to the mean plus a better-than-average effect reproduces the shape. No metacognitive deficit required. Illustrative, not their figures.</figcaption>
-</figure>
+Simulated: r = 0.30, mean estimate at the 66th percentile, n = 2000, seeded.
 
-```notes
-Ask before revealing panel 2: what would you expect if self-estimates were pure noise plus a constant?
-```
+**Nothing in that model knows anything about competence-to-judge.** Q1 still
+"overrates" itself by 44 points.
 
 ---
 
@@ -162,28 +126,9 @@ The most famous claim about not knowing what you don't know is itself not fully 
 
 ## Agrippa's trilemma
 
-<figure class="fig">
-<svg viewBox="0 0 520 200" role="img" aria-label="A claim branches into three options: a circular chain returning to itself, an infinite regress, and a chain terminating at an arbitrary stopping point.">
-  <rect x="196" y="8" width="120" height="36" class="d-accent" />
-  <text x="256" y="26" text-anchor="middle" class="d-hi">justify this</text>
-  <path d="M256 44 v20 M256 64 h-160 v18 M256 64 h160 v18 M256 64 v18" class="d-line" />
-  <g>
-    <circle cx="96" cy="126" r="30" class="d-warn" />
-    <path d="M78 112 l10 -8 l2 12" class="d-warn" />
-    <text x="96" y="178" text-anchor="middle" class="d-sm">circular</text>
-  </g>
-  <g>
-    <path d="M226 100 h60 M234 118 h52 M242 136 h44 M250 154 h36" class="d-warn" />
-    <text x="266" y="178" text-anchor="middle" class="d-sm">infinite</text>
-  </g>
-  <g>
-    <path d="M416 100 v46" class="d-warn" />
-    <line x1="396" y1="146" x2="436" y2="146" class="d-accent" />
-    <text x="416" y="178" text-anchor="middle" class="d-sm">stops arbitrarily</text>
-  </g>
-</svg>
-<figcaption>Via Sextus. Pick a horn in the seminar and defend it — you are already standing on one.</figcaption>
-</figure>
+![A directed graph: the question why believe P branches to three terminal options - circular, infinite, and arbitrary stop - each of which leads to a note that you are standing on one of them.](./figures/agrippa-trilemma.svg)
+
+Via Sextus, *Outlines of Pyrrhonism* I.164–169. Pick a horn and defend it.
 
 ---
 

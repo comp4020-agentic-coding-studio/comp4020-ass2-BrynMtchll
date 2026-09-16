@@ -97,21 +97,11 @@ So only its accuracy is negotiable.
 
 ## Shannon gave us the price list
 
-<figure class="fig">
-<svg viewBox="0 0 460 230" role="img" aria-label="A rate-distortion curve falling from high rate at zero distortion towards zero rate at maximum distortion, with a marked operating point.">
-  <line x1="60" y1="20" x2="60" y2="185" class="d-line" />
-  <line x1="60" y1="185" x2="420" y2="185" class="d-line" />
-  <text x="24" y="100" class="d-sm">rate</text>
-  <text x="240" y="212" text-anchor="middle" class="d-sm">distortion (information lost)</text>
-  <path d="M70 28 C140 40 180 120 260 152 S360 180 410 183" class="d-accent" />
-  <circle cx="260" cy="152" r="6" class="d-fill-accent" />
-  <text x="276" y="140" class="d-hi">every organism</text>
-  <text x="276" y="158" class="d-sm">sits somewhere on this curve</text>
-  <text x="74" y="40" class="d-sm">perfect fidelity,</text>
-  <text x="74" y="56" class="d-sm">unaffordable</text>
-</svg>
-<figcaption>Rate–distortion theory: given a fixed capacity, the least damage you can do. Schematic curve, not measured data.</figcaption>
-</figure>
+![Rate-distortion curves for two memoryless Gaussian sources. Rate in bits per sample falls steeply as permitted distortion rises, reaching zero at distortion equal to the source variance.](./figures/rate-distortion.svg)
+
+The exact closed form, not a sketch: **R(D) = ½·log₂(σ²/D)**.
+
+Past D = σ² the rate is zero — you send nothing and guess the mean.
 
 ---
 

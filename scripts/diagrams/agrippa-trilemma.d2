@@ -1,0 +1,21 @@
+# Agrippa's trilemma, via Sextus Empiricus, Outlines of Pyrrhonism I.164-169.
+# Week 12. Every chain of justification terminates in one of three ways, and
+# none of the three is comfortable.
+
+...@_style
+
+claim: "Why believe P?" { class: accent }
+
+circular: "Circular\n\nP because Q,\nQ because P" { class: warn }
+infinite: "Infinite\n\nP because Q,\nQ because R,\nR because…" { class: warn }
+arbitrary: "Arbitrary stop\n\nP because Q.\nQ needs no reason." { class: warn }
+
+claim -> circular: "" { class: edge }
+claim -> infinite: "" { class: edge }
+claim -> arbitrary: "" { class: edge }
+
+verdict: "You are standing on one of these right now" { class: muted }
+
+circular -> verdict: "" { class: edge-warn }
+infinite -> verdict: "" { class: edge-warn }
+arbitrary -> verdict: "" { class: edge-warn }

@@ -77,5 +77,17 @@ ax2.annotate(
 )
 
 ds.save(fig, "dunning-kruger-artefact")
+
+# The same simulation, shown the familiar way: quartile means only. This is the
+# chart everyone has seen, and it came out of a model with no deficit in it.
+fig2, ax = plt.subplots(figsize=(6.6, 3.8))
+ax.plot(xs, actual_means, color=ds.FG, lw=2.8, marker="o", label="actual performance")
+ax.plot(xs, est_means, color=ds.ACCENT, lw=2.8, marker="o", label="self-estimate")
+ax.set_xticks(xs, ["Q1", "Q2", "Q3", "Q4"])
+ax.set_xlabel("actual performance quartile")
+ax.set_ylabel("percentile")
+ax.set_ylim(0, 100)
+ax.legend(loc="lower right")
+ds.save(fig2, "dunning-kruger-classic")
 print(f"  Q1 actual {actual_means[0]:.1f} vs estimate {est_means[0]:.1f}")
 print(f"  Q4 actual {actual_means[3]:.1f} vs estimate {est_means[3]:.1f}")

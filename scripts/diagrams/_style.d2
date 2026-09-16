@@ -1,0 +1,74 @@
+# Shared look for every diagram in this course's decks.
+# Imported by each source file so a colour is defined once. Palette matches
+# scripts/figures/deckstyle.py and the --at-* brand tokens the deck theme uses.
+
+vars: {
+  d2-config: {
+    layout-engine: dagre
+    pad: 16
+    center: true
+  }
+}
+
+classes: {
+  node: {
+    style: {
+      fill: transparent
+      stroke: "#8f8a82"
+      stroke-width: 2
+      font-color: "#e8e4dc"
+      border-radius: 4
+    }
+  }
+  accent: {
+    style: {
+      fill: "#2b2823"
+      stroke: "#f2b53b"
+      stroke-width: 3
+      font-color: "#e8e4dc"
+      border-radius: 4
+      bold: true
+    }
+  }
+  warn: {
+    style: {
+      fill: transparent
+      stroke: "#e2664f"
+      stroke-width: 3
+      stroke-dash: 4
+      font-color: "#e2664f"
+      border-radius: 4
+    }
+  }
+  muted: {
+    style: {
+      fill: transparent
+      stroke: "#5c5850"
+      stroke-width: 1
+      font-color: "#8f8a82"
+      border-radius: 4
+    }
+  }
+  edge: {
+    style: {
+      stroke: "#8f8a82"
+      stroke-width: 2
+      font-color: "#8f8a82"
+    }
+  }
+  edge-accent: {
+    style: {
+      stroke: "#f2b53b"
+      stroke-width: 3
+      font-color: "#e8e4dc"
+    }
+  }
+  edge-warn: {
+    style: {
+      stroke: "#e2664f"
+      stroke-width: 2
+      stroke-dash: 4
+      font-color: "#e2664f"
+    }
+  }
+}
