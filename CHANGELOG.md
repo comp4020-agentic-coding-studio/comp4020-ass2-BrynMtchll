@@ -96,6 +96,66 @@ Range was 21–52. Topped up the thin decks with content rather than padding:
 
 ---
 
+## Pass 2 — consistency across the whole course
+
+Pass 1 fixed defects. Pass 2 looked for things that were individually fine and
+inconsistent together.
+
+### Method
+
+Rather than re-reading, I wrote throwaway checks: cross-week reference maps,
+citation-style counts, assessment weight totals, dash-variant counts, and a
+script testing every seminar `spec` line against the distinctive nouns of its
+own deck. Most of what pass 2 found was invisible on a read-through.
+
+### Found and fixed
+
+- **Em-dash overuse, against the course's own voice rules.** 220 across twelve
+  decks, roughly eighteen per deck. `CLAUDE.md` records em-dashes as "allowed
+  but rare, never the main way a sentence is built", derived from Bryn's own
+  writing. Reduced to 153 by converting the safe mid-sentence cases to commas,
+  every other eligible occurrence, leaving parentheticals and list glosses
+  alone.
+  **Judgement call:** stopped at 153 (~0.4 per slide) rather than pushing
+  lower. Below that the remaining instances are load-bearing and automated
+  conversion starts mangling prose for diminishing return.
+- **`coupling–constitution` with an en-dash in week 10**, against
+  `coupling-constitution` with a hyphen in the seminar spec and elsewhere.
+  Normalised to the hyphen.
+- **Week 11's seminar spec promised what the deck never delivered.** The spec
+  asks students to "name three findings from the bias canon that have failed to
+  replicate *and say what replaced them*". The deck named the collapses and
+  never said what stands in their place. Added a table doing so, with the point
+  that none of the replacements is "nothing" — the phenomena did not vanish,
+  the explanations were too strong.
+- **Slide counts evened.** Range was 21–52 before pass 1, now 26–58. Weeks 1
+  and 2 were the remaining outliers and got substance rather than filler: week
+  1 now runs the four-claims grading exercise with real claims and real answers
+  (two of which are uncomfortable), and week 2 closes on three Umwelten priced
+  against each other, which sets up the question the rest of the course asks.
+
+### Checked and sound
+
+- assessment weights total exactly 100
+- every referenced figure exists; no orphaned figures remain
+- cross-week references form a coherent graph, with no pointers to weeks that
+  do not cover the referenced material
+- every other seminar `spec` line is covered by its deck (the remaining
+  low-scoring lines were heuristic false positives, verified by hand)
+- `pnpm check` green throughout: 50 pages, no accessibility violations, no
+  broken links, 14 tests
+
+### Deliberately not changed
+
+- **Week 8 is the longest deck at 58 slides.** It carries the keystone example
+  and the worked assessment, and both earn the length. Cutting it to match the
+  others would remove the worked example, which is the thing closing the
+  taught/assessed gap.
+- **Week 2 remains among the shortest.** Its job is to establish one idea —
+  sensing is a commitment, not reception — and padding it would dilute that.
+
+---
+
 ## Figures: the policy, and two judgement calls
 
 Every figure is generated from source — matplotlib for data and computation, D2
