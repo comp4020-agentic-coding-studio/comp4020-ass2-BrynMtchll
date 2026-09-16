@@ -1,59 +1,199 @@
 ---
 title: The map, and what it was really for
-description: Week 5 — eighty years of a spatial system, and the result that reframed it
+description: Week 5 — Tolman against the behaviourists, the cells that vindicated him, and the 2016 result suggesting none of it was specifically about space
 ---
 
 # The map, and what it was really for
 
-SLOP3233 · Week 5
-
-Tuyet Nabarro
+SLOP3233 · Week 5 · Tuyet Nabarro
 
 ---
 
-## What association cannot do
+## What association could not do
 
-Act on a part of the world you are not currently touching.
+Week 4 gave the system co-occurrence. That is enough to learn.
+
+It is not enough to **act on a part of the world you are not currently
+touching**.
 
 For that you need something held that is not being sensed.
 
 ---
 
-## Tolman, 1948
+{/* _class: impact */}
 
-Rats in mazes doing things their training never rewarded.
-
-Not a chain of associations. Something **map-like**.
+# Part 1 — Tolman's heresy
 
 ---
 
-## O'Keefe & Dostrovsky, 1971
+## The orthodoxy he was arguing with
 
-Cells that fire for place.
+By the 1940s the dominant account of maze learning was a **chain of
+stimulus–response associations**: at this junction, turn left; at that smell,
+go forward.
 
-The story looked finished: there is a spatial system, here are its parts.
+Learning was strengthening links. Nothing needed representing.
 
-Nobel, eventually.
+---
+
+## Latent learning breaks it
+
+Rats allowed to wander a maze **with no reward at all** later learn the rewarded
+route faster than naive rats.
+
+On an S–R account there was nothing to strengthen. No reward, no reinforcement,
+no learning.
+
+Something was acquired anyway.
+
+---
+
+## Place learning against response learning
+
+Train a rat to food that is always in the **same place**, from varying start
+points. It succeeds.
+
+An S–R chain cannot transfer across start points, because the required response
+differs from each one.
+
+---
+
+## Shortcuts
+
+Block the trained route and open a set of novel radial arms.
+
+Rats select the arm pointing at the **goal location** — a route they have never
+run and never been rewarded for.
+
+---
+
+{/* _class: quote */}
+
+Tolman, 1948: something map-like, not a chain of associations.
+
+*Psychological Review* 55(4), 189–208.
 
 ---
 
 {/* _class: impact */}
 
-# Then 2016
+# Part 2 — twenty-three years later, the cells
 
 ---
 
-## Constantinescu, O'Reilly & Behrens
+## O'Keefe & Dostrovsky, 1971
 
-People navigating a two-dimensional space of **concepts**. Not places.
+Recording in rat hippocampus, they find units that fire when the animal is in a
+**particular place in the environment** — and not otherwise.
+
+Not a response. Not a stimulus. A location.
+
+*Brain Research* 34(1), 171–175.
 
 ---
 
-## The signal turned up anyway
+## What place cells are not
 
-Hexagonally symmetric. Entorhinal cortex and vmPFC.
+- **Not** tied to a sensory cue — the field persists in darkness
+- **Not** tied to a movement — it fires regardless of heading, in an open arena
+- **Not** a single map — the population **remaps** across environments
 
-Stable across sessions a week apart.
+O'Keefe & Nadel's *The Hippocampus as a Cognitive Map* (1978) is the synthesis.
+
+---
+
+## The rest of the toolkit
+
+| Cell type | Codes |
+| --- | --- |
+| Place cells | where you are |
+| **Grid cells** | a periodic metric over the whole surface |
+| Head-direction cells | which way you face |
+| Boundary vector cells | distance and bearing to walls |
+| Speed cells | how fast you are going |
+
+Enough, in principle, to do dead reckoning — which is what week 8's ant does
+with vastly less.
+
+---
+
+## Hafting et al., 2005
+
+Entorhinal cells whose firing fields tile the environment in a **regular
+triangular lattice**.
+
+Not one place. A periodic metric.
+
+Nobel Prize 2014 — O'Keefe, and May-Britt and Edvard Moser.
+
+---
+
+{/* _class: impact */}
+
+# Why hexagonal?
+
+---
+
+## Because interference forces it
+
+![Two panels showing the same hexagonally symmetric field of bright peaks on a dark ground. The left panel is labelled with spatial axes in metres and has a dashed hexagon marking the 60 degree symmetry. The right panel has identical structure but its axes are labelled as two abstract stimulus dimensions.](./figures/grid-cells.svg)
+
+---
+
+## The construction
+
+```
+field(x, y) = Σ cos(kᵢ · x)   for three wave vectors 60° apart
+```
+
+Threshold it, and a triangular lattice is the only thing that can come out.
+
+So **60° symmetry is not an observation about rodents.** It is what summing
+three plane waves at 60° does, anywhere, in any medium.
+
+```notes
+This is the slide that makes the 2016 result comprehensible rather than magical.
+```
+
+---
+
+## Which gives the fMRI work its handle
+
+You cannot resolve single grid cells in a human scanner.
+
+But a population using a hexagonally symmetric code produces a **six-fold
+periodic signal** as a function of movement direction — and that you can
+measure.
+
+---
+
+{/* _class: impact */}
+
+# Part 3 — the reframe
+
+---
+
+## Constantinescu, O'Reilly & Behrens, 2016
+
+Participants learn a space of **morphing bird silhouettes**: two continuous
+dimensions, neck length and leg length.
+
+No arena. No movement. No space.
+
+They then "navigate" it — imagining transitions from one bird to another.
+
+---
+
+## The signal turns up anyway
+
+**Hexagonally symmetric**, as a function of direction through the *conceptual*
+space.
+
+In entorhinal cortex and ventromedial prefrontal cortex.
+
+**Stable across sessions acquired a week apart.**
+
+*Science* 352(6292), 1464–1468.
 
 ---
 
@@ -63,53 +203,130 @@ If one mechanism organises relational structure generally, space is just the ins
 
 ---
 
-## Which is why we found it there first
+## Why we found it in space first
 
-Not because space is special.
+Not because space is special to the brain.
 
-Because space is **visible** — you can put an animal in a maze and watch.
+Because space is **observable to the experimenter** — you can put an animal in
+a box and watch where it goes. You cannot watch it move through a space of bird
+shapes.
+
+The apparatus selected the domain, and we mistook that for the subject.
+
+---
+
+## The model that unifies them
+
+Whittington et al., **the Tolman–Eichenbaum Machine**, *Cell* (2020).
+
+One architecture in which spatial and relational memory are the same
+computation, with place-like and grid-like codes emerging from the demand to
+generalise structure across environments.
+
+Named, deliberately, for the two people the field spent fifty years reconciling.
 
 ---
 
 ## What this does to the course
 
-This week stops being a step on the road to cognition.
+This week stops being a step toward cognition.
 
-It becomes closer to the **substrate** the later weeks run on.
+It becomes closer to the **substrate the later weeks run on** — if concepts are
+navigated with the machinery of place, then week 7's self-model and week 11's
+categories inherit its properties.
+
+Including its failure modes.
 
 ---
 
-## For the formal version
+## The honest caveat
 
-Whittington et al., 2020 — the Tolman–Eichenbaum Machine.
+Whether the six-fold fMRI signal really reflects grid cells, or some other
+periodically-tuned population, is **not settled**.
 
-One model, spatial and relational memory unified. On the reading list, not
-examinable.
+The inference runs: grid cells are hexagonal → this signal is hexagonal →
+therefore grid cells. Which is an inference to the best available explanation,
+not a measurement.
+
+Grade **[C]**, and note that the 2016 result has replicated in other
+conceptual domains, which strengthens it without closing it.
 
 ---
 
 {/* _class: impact */}
 
-# The limit
+# Part 4 — and it lies
 
 ---
 
-## What a map costs
+## A map buys you reach
 
-It can be wrong in ways it cannot represent.
+Act on what you are not sensing. Plan a route you have not walked. Take a
+shortcut.
+
+Every one of those is unavailable to the system in week 4.
 
 ---
 
-## Spatial judgement distorts
+## What it costs
 
-In specific, predictable directions.
+The map can be wrong in ways **the map cannot represent**.
 
-And the distortion is **not available** to the person judging.
+Spatial memory is not a scale model with noise. It is systematically distorted,
+in directions you can predict.
+
+---
+
+## Distortions that are reliably reproducible
+
+- **Route-based inflation** — distance judged longer when the path between two
+  points has more turns or intersections, even at equal metric distance
+- **Boundary effects** — two points judged further apart when a boundary lies
+  between them
+- **Hierarchical error** — city A judged east of city B because *their regions*
+  stand in that relation, when the cities do not
+- **Asymmetry** — the distance from a landmark to an ordinary place is judged
+  differently from the reverse
+
+---
+
+## The part that matters
+
+None of those distortions is **available to the person making the judgement**.
+
+There is no felt uncertainty attached to the wrong answer. The map reports a
+number, and reports nothing about its own deformation.
+
+---
+
+## Which is the pattern, for the third time
+
+| Week | System | What it cannot detect |
+| --- | --- | --- |
+| 3 | slime trail | whether the trail is its own or stale |
+| 4 | association | cause against coincidence |
+| **5** | **the map** | **its own distortion** |
+
+Three mechanisms, three blind spots, and no internal signal in any of them.
+
+---
+
+## One comparative note before we leave
+
+Menzel et al. (2005) displaced honeybees to unfamiliar release sites and
+tracked them by harmonic radar.
+
+They flew novel direct routes to the hive — behaviour that map-like memory
+explains and vector memory alone does not. *PNAS* 102(8), 3040–3045.
+
+A million neurons, doing something Tolman's rats were doubted for.
 
 ---
 
 {/* _class: centered */}
 
-## First appearance of the pattern
+## Next week
 
-By week 12 this is the whole argument.
+The direction of flow reverses,
+
+and most of what you take to be sensing turns out to be generated.
