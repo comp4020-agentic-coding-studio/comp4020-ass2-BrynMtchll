@@ -2,48 +2,86 @@
 import Card from "astro-theme-university/components/Card.astro";
 import CardGrid from "astro-theme-university/components/CardGrid.astro";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
-import heroImage from "../assets/images/hero-home.avif";
 import { courseMeta } from "../course-config";
 import { sessionLabels, siteConfig } from "../site-config";
-
-// STARTER_CONTENT: replace the hero artwork and its alt text below, then
-// remove this comment.
 ---
 
 <ContentLayout
   title={`${courseMeta.code}: ${courseMeta.title}`}
   description={courseMeta.description}
-  heroImage={heroImage}
-  heroImageAlt="A lecture theatre reduced to flat gold and black shapes, rows of seats sweeping past the frame, in a two-ink risograph print"
   {...siteConfig}
 >
   <ul class="course-tags" aria-label="Course tags">
     {courseMeta.tags.map((tag) => <li>{tag}</li>)}
   </ul>
 
-  <!-- STARTER_CONTENT: replace the authored page below, then remove this comment. -->
+  <p class="lede">
+    You are a finite system in a world that is not. Everything you know about it
+    arrived through channels that discard almost all of it, and was compressed
+    again into a model small enough to act on. That compression is what your
+    intelligence <em>is</em>. It is also why there are things you cannot notice
+    you are missing.
+  </p>
+
+  <h2>What the course argues</h2>
+  <p>
+    Intelligence is not a quantity that some animals have more of. It is a set
+    of trades, made under a hard constraint, and every one of them buys a
+    capability by giving something up. We start with a bacterium that holds
+    nothing at all and work upward, and by the end the account is detailed
+    enough to turn on you.
+  </p>
+  <p>
+    The last weeks are the point of the earlier ones. Once you can say what a
+    desert ant cannot detect about its own navigation, the same question about
+    your own judgement stops being rhetorical — and becomes much harder, because
+    you are asking it from inside the thing you are asking about.
+  </p>
+
   <h2>What you will do</h2>
   <p>
-    Say what a student spends their time on — the making, reading, arguing or
-    measuring that fills the weeks. Name the artefact they walk out with.
+    You will read primary literature every week, most of it outside whatever
+    discipline you came from. Four fields are in play and none of them is
+    optional: evolutionary biology says when a capacity appeared and how often,
+    neuroscience says what implements it, psychology says how it was measured,
+    and philosophy asks whether the concept survives being pressed on. A claim
+    supported by only one of them is incomplete, and you will be asked to say so.
+  </p>
+  <p>
+    Much of the field's best-known findings have not replicated. You will grade
+    evidence rather than accumulate it, and you will do this on claims that are
+    still being argued about, with no answer key. In week 2 you will write down
+    what you currently think intelligence is, before you know anything, and in
+    week 11 you will revise it and account for what moved.
   </p>
 
   <h2>Who it is for</h2>
   <p>
-    Say who this is aimed at and what they need to already know. Be specific
-    enough that someone can rule themselves in or out without emailing you.
+    Third-year students from any of biology, neuroscience, psychology,
+    philosophy or computer science. You need no background in the other three,
+    but you do need to be willing to read outside your own — most weeks, the
+    evidence that settles a question comes from a field you have not studied.
+  </p>
+  <p>
+    There is no prerequisite and no exam. If you want a semester of established
+    results, this is the wrong course; roughly a third of what we cover is
+    contested, and the disagreements are the content rather than an
+    inconvenience.
   </p>
 
   <h2>Where to go next</h2>
   <CardGrid columns={2}>
     <Card title={sessionLabels.plural} href="/sessions/">
-      <p>The weekly schedule and what happens in each teaching session.</p>
+      <p>The twelve weeks, and what happens in each.</p>
     </Card>
     <Card title="Assessment" href="/assessments/">
-      <p>What is marked, what it is worth, and when it is due.</p>
+      <p>Four pieces of work, what each is for, and when it is due.</p>
+    </Card>
+    <Card title="Lectures" href="/lectures/">
+      <p>The lecture programme, with slides where they exist.</p>
     </Card>
     <Card title="People" href="/people/">
-      <p>Who teaches the course and how to reach them.</p>
+      <p>Who teaches this and what to ask each of them.</p>
     </Card>
   </CardGrid>
 </ContentLayout>
@@ -64,5 +102,14 @@ import { sessionLabels, siteConfig } from "../site-config";
     color: var(--at-text-secondary);
     background: var(--at-bg-alt);
     font-size: 0.9rem;
+  }
+
+  .lede {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: var(--at-text-secondary);
+    border-inline-start: 3px solid var(--at-border);
+    padding-inline-start: 1.1rem;
+    margin-block-end: 2.5rem;
   }
 </style>
