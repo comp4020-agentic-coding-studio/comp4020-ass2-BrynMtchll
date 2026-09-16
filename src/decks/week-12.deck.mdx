@@ -189,19 +189,10 @@ The most famous claim about not knowing what you don't know is itself not fully 
 
 ## No Free Lunch: the bias is not optional
 
-<figure class="fig">
-<svg viewBox="0 0 500 200" role="img" aria-label="Two learners plotted across a space of problems: each has peaks where it performs well and troughs where it performs badly, and the area under both curves is identical.">
-  <line x1="50" y1="14" x2="50" y2="150" class="d-line" />
-  <line x1="50" y1="150" x2="470" y2="150" class="d-line" />
-  <text x="16" y="82" class="d-sm">skill</text>
-  <path d="M60 40 C110 40 120 132 170 132 C220 132 230 44 280 44 C330 44 340 130 390 130 C430 130 440 60 465 56" class="d-accent" />
-  <path d="M60 130 C110 130 120 40 170 40 C220 40 230 128 280 128 C330 128 340 46 390 46 C430 46 440 120 465 124" class="d-line" stroke-width="2.5" />
-  <text x="230" y="176" text-anchor="middle" class="d-sm">all possible problems →</text>
-  <text x="62" y="28" class="d-hi">learner A</text>
-  <text x="62" y="146" class="d-sm">learner B</text>
-</svg>
-<figcaption>Wolpert &amp; Macready, 1997. Averaged over all problems the areas are equal — any bias that helps somewhere must hurt elsewhere. A theorem, not a sentiment.</figcaption>
-</figure>
+![Three learners with different inductive biases, scored across all 256 possible target labellings of eight binary points. Each learner's accuracy distribution differs, and all three have a mean of exactly 0.5.](./figures/no-free-lunch.svg)
+
+Exhaustive, not sampled: all 256 target functions, trained on the same 4 points.
+All three means are **exactly 0.500000**.
 
 ---
 
