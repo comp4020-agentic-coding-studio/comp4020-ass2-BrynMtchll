@@ -1,0 +1,36 @@
+# Seeley, Visscher, Schlegel, Hogan, Franks & Marshall (2012),
+# Science 335(6064), 108-111. Week 10.
+#
+# Drawn as two columns because the claim is that these are the same circuit.
+# Anything that makes them look like an analogy rather than an identity is
+# working against the week.
+
+...@_style
+
+direction: right
+
+neural: Neural decision circuit {
+  style.fill: transparent
+  style.stroke: "#5c5850"
+  ea: "Population A\naccumulates evidence for A" { class: node }
+  eb: "Population B\naccumulates evidence for B" { class: node }
+  ta: "Threshold crossed\n→ choose A" { class: accent }
+  ea -> ta: "" { class: edge-accent }
+  ea -> eb: "inhibits" { class: edge-warn }
+  eb -> ea: "inhibits" { class: edge-warn }
+}
+
+swarm: Honeybee swarm {
+  style.fill: transparent
+  style.stroke: "#5c5850"
+  sa: "Scouts dancing\nfor site A" { class: node }
+  sb: "Scouts dancing\nfor site B" { class: node }
+  qa: "Quorum reached\n→ move to A" { class: accent }
+  sa -> qa: "" { class: edge-accent }
+  sa -> sb: "stop signals" { class: edge-warn }
+  sb -> sa: "stop signals" { class: edge-warn }
+}
+
+same: "Same motif. Same function:\nbreak deadlock when evidence is close.\n\nThirteen orders of magnitude apart in substrate." { class: accent }
+neural -> same: "" { class: edge }
+swarm -> same: "" { class: edge }
