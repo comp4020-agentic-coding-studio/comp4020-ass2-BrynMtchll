@@ -239,6 +239,78 @@ subject to it — closing on a track record being the only thing ever on offer.
 
 ---
 
+## Pass 4 — benchmarked against COMP3670
+
+Compared the decks against the real ANU **COMP3670 / COMP6670 Introduction to
+Machine Learning** handouts (Sem 2 2026, Marcondes) in
+`~/Downloads/comp3670 materials`.
+
+### The measurement
+
+| | Slides / pages |
+| --- | --- |
+| COMP3670 Lectures 1–4 | 69, 89, 71, 73 |
+| These decks, before this pass | 29–60 |
+
+So roughly half the length of a real 3000-level ANU lecture. But length was the
+symptom; the diagnosis is what their pages contain.
+
+### What their specificity actually consists of
+
+Read closely, their pattern is consistent and repeatable:
+
+1. **Definition**, in a styled box, term bolded
+2. **A concrete example immediately after**, always numeric
+3. **The arithmetic in full** — `0.06 + 0.14 + 0.04 + 0.06 = 0.30`
+4. **A sanity check** — *"They add to 1, as a distribution must"*
+5. **A collected comparison table** that makes a surprise visible
+6. **A labelled moral** that names the transferable lesson
+
+Plus a *"Recall the end of Lecture 1"* opener carrying an explicit open question,
+a *"Why we cannot answer it yet"* slide that maps each vague word in the question
+to the concept that will formalise it, and named confusion-anticipation slides
+(*"a random variable is neither random nor a variable"*).
+
+### Adopted
+
+- **Worked numeric examples with visible arithmetic and a sanity check.** The
+  most valuable is the quiz scoring, which was a genuine taught/assessed gap:
+  the deck asserted that certainty-based marking is a *proper* scoring rule and
+  never demonstrated it, while assessing students with it at 15%. Now derived —
+  expected score is linear in `p` for each declaration, setting the lines equal
+  gives `p = 2/3` and `p = 4/5`, and those are the published 67% and 80%
+  thresholds recovered from the payoff table. New figure plots the envelope.
+- The **bee neuron budget** now shows the addition and the division rather than
+  stating "64%", with a sanity check that the parts sum to the published total,
+  so we know we have the whole budget and not a subset.
+- **Ashby's law worked on a thermostat** with real numbers, including the check
+  that repertoire beyond the disturbance variety buys nothing.
+- **"Recall the end of week N" + a highlighted open question**, on every deck
+  from week 2. Their strongest device, and the one this course needed most: it
+  claimed to be cumulative and was only asserting it. The eleven carried
+  questions now form a visible chain from the card in week 1 to the
+  self-application in week 12.
+- **"The moral."** as a labelled device where a slide's lesson generalises past
+  its example.
+
+### Deliberately not adopted
+
+**Judgement call: no definition/example box formalism.** That register is right
+for measure theory, where a definition is stipulative and an example is a
+verification. It is wrong here. Boxing contested empirical claims as
+*Definitions* would manufacture exactly the false precision this course is
+about — and the course already has a notation for epistemic status, which is
+`[E]`/`[C]`/`[S]`.
+
+### Still short of the benchmark
+
+Decks now run 30–62 slides against COMP3670's 69–89. Closing that fully would
+need a worked example per conceptual move, and the honest constraint is that a
+conceptual course has fewer things that *can* be worked than a mathematical one.
+Where a derivation exists, it is now shown.
+
+---
+
 ## Figures: the policy, and two judgement calls
 
 Every figure is generated from source — matplotlib for data and computation, D2
