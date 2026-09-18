@@ -315,6 +315,47 @@ in directions you can predict.
 
 ---
 
+## Work a distortion
+
+Two pairs of locations, **identical straight-line distance of 400 m**:
+
+```
+pair A:  one straight street, no intersections
+pair B:  four turns, six intersections, crosses a main road
+```
+
+Typical finding in the route-inflation literature: judged distance rises with
+the number of intervening turns and nodes, even when metric distance is held
+constant. Estimates for pair B commonly run **20–40% higher**.
+
+```
+400 m  →  judged ~480–560 m
+```
+
+---
+
+## And the shape of the error is the tell
+
+It is not noise. Noise would scatter both pairs equally around 400.
+
+The error is **directional and predictable from the structure of the route**,
+which means the representation is not a scale model with error added — it is a
+differently-shaped thing that answers metric questions by proxy.
+
+---
+
+## The moral
+
+A system can be **reliably, quantifiably wrong** and give no indication of it.
+
+Ask a person for a distance and you get a number with no error bar attached,
+because the representation that produced it does not carry one.
+
+That is the same failure as the ant's odometer in week 8, three weeks early and
+in your own head.
+
+---
+
 ## The part that matters
 
 None of those distortions is **available to the person making the judgement**.

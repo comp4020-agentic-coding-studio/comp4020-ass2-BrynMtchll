@@ -452,6 +452,50 @@ Wittlinger, Wehner & Wolf, *Science* 312, 1965–1967 (2006).
 
 ---
 
+## Work the stilts
+
+Say an ant walks **10 m** out with a natural stride of **10 mm**. Its
+integrator therefore holds:
+
+```
+strides counted  =  10.0 m / 0.010 m  =  1,000
+```
+
+Glue on stilts so the stride becomes **13 mm**, then let it run home. It runs
+until the count is repaid:
+
+```
+distance covered  =  1,000 × 0.013 m  =  13.0 m
+overshoot         =  13.0 − 10.0      =   3.0 m
+```
+
+---
+
+## And the stumps
+
+Trim the legs so the stride becomes **7 mm**:
+
+```
+distance covered  =  1,000 × 0.007 m  =   7.0 m
+undershoot        =  10.0 − 7.0       =   3.0 m
+```
+
+**Sanity check:** the error is proportional to the stride change, and to the
+outbound distance. A longer foraging trip makes the same manipulation worse in
+absolute terms — which is what the experiments found.
+
+---
+
+## The moral
+
+The ant is not measuring distance. It is **counting a proxy** and multiplying
+by an assumed constant.
+
+Change the constant after the count and the arithmetic is still perfect. The
+answer is simply wrong, and nothing inside the calculation can notice.
+
+---
+
 ## Why the control is the clever part
 
 Manipulating **before** the outbound run leaves navigation intact.

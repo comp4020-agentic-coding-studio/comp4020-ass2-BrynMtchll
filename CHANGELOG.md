@@ -311,6 +311,53 @@ Where a derivation exists, it is now shown.
 
 ---
 
+## Pass 5 — worked examples throughout
+
+Went through every deck for abstract claims with no concrete instance, and added
+a worked example in the COMP3670 register: numbers, the arithmetic visible, a
+sanity check, then a labelled moral.
+
+Nine added. The three that were genuine absences rather than improvements:
+
+- **Week 11 had no base-rate calculation at all.** The single most-cited worked
+  example in the heuristics literature was missing from the week about that
+  literature. Now worked twice on the same screening problem — once as
+  probabilities (`P(D|+) = 0.0090/0.0981 ≈ 9%`, against a modal intuition of
+  80–90%) and once in natural frequencies (`9 / 98`). The second version is
+  Gigerenzer's argument made operational rather than asserted: identical
+  arithmetic, no formula, and much of the deficit disappears with the format.
+- **Week 2's barcode hypothesis never committed to a number.** It does now:
+  `420 nm / 12 bins = 35 nm` predicted threshold against `25–30 nm` measured and
+  `1–4 nm` in the comparison animals. The prediction lands, which is why the
+  claim is `[C]` rather than `[S]`, and the moral generalises — a story becomes
+  a scientific claim when it commits to a number it could be wrong about.
+- **Week 10 asserted that averaging helps without ever showing why.** Now
+  `SE = 21/√60 = 2.7`, then the shared-versus-private error decomposition that
+  explains the Lorenz result exactly: influence converts private noise into
+  shared content, so spread falls 21 → 1.6 and collective error stays at 6.7.
+
+The other six:
+
+| Week | Worked |
+| --- | --- |
+| 3 | the U-trap as a rule with no exit, then the one extra bit that opens one |
+| 4 | Rescorla–Wagner over four trials, then blocking as arithmetic (0.30 → 0.015 per trial) |
+| 5 | route inflation on two 400 m pairs, and why directional error is not noise |
+| 6 | a precision-weighted update twice, same error moving the estimate 1.2 then 4.8 |
+| 7 | the compression ratio, ~10¹⁴ synaptic states against ~5×10³ bits of report |
+| 8 | the stilts arithmetic — 1,000 strides at 13 mm gives a 3 m overshoot |
+| 9 | 42 million neurons per octopus arm against 71 million in a whole mouse |
+| 12 | two Brier scores on identical accuracy, 0.272 against 0.210 |
+
+**Judgement call on week 7.** The synapse and speech-rate figures are
+order-of-magnitude, so the slide says the exact numbers do not matter and the
+conclusion survives four orders of magnitude either way. Stating a ratio that
+loose without flagging it would be the false precision this course objects to.
+
+Decks now 33–65 slides, against COMP3670's 69–89.
+
+---
+
 ## Figures: the policy, and two judgement calls
 
 Every figure is generated from source — matplotlib for data and computation, D2

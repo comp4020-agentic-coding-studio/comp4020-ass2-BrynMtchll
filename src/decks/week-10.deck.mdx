@@ -219,6 +219,62 @@ Note the word doing the work: **independent**.
 
 ---
 
+## Work out why a crowd is accurate at all
+
+Suppose 60 people each estimate a quantity, independently, with individual
+standard deviation **21** and no shared bias.
+
+The standard error of their mean is:
+
+```
+SE  =  σ / √N  =  21 / √60  =  21 / 7.75  =  2.7
+```
+
+**One person is off by about 21. The average is off by about 2.7.** That factor
+of √60 is the whole of the wisdom of crowds.
+
+---
+
+## Now break the independence
+
+Split each person's error into a **shared** part and a **private** part:
+
+```
+error = shared bias  +  private noise
+```
+
+Averaging cancels the private noise. It does **nothing** to the shared bias,
+because it is the same in every estimate.
+
+```
+if shared bias = 6.7 :  SE of mean → 6.7, not 0
+```
+
+---
+
+## Which explains the finding exactly
+
+Influence makes people's estimates resemble each other. That converts private
+noise into shared content.
+
+```
+before influence :  spread 21.0    collective error 6.7
+after  influence :  spread  1.6    collective error 6.7
+```
+
+---
+
+## The moral
+
+Averaging is a **variance** trick, not a truth trick. It removes the part of
+the error that differs between people, and nothing else.
+
+Confidence is read off agreement. Influence manufactures agreement without
+touching accuracy — so it produces a group that is more certain and no less
+wrong.
+
+---
+
 ## Lorenz et al., 2011
 
 N = 144. Estimation tasks with real answers. Participants could see previous

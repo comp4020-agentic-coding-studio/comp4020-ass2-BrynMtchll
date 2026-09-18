@@ -306,6 +306,48 @@ Look at it before the seminar.
 
 ---
 
+## Calibration, scored
+
+The **Brier score** is the mean squared error of a probabilistic forecast:
+`BS = mean((p − o)²)`, where `o` is 1 if the event happened and 0 if not.
+Lower is better.
+
+Two forecasters, same ten questions, both get **7 right**:
+
+```
+Confident Clara   says 0.95 every time
+Careful Karim     says 0.70 every time
+```
+
+---
+
+## Work both
+
+```
+Clara:  7 hits at (0.95−1)² = 0.0025
+        3 miss at (0.95−0)² = 0.9025
+        BS = (7×0.0025 + 3×0.9025)/10 = (0.0175 + 2.7075)/10 = 0.272
+
+Karim:  7 hits at (0.70−1)² = 0.09
+        3 miss at (0.70−0)² = 0.49
+        BS = (7×0.09 + 3×0.49)/10 = (0.63 + 1.47)/10 = 0.210
+```
+
+**Karim wins on identical accuracy**, because he said 0.70 and was right 70% of
+the time.
+
+---
+
+## The moral
+
+Being right is not the whole of being good at this. **Saying how right you are
+likely to be** is the other half, and it is separately measurable.
+
+Which is exactly what your quizzes have been scoring since week 1, and why
+Tetlock's programme could rank forecasters at all.
+
+---
+
 ## Calibration is a measurement, not a mood
 
 <figure class="fig">

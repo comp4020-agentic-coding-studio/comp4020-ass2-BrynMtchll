@@ -151,6 +151,50 @@ predicting it.
 
 ---
 
+## Work the model on one cue
+
+Take **α β = 0.3**, **λ = 1** (shock present), starting from **V = 0**.
+
+```
+trial 1:  ΔV = 0.3 × (1 − 0.00) = 0.30   →  V = 0.30
+trial 2:  ΔV = 0.3 × (1 − 0.30) = 0.21   →  V = 0.51
+trial 3:  ΔV = 0.3 × (1 − 0.51) = 0.147  →  V = 0.66
+trial 4:  ΔV = 0.3 × (1 − 0.66) = 0.102  →  V = 0.76
+```
+
+**Sanity check:** the increments shrink and V approaches λ = 1 without
+exceeding it. Learning slows as the outcome stops being surprising.
+
+---
+
+## Now add a second cue to a trained one
+
+Cue A is already at **V_A = 0.95**. Introduce cue B alongside it, so the model
+uses **ΣV = V_A + V_B**.
+
+```
+V_A = 0.95, V_B = 0.00   →  ΣV = 0.95
+
+ΔV_B = 0.3 × (1 − 0.95) = 0.015
+```
+
+B gains **0.015** per trial instead of 0.30. Twenty times slower, from the
+identical pairing.
+
+---
+
+## The moral
+
+Blocking is not an extra assumption bolted onto the theory to fit the data.
+
+It is **arithmetic**: the error term is already near zero, so there is nothing
+left to drive learning about B.
+
+A mechanism that learns from surprise will be blind to a perfectly valid cue
+that arrives second.
+
+---
+
 ## Which predicts blocking, and blocking happens
 
 **Kamin's design:**

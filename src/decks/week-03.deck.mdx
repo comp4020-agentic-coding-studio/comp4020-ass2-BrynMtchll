@@ -79,6 +79,53 @@ marked as explored, on the ground.
 
 ---
 
+## Work the trap
+
+Gradient-following is a rule with no memory:
+
+```
+rule:  move toward higher attractant concentration
+```
+
+Inside a U-shaped barrier, every direction that raises concentration leads
+**further into the U**, because the barrier blocks the short path and the
+gradient points through it.
+
+```
+step 1:  concentration rising  →  advance
+step 2:  concentration rising  →  advance
+step 3:  at the barrier, all forward moves blocked
+step 4:  retreating lowers concentration  →  rule forbids it
+```
+
+**The rule has no exit.** It is not that escape is slow; it is unreachable.
+
+---
+
+## Now add one bit of state
+
+```
+rule:  move toward higher concentration, EXCEPT onto your own trail
+```
+
+Retreat is no longer forbidden, because the trail marks the path back as
+already-explored rather than as lower-value.
+
+**Sanity check:** this is exactly why disguising the trail restores the failure.
+Remove the extra bit and you are back to the rule with no exit.
+
+---
+
+## The moral
+
+The organism did not get cleverer. It got **one extra distinction** — visited
+against unvisited — and that distinction is stored outside its body.
+
+Which is the cheapest possible upgrade, and it converts an unsolvable problem
+into a solvable one.
+
+---
+
 ## How they established that it is the trail
 
 Not by observing avoidance, by **removing the cue**.
