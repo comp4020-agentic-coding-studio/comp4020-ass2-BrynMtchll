@@ -156,6 +156,89 @@ own deck. Most of what pass 2 found was invisible on a read-through.
 
 ---
 
+## Pass 3 — language precision and narrative flow
+
+### Method
+
+Mechanical audits again: wordlists for vague and pop-science register,
+confidence-mismatch patterns, weak sequential transitions, sentence lengths over
+34 words, term first-appearance versus first-definition, and section-divider
+counts per deck.
+
+### Language: fewer hits than expected
+
+Only four across roughly 400 slides — "remarkable" (wk8), "kind of" (wk12), one
+35-word sentence (wk12), one awkward inversion (wk8). Zero weak sequential
+transitions and zero confidence-mismatch patterns.
+
+That suggests the voice rules in `CLAUDE.md` were doing their job while the
+decks were being written, which is the point of having them.
+
+### Terminology: six terms used bare
+
+Each now carries a one-line definition at first use.
+
+| Term | Was | Now |
+| --- | --- | --- |
+| underdetermination | heading only, wk12 | defined before the diagram |
+| informational cascade | heading only, wk10 | defined before the examples |
+| requisite variety | table cell, wk1 | defined above the inequality |
+| precision | wk6 heading | defined as inverse variance, since it differs from the ordinary sense |
+| non-compensatory | wk11, in passing | defined where the simulation depends on it |
+| self-model | **forward-referenced in wk5**, defined in wk7 | glossed at first use in wk5 |
+
+The self-model case was the real defect: a term introduced two weeks before its
+definition.
+
+### Macrostructure: was invisible to students
+
+The four-part structure existed in `docs/course-model.md` and nowhere a student
+would look.
+
+**Judgement call:** rather than a single page nobody revisits, every deck now
+opens with a *"where this week sits"* slide marking its part, plus a line saying
+why the third part is a control group rather than a tour. Repetition across
+twelve decks is what makes a macrostructure visible.
+
+Weeks 1, 2, 4 and 9 had one section divider between them. They now have three to
+five each.
+
+### Weeks 8–10: slides that stopped at description
+
+Four slides described the organism and never named what it established. Now they
+land the asymmetry:
+
+- neuron counting showed our intuitions tracked the wrong quantity, and only
+  from outside the lineage
+- we can say what evidence would settle bee play; we cannot say what would
+  settle the same question about ourselves
+- the octopus gap has an outline and ours does not
+- an informational cascade is invisible from inside, because every step was
+  reasonable
+
+**Judgement call:** I did not append a thesis line to all 124 slides in those
+weeks. Doing so would itself be a rigid per-week template, which the brief
+elsewhere asks me to avoid. Section closers and organism-introduction slides
+carry it; worked detail slides do not.
+
+### Weeks 11–12: the plant existed but did not reach
+
+Week 11 already said the literature on human error is subject to human error. It
+did not connect that to the course. It now names the site's own grades and
+reading list as products of the architecture weeks 3–7 described, and cites my
+failed reproduction as the instance students have already seen — then states the
+question week 12 answers, so the turn arrives prepared rather than abrupt.
+
+### Both bookends were echoing rather than sharpening
+
+Week 1 closed "Week 12 asks this again / with no card", and week 12 closed with a
+near-mirror. Both now sharpen: week 1 says what the card found and what has no
+card; week 12 states the thesis in its narrower final form — the discarding is
+not reportable, the checker is the checked, and the literature on that is
+subject to it — closing on a track record being the only thing ever on offer.
+
+---
+
 ## Figures: the policy, and two judgement calls
 
 Every figure is generated from source — matplotlib for data and computation, D2
