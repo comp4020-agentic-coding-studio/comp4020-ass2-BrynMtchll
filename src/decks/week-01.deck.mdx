@@ -71,6 +71,37 @@ variety, and not a fraction more.
 
 ---
 
+## Worked, with numbers
+
+A thermostat that can only switch a heater **on or off** has
+H(regulator) = log₂ 2 = **1 bit**.
+
+Suppose the disturbances it must counter — outdoor temperature, occupancy,
+sunlight, draughts, door openings — jointly take 32 distinguishable states, so
+H(disturbance) = log₂ 32 = **5 bits**.
+
+```
+H(outcome) ≥ 5 − 1 = 4 bits of variation it cannot remove
+```
+
+**Sanity check:** buy a regulator with 32 settings and the floor drops to
+5 − 5 = 0. Buy one with 64 and it stays at 0 — extra repertoire past the
+disturbance variety buys nothing.
+
+---
+
+## The moral
+
+Ashby's law is not advice about thermostats.
+
+It says the **shape of what a system cannot control is fixed by its own
+repertoire**, and no cleverness in how the repertoire is deployed changes the
+floor.
+
+Every organism in this course is somewhere on that inequality.
+
+---
+
 ## Read the left-hand region
 
 A regulator with fewer distinguishable responses than the world has
@@ -389,6 +420,58 @@ Students at 80% accuracy typically collect about half the available marks.
 
 That gap is not a scoring quirk. It is the subject of week 12, arriving in week
 2 and in your own results.
+
+---
+
+## The quiz scoring, worked
+
+| Declared certainty | If correct | If wrong |
+| --- | --- | --- |
+| low | +1 | 0 |
+| mid | +2 | −2 |
+| high | +3 | −6 |
+
+Let **p** be your true probability of being correct. Expected score is linear
+in p:
+
+```
+E[low]  = 1p + 0(1−p) =      p
+E[mid]  = 2p − 2(1−p) = 4p − 2
+E[high] = 3p − 6(1−p) = 9p − 6
+```
+
+---
+
+## Where the advice changes
+
+Set the lines equal:
+
+```
+low = mid    →   p = 4p − 2    →   p = 2/3  ≈ 0.667
+mid = high   →   4p − 2 = 9p − 6   →   p = 4/5 = 0.800
+```
+
+**Sanity check:** those are the 67% and 80% thresholds the scheme publishes.
+They were not chosen by anyone. They fall out of the payoff table.
+
+---
+
+## Which is what "proper" means
+
+![Three straight lines of expected score against true probability of being correct: declare low, mid and high. The upper envelope switches at two-thirds and four-fifths, both marked.](./figures/cbm-proper-rule.svg)
+
+The highest line at your actual **p** is always the one that reports your actual
+**p**. No misreport beats honesty.
+
+---
+
+## The moral
+
+You cannot improve your score by managing how confident you look.
+
+The only lever is **being better calibrated** — which is the one thing the
+course is trying to teach, and the reason the scheme was chosen over ordinary
+negative marking.
 
 ---
 
