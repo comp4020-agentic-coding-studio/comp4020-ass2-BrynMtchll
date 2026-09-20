@@ -427,6 +427,45 @@ an assessment, a deck. Different route, different defects.
 
 ---
 
+## Pass 7 — visual treatment, and two things the image-free decision broke
+
+### Defects
+
+- **Four pages had no `<h1>`.** `BaseLayout` renders its heading only inside the
+  hero, and the hero only renders when a hero image resolves — so emptying
+  `src/assets/images/` removed the page title from `/evidence/`, `/lectures/`,
+  `/assessments/` and `/people/`, with the build green and axe clean. Fixed in
+  `PageLayout`, which now takes the lead paragraph over and renders the title
+  above it. `spec/` asserts exactly one `h1` per page, and that test immediately
+  caught a duplicate on `/policies/`.
+- **`404.md` pointed at a deleted asset**, `hero-home.avif`. A missing hero
+  image renders as no hero rather than as an error, so nothing said so.
+
+### Treatment
+
+- **Evidence grades are badges now**, coloured from the theme's semantic tokens
+  and differentiated by border style as well as colour, so the three survive
+  greyscale. 39 occurrences across the site.
+- **Seminar and lecture pages carry an orientation row**: which part of the
+  argument the week belongs to, the date, and links to the paired
+  lecture/seminar, its deck and the schedule.
+- **Part membership moved to `src/lib/parts.ts`**, because the schedule page and
+  the twelve week pages both state it and two copies are two chances to
+  disagree.
+- **Figure captions and reading lists** are set as what they are: the caption
+  pulled back to the text column even where the figure runs full-bleed, the
+  reading list quieter and tighter than the argument above it.
+
+### Deliberately not changed
+
+- **The Slop palette, type scale and spacing.** Platform, and not mine.
+- **The decks keep bold-bracket grades**, so site and decks differ. Forty-two
+  slides would each gain a border and padding, and deck fit is the one thing
+  with no automated check. Consistency was worth less than not breaking
+  something invisible to me.
+
+---
+
 ## Figures: the policy, and two judgement calls
 
 Every figure is generated from source — matplotlib for data and computation, D2

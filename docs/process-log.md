@@ -466,6 +466,63 @@ job. The honest state is that this pass was verified by hand.
 
 ---
 
+## 14. Restyle, and the title that had quietly disappeared
+
+> we can go further with restyle and imrpovement
+
+The platform fixes the Slop identity, so the palette, type scale and spacing
+stay as they arrived. What was available was the visual vocabulary this
+particular course needs, and the obvious candidate was its own notation.
+
+**The grades were the site's least visible load-bearing element.** [E], [C] and
+[S] sit on every substantive claim, the policies page makes students
+accountable for the ones they assign, and they rendered as bold text —
+indistinguishable from ordinary emphasis. They are now badges, coloured from
+the theme's own semantic tokens.
+
+They are *also* differentiated by border style: solid, heavy solid, dashed. A
+course whose argument is that no single channel is sufficient should not encode
+its own notation in one channel, and the three stay tellable apart in greyscale
+or to a colour-blind reader. That is the rare case where the content dictated
+the CSS.
+
+**Two defects surfaced, both consequences of a decision made weeks earlier.**
+
+Four pages had no `<h1>` at all: `/evidence/`, `/lectures/`, `/assessments/`
+and `/people/`. The cause is two template layers away from the decision that
+produced it. `BaseLayout` renders its heading only inside the hero
+(`{heroTitle && resolvedHeroImage && ...}`), and the hero only renders when a
+hero image resolves. Emptying `src/assets/images/` for the image-free treatment
+therefore deleted the page title from every page that relied on `heroTitle`,
+silently, with the build green and axe clean throughout. `PageLayout` now takes
+over the lead paragraph and renders the title above it, which restores the
+title-then-lead order the detail routes already had.
+
+The same decision left `src/pages/404.md` pointing at
+`hero-home.avif`, deleted weeks ago and never noticed because a missing hero
+image renders as no hero rather than as an error.
+
+This is the third time in this project that a correct-looking green build
+concealed something, and the pattern is consistent: **the failures are all in
+the gap between a decision and its consequence somewhere I wasn't looking.**
+That is, uncomfortably, the thesis of the course.
+
+The spec test I wrote for it — exactly one `<h1>` per page — earned itself
+immediately by catching a duplicate on `/policies/`, a page I had not touched,
+where the starter's own body heading now collided with the one the layout
+supplies.
+
+**A judgement call recorded rather than hidden.** The decks keep the bold-
+bracket form, so the site and the decks now differ. Forty-two occurrences
+across twelve decks would each add a border and some padding to a slide whose
+fit I have no way to verify automatically, and bold already reads well at
+projection size. Consistency was worth less than not breaking something I
+cannot see.
+
+[`03f9f69`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BrynMtchll/commit/03f9f69)
+
+---
+
 ## Still open
 
 - `PROCESS.md` — mine, 400-600 words, drawn from this log. Not started.
