@@ -6,8 +6,8 @@
 intelligence is lossy compression of a world too large to represent, and that
 every compression has a shape you cannot see from inside it. Twelve seminars,
 twelve lectures, twelve decks, four assessments. The curricular judgement is
-mine. Most of the words were written by an agent working to rules I wrote
-first, which is the part worth accounting for.
+mine; most of the words were written by an agent working to rules I wrote
+first, which is what this accounts for.
 
 ## How I got here
 
@@ -16,7 +16,7 @@ Coherence has to come from one model rather than from coverage — if a week cou
 be moved anywhere in the order without loss, it isn't carrying its part of the
 argument. A subject this full of failed replications has to grade its own
 evidence out loud. And no single discipline settles a question about
-intelligence, so four have to be pooled rather than surveyed.
+intelligence, so four are pooled rather than surveyed.
 
 Then I wrote those into the harness instead of applying them by hand:
 
@@ -26,16 +26,15 @@ Then I wrote those into the harness instead of applying them by hand:
 > intelligence.
 
 That is [`6aeb3e4`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BrynMtchll/commit/6aeb3e4).
-The obvious alternative was to hold the standard in my head and correct the
-output when it drifted. Rules scale and corrections don't: across twelve weeks
+The obvious alternative was to hold the standard in my head and correct drift. Rules scale and corrections don't: across twelve weeks
 and twelve decks I'd have re-derived the same judgement dozens of times.
 
-The rule immediately created a problem of my own making. Four lenses per week,
-run in the same order, produces twelve pages with one shape, and a template is
-the failure this brief names explicitly. I could have dropped the rule or
-enforced it weekly. Instead I recorded the distinction: the lenses are a
-checklist for the argument, not a shape for the page, and each week leads with
-whichever one carries the weight. Hence week 3 leading on a ninety-year
+The rule immediately created a problem of my own making. Four lenses a week, run
+in the same order, produces twelve pages with one shape — the failure this brief
+names explicitly. I could have dropped the rule or enforced it weekly. Instead
+the harness records the distinction: the lenses are a checklist for the
+argument, not a shape for the page, and each week leads with whichever carries
+the weight. Hence week 3 leading on a ninety-year
 replication failure and week 9 on whether a famous question is malformed.
 
 The intervention that mattered most was aimed at my own inputs rather than at
@@ -59,11 +58,11 @@ carries at least three resolvable sources, which failed honestly and got
 satisfied rather than lowered
 ([`5051fcc`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BrynMtchll/commit/5051fcc)).
 
-The rules I trust least are the ones that have never fired. A `max-height` in the
-deck stylesheet, commented as the important one, had quietly stopped matching
-anything when the figures moved from inline SVG to generated images — five slides
-were clipping their own concluding line behind a green build. So I negative-tested
-the sensor I wrote for it before believing it
+The rules I trust least are the ones that never fire. A `max-height` in the deck
+stylesheet, commented as the important one, had stopped matching anything when
+the figures moved from inline SVG to generated images: five slides were clipping
+their own last line behind a green build. So I negative-tested its replacement
+before believing it
 ([`5b47230`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BrynMtchll/commit/5b47230)).
 
 What I deliberately left out of the harness: whether the course is genuinely
