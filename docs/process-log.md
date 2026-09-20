@@ -580,6 +580,64 @@ make the standard loop depend on a browser.
 
 ---
 
+## 16. One phrase doing two jobs
+
+> we need more specificity and clarity and talking about "turned on the reader"
+
+**"Turns on" appeared 25 times in two incompatible senses.** The course's
+central move is the account aimed back at the reader — "turned on the reader",
+"the course turns on itself", "detailed enough to turn on you". The other sense
+is ordinary hinging: "the distinction the whole course turns on", "the argument
+turns on Thoen". And twelve of those were mine, added the same evening, as the
+reading-list label "the paper this seminar turns on".
+
+So the course's signature phrase shared an idiom with a mundane one, and the
+reader had no way to tell which was meant. Both were blunted, and I had made it
+measurably worse while thinking I was adding clarity.
+
+The fix is a rule rather than a rewrite: **the phrase survives in exactly one
+place** — the course description, where it is the slogan and is immediately
+followed by three concrete consequences — and everywhere else says what
+actually happens. The hinging sense went to plain verbs. The gestural instances
+name a mechanism or a task: week 7 is the modeller modelling itself, week 11 is
+the course grading its own sources, week 12 is you applying eleven weeks to
+your own judgement.
+
+**The home page section about the title contradicted itself.** It said the
+course "spends twelve weeks dismantling" the title, then that half of it
+"survives", and it hinged on "the second half" versus "the first half" of a
+four-word title without ever saying which was which. Rewritten to separate the
+noun from the claim: *dumb* implies a deficiency the course rejects, and what
+survives is the narrower, harder point that a compression cannot report what it
+discarded. That paragraph was mine, written at speed, and it was the least
+precise prose on the site.
+
+**A promise with nothing behind it.** The AI section told readers they could
+derive an artificial system's limits in the profile's optional closing section.
+That section asks for one change to *the organism*. I had invented a route
+while arguing for a position. Rather than soften the home page I gave the
+profile a tenth section that offers exactly what is promised, marked on whether
+the derivation follows from the model rather than on whether the guess is
+right.
+
+**Two rendering faults, found by looking rather than by building.** The home
+page's five badges were unstyled: `index.astro` imports `ContentLayout`
+directly, so it never passes through `PageLayout` and never loaded
+`course.css`. The assessment route was missing it too. Astro pages do not share
+one layout, so a stylesheet reaches a page only if that page's own template
+pulls it — which means markup and the CSS that gives it meaning can separate
+silently. There is now a test that they travel together. And Astro trims
+whitespace at line boundaries, so two of my line breaks had eaten the spaces
+around inline elements: "grade our own.The title is[S]".
+
+The pattern across tonight holds here too. Nothing in the build could see any
+of this, because none of it is malformed — it is prose that means less than it
+looks like it means, and markup that is correct but unstyled.
+
+[`879afcd`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BrynMtchll/commit/879afcd)
+
+---
+
 ## Still open
 
 - `PROCESS.md` — mine, 400-600 words, drawn from this log. Not started.

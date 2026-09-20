@@ -514,6 +514,42 @@ reveal scales one fixed box — so this is the half that genuinely needs eyes.
 
 ---
 
+## Pass 9 — specificity
+
+### The idiom collision
+
+"Turns on" was used 25 times in two incompatible senses: the account *aimed
+back at* the reader, and ordinary *hinging on*. Twelve of the second kind were
+introduced in pass 6 as the reading-list label. The phrase now survives in one
+place only — the course description, where it is the slogan — and every other
+use states the mechanism or the task instead.
+
+### Prose corrected
+
+- **"About the title"** contradicted itself (the course "dismantles" the title;
+  half of it "survives") and referred to "the first half" and "the second half"
+  of a four-word title without saying which. Rewritten to separate the noun
+  *dumb*, which the course rejects, from the claim that survives.
+- **The AI section promised a route that did not exist.** It sent readers to the
+  profile's optional close, which asks for a change to *the organism*. The
+  profile now carries a tenth section that offers what the home page promises.
+- Seven gestural instances — week 7, 11 and 12 descriptions, Halvard's bio, the
+  week 11 lecture title, the lectures index, the home page — now name a
+  mechanism.
+
+### Two rendering faults
+
+- **Five badges on the home page were unstyled.** `index.astro` imports
+  `ContentLayout` directly and so never passes through `PageLayout`, which is
+  what loads `course.css`; the assessment route was missing it too. Astro pages
+  do not share a layout, so markup and the stylesheet that gives it meaning can
+  separate without any check noticing. A spec test now asserts they travel
+  together.
+- Astro trims whitespace at line boundaries, which had eaten the spaces around
+  two inline elements.
+
+---
+
 ## Figures: the policy, and two judgement calls
 
 Every figure is generated from source — matplotlib for data and computation, D2
