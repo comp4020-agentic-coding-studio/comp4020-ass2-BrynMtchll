@@ -414,6 +414,58 @@ content.
 
 ---
 
+## 13. The phone viewport, and the trap that nearly hid it
+
+> ive still got time and budget, what more work can i put in
+
+The assessment page fixes two marking viewports, 1920x1080 and 390x844, and
+says both are full marking environments. Nothing on this site had ever been
+looked at on a phone.
+
+**Seven figures overflowed at 390px.** Every generated figure added in pass 6 —
+on weeks 1, 2, 3, 8, 10 and 12 — rendered at 417px inside a 390px viewport,
+making the whole page scroll sideways. Desktop was clean.
+
+**The cause is a theme behaviour I was the first to exercise.** The theme runs
+content images full-bleed on purpose: it cancels `max-width`, sets
+`width: calc(100% + ...)` and pulls the image outward with negative inline
+margins. At 1920 the page gutters absorb that and it looks good. At 390 there
+are no gutters to absorb it. The starter shipped images only as hero artwork,
+so nothing had put an image in `.at-main` prose until I did. Fixed in
+`src/styles/figures.css`, which cancels the full-bleed below 48rem and keeps it
+above — the treatment is right where it works.
+
+**The trap, which is the part worth recording.** My first measurement was a
+Chrome screenshot at `--window-size=390,844`, and it showed *every* page
+clipping text mid-word, home page included. That looks exactly like a
+catastrophic site-wide layout bug. It isn't one. Chrome enforces a minimum
+window width, so the page had been laid out at a wider viewport and the PNG was
+simply cropped to 390. I was one step away from "fixing" a bug that did not
+exist, on evidence that looked conclusive.
+
+What distinguished them was measuring instead of looking: an iframe set to a
+true 390px, reporting `documentElement.scrollWidth` against `innerWidth`. That
+returned 390 for the home page — no overflow — and 399 for the six seminar
+pages, each naming the `<img>` responsible. The instrument that looked more
+direct was the one that lied.
+
+This is the same failure as *Stentor* in week 3, which is uncomfortable. A
+result was produced by an apparatus that wasn't measuring what it appeared to
+be measuring, and nothing inside the result said so.
+
+**What I could not do: turn this into a committed check.** I wrote one, twice.
+Chrome headless can be driven without any new dependency by reading
+measurements back out of `--dump-dom`, and it works for a handful of pages —
+that is how the real figures above were obtained. Over forty pages at two
+viewports it stalls on its own virtual clock, batching included, and I could not
+make it finish reliably. A check that hangs is worse than no check, so there
+isn't one in `scripts/`, and deck legibility at both viewports remains a human
+job. The honest state is that this pass was verified by hand.
+
+[`5051fcc...HEAD`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BrynMtchll/compare/5051fcc...main)
+
+---
+
 ## Still open
 
 - `PROCESS.md` — mine, 400-600 words, drawn from this log. Not started.
@@ -421,6 +473,9 @@ content.
   `skipped`. The first public push is the first time `check` and `deploy`
   actually execute.
 - The SLOP level digit (currently 3; one character to change)
+- No automated viewport check. Pages were verified by hand at 1920x1080 and
+  390x844; deck slide fit and legibility have still only been eyeballed on
+  desktop.
 
 ## Closed since
 

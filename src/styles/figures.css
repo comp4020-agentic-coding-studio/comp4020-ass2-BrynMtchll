@@ -1,0 +1,21 @@
+/* Content figures, at the phone marking viewport.
+ *
+ * The theme deliberately runs images in `.at-main` full-bleed: it cancels
+ * `max-width`, sets `width: calc(100% + ...)` and pulls the image outward with
+ * negative inline margins. At 1920 the page gutters absorb that and it looks
+ * good. At 390 there are no gutters to absorb it, so the image overflows the
+ * viewport and the whole page scrolls sideways.
+ *
+ * The starter shipped images only as hero artwork, so nothing exercised this
+ * until the seminar pages started carrying generated figures. Both viewports
+ * are full marking environments, so the full-bleed treatment is kept where it
+ * works and cancelled where it doesn't.
+ */
+@media (max-width: 48rem) {
+  .at-main > img,
+  .at-main :where(p, figure) > img {
+    margin-inline: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
