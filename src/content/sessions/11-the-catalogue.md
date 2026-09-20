@@ -11,6 +11,9 @@ spec:
   - you can distinguish bounded rationality, ecological rationality and the heuristics-and-biases programme
   - you can name three findings from the bias canon that have failed to replicate and say what replaced them
   - your revision and memo are submitted
+related:
+  - sessions/04-association
+  - sessions/01-a-world-too-large
 ---
 
 This is the week the course is named after, and it is not the week where I list
@@ -60,3 +63,23 @@ to tell me why he isn't.
 
 Your revision is due this week. It should be visibly harder to write after this
 seminar than before it.
+
+## Reading
+
+The paper this seminar turns on:
+
+- Hagger and colleagues (2016). [A multilab preregistered replication of the ego-depletion effect](https://doi.org/10.1177/1745691616652873). *Perspectives on Psychological Science*.
+
+
+The rest of the week's reading:
+
+- Simon (1955). [A behavioral model of rational choice](https://doi.org/10.2307/1884852). *Quarterly Journal of Economics*.
+- Tversky and Kahneman (1974). [Judgment under uncertainty: heuristics and biases](https://doi.org/10.1126/science.185.4157.1124). *Science*.
+- Gigerenzer and Goldstein (1996). [Reasoning the fast and frugal way](https://doi.org/10.1037/0033-295X.103.4.650). *Psychological Review* — these three make different claims. Separating them is the week's work.
+- Melnikoff and Bargh (2018). [The mythical number two](https://doi.org/10.1016/j.tics.2018.02.001). *Trends in Cognitive Sciences*.
+- Open Science Collaboration (2015). [Estimating the reproducibility of psychological science](https://doi.org/10.1126/science.aac4716). *Science*.
+- Carter and colleagues (2015). [A series of meta-analytic tests of the depletion effect](https://doi.org/10.1037/xge0000083). *JEP: General*.
+- Wason (1968). [Reasoning about a rule](https://doi.org/10.1080/14640746808400161). *QJEP*; Cosmides (1989). [The logic of social exchange](https://doi.org/10.1016/0010-0277(89)90023-1). *Cognition*.
+
+Grades are not attached to papers here, because a grade belongs to a claim rather than to the paper it appears in — see [evidence grades](/evidence/). Several of these papers contain claims at two different grades.
+

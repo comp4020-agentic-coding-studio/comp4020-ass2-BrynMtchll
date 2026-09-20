@@ -11,6 +11,8 @@ spec:
   - you can describe E. coli chemotaxis without attributing a representation to it
   - you can explain why twelve photoreceptor types produce worse colour discrimination than four
   - your position statement is submitted
+related:
+  - sessions/01-a-world-too-large
 ---
 
 The first organism on the course holds nothing. *E. coli* runs and tumbles up a
@@ -35,6 +37,10 @@ inference is natural. When Thoen and colleagues actually tested wavelength
 discrimination in 2014, it came out roughly **ten times worse** than goldfish,
 butterflies, birds or us.
 
+![Horizontal bars of wavelength discrimination threshold: human about 2 nanometres, bird 3, butterfly 4, goldfish 4, and stomatopod about 30 — roughly ten times worse than any of them.](../../decks/figures/mantis-discrimination.svg)
+
+*Wavelength discrimination thresholds, smaller being better, from Thoen and colleagues (2014). The stomatopod is the twelve-channel animal.*
+
 The proposed explanation is that it isn't comparing channels to compute a hue at
 all. It reads which of twelve narrow bins fires hardest — recognition rather
 than discrimination, closer to a barcode scanner than an eye. Which is a
@@ -52,3 +58,19 @@ result licenses the sentence "the mantis shrimp has poor colour vision". It does
 not, quite, and working out why is the exercise. A 2021 review notes the
 mechanism is still unresolved, which is a good early demonstration that **[C]**
 is a normal state for a claim rather than a failure of the field.
+
+## Reading
+
+The paper this seminar turns on:
+
+- Thoen and colleagues (2014). [A different form of color vision in mantis shrimp](https://doi.org/10.1126/science.1245824). *Science*.
+
+
+The rest of the week's reading:
+
+- Macnab and Koshland (1972). [The gradient-sensing mechanism in bacterial chemotaxis](https://doi.org/10.1073/pnas.69.9.2509). *PNAS*.
+- Marshall and Arikawa (2014). [Unconventional colour vision](https://doi.org/10.1016/j.cub.2014.10.025). *Current Biology* — the dispatch written alongside Thoen, and the clearest short statement of what the result does and does not show.
+- Berg (2004). *E. coli in Motion*. Springer — reference rather than reading; use it for the mechanism.
+
+Grades are not attached to papers here, because a grade belongs to a claim rather than to the paper it appears in — see [evidence grades](/evidence/). Several of these papers contain claims at two different grades.
+

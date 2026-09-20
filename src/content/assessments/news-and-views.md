@@ -68,3 +68,9 @@ cannot.
 Bring your chosen claim to Rosalind or me by the end of week 5. Most of the
 failures on this task are choice failures rather than writing failures, and they
 are cheap to prevent and expensive to fix.
+
+## The rules that apply to this task
+
+Extensions, late penalties, academic integrity and what you may use a language
+model for are on the [policies page](/policies/), which governs all four
+assessments. Nothing on this page overrides it.

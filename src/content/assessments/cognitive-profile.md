@@ -113,3 +113,9 @@ because the unit is a colony and the reader keeps forgetting.
 Bring two options to Rosalind before the end of week 9. She will usually tell you
 which one has the literature to fill section 7, which is the section that decides
 your mark.
+
+## The rules that apply to this task
+
+Extensions, late penalties, academic integrity and what you may use a language
+model for are on the [policies page](/policies/), which governs all four
+assessments. Nothing on this page overrides it.

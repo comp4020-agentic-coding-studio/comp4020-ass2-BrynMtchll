@@ -20,9 +20,11 @@ export const siteConfig = defineSiteConfig({
   name: "Slop University",
 
   links: [
-    { text: "Lectures", href: "/lectures/" },
+    { text: "Schedule", href: "/schedule/" },
     { text: sessionLabels.plural, href: "/sessions/" },
+    { text: "Lectures", href: "/lectures/" },
     { text: "Assessment", href: "/assessments/" },
+    { text: "Evidence grades", href: "/evidence/" },
     { text: "People", href: "/people/" },
     { text: "Policies", href: "/policies/" },
   ],

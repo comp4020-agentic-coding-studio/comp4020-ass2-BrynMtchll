@@ -11,6 +11,9 @@ spec:
   - you can explain why the small-brain puzzle largely dissolves once neurons are counted rather than mass
   - you can describe the stilts-and-stumps experiment and what it establishes
   - you can name one capacity in an insect that has no obvious function
+related:
+  - sessions/05-structure-not-sensed
+  - sessions/02-measurement
 ---
 
 From here to week 10 the course stops adding and starts testing. If the account
@@ -51,6 +54,10 @@ and never knows how it got where it is, and the integrator has no independent
 reference against which to check itself. An ant that is lost behaves exactly like
 an ant that is not. Hold that sentence until week 12.
 
+![Two panels. Left, a simulated wandering outbound path from the nest, with the true direction home and the slightly wrong homeward vector the ant actually runs, missing by a couple of body lengths. Right, mean miss distance against outbound path length, crossing the width of the nest entrance at around fifty steps.](../../decks/figures/path-integration-error.svg)
+
+*Simulated path integration. The integrator is good — errors partly cancel on a wandering path — and it is still not good enough, because the target is a hole. Past roughly fifty steps the expected miss exceeds the nest entrance, which is why a returning ant spirals.*
+
 ## Two things with no obvious function
 
 Bumblebees roll wooden balls with no reward attached, detouring to do it, younger
@@ -61,3 +68,22 @@ that lengthen through the night, which looks a great deal like REM sleep.
 
 Neither result tells us what we want it to. Both are graded **[C]**, and the
 seminar is about what evidence would move either one.
+
+## Reading
+
+The paper this seminar turns on:
+
+- Wittlinger, Wehner and Wolf (2006). [The ant odometer: stepping on stilts and stumps](https://doi.org/10.1126/science.1126912). *Science*.
+
+
+The rest of the week's reading:
+
+- Olkowicz and colleagues (2016). [Birds have primate-like numbers of neurons in the forebrain](https://doi.org/10.1073/pnas.1517131113). *PNAS*.
+- Chittka and Niven (2009). [Are bigger brains better?](https://doi.org/10.1016/j.cub.2009.08.023) *Current Biology* — the numbers in this week's lecture are read out of this paper rather than paraphrased.
+- Herculano-Houzel (2009). [The human brain in numbers](https://doi.org/10.3389/neuro.09.031.2009). *Frontiers in Human Neuroscience*.
+- Galpayage Dona and colleagues (2022). [Do bumble bees play?](https://doi.org/10.1016/j.anbehav.2022.08.013) *Animal Behaviour*.
+- Howard and colleagues (2018). [Numerical ordering of zero in honey bees](https://doi.org/10.1126/science.aar4975). *Science*.
+- Jackson and Cross (2011). [Spider cognition](https://doi.org/10.1016/b978-0-12-415919-8.00003-3). *Advances in Insect Physiology*.
+
+Grades are not attached to papers here, because a grade belongs to a claim rather than to the paper it appears in — see [evidence grades](/evidence/). Several of these papers contain claims at two different grades.
+

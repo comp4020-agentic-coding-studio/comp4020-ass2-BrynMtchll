@@ -38,6 +38,10 @@ nerve leaves and there are no photoreceptors at all. It is roughly the size of
 nine full moons. You have had it your entire life and have never once seen a
 hole.
 
+![The optic disc drawn to scale in degrees of visual angle: an ellipse five degrees wide and seven tall, centred about fifteen and a half degrees temporal from fixation, with nine half-degree circles representing full moons fitted inside it.](../../decks/figures/blind-spot-geometry.svg)
+
+*The optic disc, to scale. Nine full moons fit inside it, about fifteen degrees off fixation in each eye.*
+
 What you are looking at when the dot disappears is not the gap. It's the filling
 — your visual system has been generating plausible content across that region
 continuously, without flagging it, and you had no way to know. Hold onto the
@@ -61,3 +65,21 @@ week 1 rather than week 10 is that you find out early that "sounds right" and
 The reading for week 2, and the brief for the position statement due at the end
 of next week. Write that before you do the reading, not after. It is the only
 piece of work in this course that is better for being uninformed.
+
+## Reading
+
+The paper this seminar turns on:
+
+- Shannon (1948). [A mathematical theory of communication](https://doi.org/10.1002/j.1538-7305.1948.tb01338.x). *Bell System Technical Journal*.
+
+
+The rest of the week's reading:
+
+- Conant and Ashby (1970). [Every good regulator of a system must be a model of that system](https://doi.org/10.1080/00207727008920220). *International Journal of Systems Science*.
+- Ramachandran and Gregory (1991). [Perceptual filling in of artificially induced scotomas in human vision](https://doi.org/10.1038/350699a0). *Nature* — the experimental version of the card you used in the seminar, and the reason "you see the filling, not the gap" is a finding rather than a turn of phrase.
+- Ashby (1956). *An Introduction to Cybernetics*. Chapman & Hall — the law of requisite variety. No DOI; the full text is freely available.
+- von Uexküll (1934/2010). *A Foray into the Worlds of Animals and Humans*. University of Minnesota Press — where the Umwelt comes from.
+- Godfrey-Smith (2016). *Other Minds*, chapters 1–2. Farrar, Straus and Giroux.
+
+Grades are not attached to papers here, because a grade belongs to a claim rather than to the paper it appears in — see [evidence grades](/evidence/). Several of these papers contain claims at two different grades.
+

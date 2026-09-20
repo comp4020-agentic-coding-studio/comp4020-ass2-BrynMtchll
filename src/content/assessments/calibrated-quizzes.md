@@ -65,3 +65,9 @@ Certainty-based marking puts a premium on having *reasons* to be sure. Answers
 memorised from a summary tend to attract high confidence without the reasons
 that would justify it, and the scoring punishes exactly that. Reading the papers
 is the cheaper path.
+
+## The rules that apply to this task
+
+Extensions, late penalties, academic integrity and what you may use a language
+model for are on the [policies page](/policies/), which governs all four
+assessments. Nothing on this page overrides it.

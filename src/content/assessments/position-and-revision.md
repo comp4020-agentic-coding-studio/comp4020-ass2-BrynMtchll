@@ -78,3 +78,9 @@ is telling me there was no position to revise. What is being assessed is the
 Question three is where the marks concentrate. A revised statement presented as
 now-correct has missed the entire course. One that says clearly what remains
 unsupported is doing, on itself, what week 12 does to the field.
+
+## The rules that apply to this task
+
+Extensions, late penalties, academic integrity and what you may use a language
+model for are on the [policies page](/policies/), which governs all four
+assessments. Nothing on this page overrides it.

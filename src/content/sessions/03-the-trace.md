@@ -12,6 +12,8 @@ spec:
   - you can explain how Physarum navigates a U-shaped trap it cannot reason about
   - you can say why the Stentor replication failed and what that failure was actually evidence of
   - you can distinguish the plant learning literature that has held up from the part that has not
+related:
+  - sessions/02-measurement
 ---
 
 *Physarum polycephalum* has no neurons and solves the U-shaped trap problem,
@@ -39,6 +41,10 @@ species.** *S. coeruleus* is motile and builds no tube. *S. roeseli* is sessile.
 The two animals do not face the same problem, so of course they don't behave the
 same way.
 
+![A timeline: Jennings reports the hierarchy in S. roeseli in 1906; the behaviourist era treats it as non-reproducible; replication attempts use S. coeruleus, which is motile and builds no tube, so faces a different problem; Dexter and colleagues replicate in S. roeseli in 2019. No fraud and no bad statistics — a species name nobody checked.](../../decks/figures/stentor-history.svg)
+
+*Ninety-three years, and the error is a species name. This is the shape of failure the course is actually about.*
+
 Sit with that, because it is not a story about fraud or about statistics. A
 correct finding was thrown away for ninety years because nobody checked a species
 name, and everyone involved was behaving reasonably. This is the failure mode
@@ -64,3 +70,21 @@ of animal foraging theory. This one has held up. Grade: **[E]**.
 Two papers, same year, same plant, same broad claim family, and they do not get
 the same grade. You will be asked to explain why in the seminar, and "one
 replicated" is the beginning of the answer rather than the whole of it.
+
+## Reading
+
+The paper this seminar turns on:
+
+- Dexter, Prabakaran and Gunawardena (2019). [A complex hierarchy of avoidance behaviors in a single-cell eukaryote](https://doi.org/10.1016/j.cub.2019.10.059). *Current Biology*.
+
+
+The rest of the week's reading:
+
+- Reid, Latty, Dussutour and Beekman (2012). [Slime mould uses an externalized spatial memory to navigate in complex environments](https://doi.org/10.1073/pnas.1215037109). *PNAS*.
+- Nakagaki, Yamada and Tóth (2000). [Maze-solving by an amoeboid organism](https://doi.org/10.1038/35035159). *Nature*.
+- Gagliano and colleagues (2016). [Learning by association in plants](https://doi.org/10.1038/srep38427). *Scientific Reports*.
+- Markel (2020). [Lack of evidence for associative learning in pea plants](https://doi.org/10.7554/eLife.57614). *eLife* — read this one directly after Gagliano, and read the published exchange that follows it.
+- Dener, Kacelnik and Shemesh (2016). [Pea plants show risk sensitivity](https://doi.org/10.1016/j.cub.2016.05.008). *Current Biology* — the plant result that did hold up.
+
+Grades are not attached to papers here, because a grade belongs to a claim rather than to the paper it appears in — see [evidence grades](/evidence/). Several of these papers contain claims at two different grades.
+

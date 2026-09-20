@@ -20,7 +20,13 @@ interface ApiNode {
   meta?: Record<string, unknown>;
 }
 
+interface CourseEdge {
+  from: string;
+  to: string;
+}
+
 interface CourseApi {
+  edges?: CourseEdge[];
   course: {
     code: string;
     title: string;
@@ -149,9 +155,116 @@ describe("assessment", () => {
     expect(total, `weights total ${total}%`).toBe(100);
   });
 
-  it("gives every assessment a due date inside the teaching period", () => {
+  // Named for what it actually asserts. That the date falls inside the teaching
+  // period is a different claim, and it belongs to data-integrity.test.ts,
+  // which owns it for every dated node rather than for assessments alone.
+  it("gives every assessment a due date", () => {
     for (const a of nodesOfType("assessments")) {
       expect(String(a.meta?.due ?? ""), `${a.id} has no due date`).toMatch(/^\d{4}-\d{2}-\d{2}/);
     }
+  });
+});
+
+// The course's defining structural claim, from CLAUDE.md: "if a week could be
+// moved anywhere in the order without loss, it isn't carrying its part of the
+// argument." That is a claim about the content, so it gets asserted against the
+// content rather than left as a sentence in the harness.
+describe("the argument is a chain, not twelve independent weeks", () => {
+  const sessions = nodesOfType("sessions");
+  const edges = api.edges ?? [];
+  const weekOf = new Map(sessions.map((s) => [s.id, s.meta?.week as number]));
+
+  /** Session-to-session edges pointing from a later week to an earlier one. */
+  const backEdges = edges.filter((e) => {
+    const from = weekOf.get(e.from);
+    const to = weekOf.get(e.to);
+    return typeof from === "number" && typeof to === "number" && to < from;
+  });
+
+  it("has every week after the first depending on an earlier one", () => {
+    const dependent = new Set(backEdges.map((e) => e.from));
+    const orphans = sessions
+      .filter((s) => (s.meta?.week as number) > 1 && !dependent.has(s.id))
+      .map((s) => s.id);
+    expect(
+      orphans,
+      `these weeks declare no dependency on any earlier week, so they could be moved anywhere in the order: ${orphans.join(", ")}`,
+    ).toEqual([]);
+  });
+
+  it("keeps week 1 as the root", () => {
+    const first = sessions.find((s) => s.meta?.week === 1);
+    expect(first, "no week 1").toBeDefined();
+    expect(
+      backEdges.some((e) => e.from === first?.id),
+      "week 1 depends on an earlier week, which cannot be right",
+    ).toBe(false);
+  });
+
+  it("closes the loop: the last week reaches back to the first", () => {
+    const last = sessions.find((s) => s.meta?.week === 12);
+    const reaches = backEdges.filter((e) => e.from === last?.id).map((e) => weekOf.get(e.to));
+    expect(reaches, "week 12 declares no dependencies").not.toEqual([]);
+    expect(
+      reaches.includes(1),
+      "week 12 does not reach back to week 1, and the whole course is built on it doing so",
+    ).toBe(true);
+  });
+});
+
+// Every week promises primary literature, on the home page and on the seminars
+// index. This asserts the promise is kept, since a reading list is the kind of
+// thing that quietly rots one week at a time.
+describe("every teaching week carries its reading", () => {
+  const sessions = nodesOfType("sessions");
+
+  it("lists at least three resolvable sources per week", () => {
+    const thin: string[] = [];
+    for (const session of sessions) {
+      const page = resolve("dist", session.id, "index.html");
+      expect(existsSync(page), `${session.id} did not build`).toBe(true);
+      const dois = readFileSync(page, "utf8").match(/https:\/\/doi\.org\/10\./g) ?? [];
+      if (dois.length < 3) thin.push(`${session.id} (${dois.length})`);
+    }
+    expect(thin, `weeks with fewer than three linked sources: ${thin.join(", ")}`).toEqual([]);
+  });
+});
+
+// The starter's listing pages addressed me, the person building the site, and
+// carried no STARTER_CONTENT marker — so check:evidence could not see them and
+// they shipped as course prose. This is the assertion that closes that gap, and
+// it is deliberately about the reader rather than about any one phrase.
+describe("no page talks to the author instead of the reader", () => {
+  const authorFacing = [
+    "src/site-config.ts",
+    "src/content.config.ts",
+    "Weights should sum to",
+    "A course decides how many",
+    "the language your course deserves",
+    "replace the placeholder",
+    "YOUR-REPO",
+  ];
+
+  it("keeps builder instructions out of the built site", () => {
+    const pages = [
+      "index.html",
+      "sessions/index.html",
+      "lectures/index.html",
+      "assessments/index.html",
+      "people/index.html",
+      "policies/index.html",
+      "schedule/index.html",
+      "evidence/index.html",
+    ];
+    const offenders: string[] = [];
+    for (const page of pages) {
+      const path = resolve("dist", page);
+      if (!existsSync(path)) continue;
+      const html = readFileSync(path, "utf8");
+      for (const phrase of authorFacing) {
+        if (html.includes(phrase)) offenders.push(`${page}: "${phrase}"`);
+      }
+    }
+    expect(offenders, `builder-facing text on public pages:\n${offenders.join("\n")}`).toEqual([]);
   });
 });

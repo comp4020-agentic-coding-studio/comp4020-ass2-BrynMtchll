@@ -11,6 +11,8 @@ spec:
   - you can explain what a cognitive map lets an animal do that association alone cannot
   - you can describe what Constantinescu and colleagues found, and why it reframes the previous eighty years
   - you can state one thing a map-holding system cannot detect about its own map
+related:
+  - sessions/04-association
 ---
 
 Tolman argued in 1948 that rats in mazes were not acquiring chains of
@@ -45,3 +47,20 @@ represent. Spatial judgement distorts in specific, predictable directions, and
 the distortion is not available to the person doing the judging — which is the
 first appearance in the course of a pattern that will become the whole argument
 by week 12.
+
+## Reading
+
+The paper this seminar turns on:
+
+- Constantinescu, O'Reilly and Behrens (2016). [Organizing conceptual knowledge in humans with a gridlike code](https://doi.org/10.1126/science.aaf0941). *Science*.
+
+
+The rest of the week's reading:
+
+- Tolman (1948). [Cognitive maps in rats and men](https://doi.org/10.1037/h0061626). *Psychological Review*.
+- O'Keefe and Dostrovsky (1971). [The hippocampus as a spatial map](https://doi.org/10.1016/0006-8993(71)90358-1). *Brain Research*.
+- Menzel and colleagues (2005). [Honey bees navigate according to a map-like spatial memory](https://doi.org/10.1073/pnas.0408550102). *PNAS*.
+- Whittington and colleagues (2020). [The Tolman-Eichenbaum Machine](https://doi.org/10.1016/j.cell.2020.10.024). *Cell* — the formal unification, for those who want it.
+
+Grades are not attached to papers here, because a grade belongs to a claim rather than to the paper it appears in — see [evidence grades](/evidence/). Several of these papers contain claims at two different grades.
+
