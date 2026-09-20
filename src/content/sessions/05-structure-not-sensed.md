@@ -50,7 +50,7 @@ by week 12.
 
 ## Reading
 
-The paper this seminar turns on:
+The paper this seminar is built around:
 
 - Constantinescu, O'Reilly and Behrens (2016). [Organizing conceptual knowledge in humans with a gridlike code](https://doi.org/10.1126/science.aaf0941). *Science*.
 

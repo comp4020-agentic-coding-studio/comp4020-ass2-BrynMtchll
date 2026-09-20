@@ -59,7 +59,7 @@ literature carefully.
 
 ## Reading
 
-The paper this seminar turns on:
+The paper this seminar is built around:
 
 - Clark (2013). [Whatever next? Predictive brains, situated agents, and the future of cognitive science](https://doi.org/10.1017/s0140525x12000477). *Behavioral and Brain Sciences*.
 

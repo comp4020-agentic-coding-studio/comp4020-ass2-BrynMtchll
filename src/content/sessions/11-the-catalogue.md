@@ -1,8 +1,8 @@
 ---
 title: The catalogue, and its own problem
 description:
-  The human case, and the week the course turns on itself — most of the famous
-  literature about how badly you reason has not replicated.
+  The human case, and the week the course grades its own sources — most of the
+  famous literature about how badly you reason has not replicated.
 week: 11
 date: 2027-05-06
 teachers:
@@ -66,7 +66,7 @@ seminar than before it.
 
 ## Reading
 
-The paper this seminar turns on:
+The paper this seminar is built around:
 
 - Hagger and colleagues (2016). [A multilab preregistered replication of the ego-depletion effect](https://doi.org/10.1177/1745691616652873). *Perspectives on Psychological Science*.
 

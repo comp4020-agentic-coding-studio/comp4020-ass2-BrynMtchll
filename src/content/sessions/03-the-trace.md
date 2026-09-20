@@ -73,7 +73,7 @@ replicated" is the beginning of the answer rather than the whole of it.
 
 ## Reading
 
-The paper this seminar turns on:
+The paper this seminar is built around:
 
 - Dexter, Prabakaran and Gunawardena (2019). [A complex hierarchy of avoidance behaviors in a single-cell eukaryote](https://doi.org/10.1016/j.cub.2019.10.059). *Current Biology*.
 

@@ -13,6 +13,6 @@ related:
 
 We start below representation entirely, with chemotaxis, and establish what a system can do with a measurement and a comparison and nothing else.
 
-Then the argument turns on Thoen and colleagues (2014). Twelve photoreceptor types, and wavelength discrimination roughly ten times worse than a goldfish. The proposal is recognition rather than discrimination — narrow labelled bins read for which fires hardest, traded against the ability to tell close hues apart.
+Then the argument hinges on Thoen and colleagues (2014). Twelve photoreceptor types, and wavelength discrimination roughly ten times worse than a goldfish. The proposal is recognition rather than discrimination — narrow labelled bins read for which fires hardest, traded against the ability to tell close hues apart.
 
 Which means the popular claim about this animal inverts the finding. That is worth noticing early, because it will not be the last time.

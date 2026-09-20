@@ -57,7 +57,7 @@ ever sit on.
 
 ## Reading
 
-The paper this seminar turns on:
+The paper this seminar is built around:
 
 - Seeley and colleagues (2012). [Stop signals provide cross inhibition in collective decision-making by honeybee swarms](https://doi.org/10.1126/science.1210361). *Science*.
 

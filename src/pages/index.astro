@@ -1,7 +1,10 @@
 ---
+import "../styles/figures.css";
+import "../styles/course.css";
 import Card from "astro-theme-university/components/Card.astro";
 import CardGrid from "astro-theme-university/components/CardGrid.astro";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
+import { withBase } from "astro-theme-university/url";
 import { courseMeta } from "../course-config";
 import { sessionLabels, siteConfig } from "../site-config";
 ---
@@ -28,8 +31,10 @@ import { sessionLabels, siteConfig } from "../site-config";
     Intelligence is not a quantity that some animals have more of. It is a set
     of trades, made under a hard constraint, and every one of them buys a
     capability by giving something up. We start with a bacterium that holds
-    nothing at all and work upward, and by the end the account is detailed
-    enough to turn on you.
+    nothing at all and work upward, and by the end you are asked to run the
+    account on yourself: to name one limit of your own judgement that has the
+    same <em>shape</em> as one you documented in another organism, and to say
+    what would show you had got it wrong.
   </p>
   <p>
     The last weeks are the point of the earlier ones. Once you can say what a
@@ -71,29 +76,37 @@ import { sessionLabels, siteConfig } from "../site-config";
 
   <h2>About the title</h2>
   <p>
-    The title is a provocation and the course spends twelve weeks dismantling
-    it. There is no deficiency account here: nothing in the argument treats your
-    mind as a broken version of something better, and week 11 is explicitly not
-    a list of the ways you are stupid. Every system we look at, from a bacterium
-    to you, buys a capability by giving something up, and calling the thing it
-    gave up a defect is a category error.
+    The title is a provocation, and the course disagrees with half of it.
   </p>
   <p>
-    What survives of the title is the second half. There are things you cannot
-    notice you are missing, that is a structural consequence rather than an
-    insult, and it applies to the people who study it as much as to anyone else.
-    Regarding the first half: we grade claims on this site, so it seems fair to
-    grade our own. <strong>The title is <abbr class="grade grade-s" title="speculative">[S]</abbr></strong> — a reasoned extension,
-    stated provocatively, and not a finding. Hold us to that.
+    <strong>Dumb</strong> implies a deficiency: a mind that is a broken version
+    of a better one. Nothing here supports that. Every system in the course,
+    from a bacterium to you, buys a capability by giving something up, and what
+    it gave up is the price of what it bought rather than a fault in it. Week 11
+    is not a list of the ways you reason badly — it is largely about how much of
+    the famous literature making that claim failed to replicate.
+  </p>
+  <p>
+    What the title gets right is narrower and harder to shake off. A compression
+    cannot hold what it discarded, so it cannot report what it discarded either.
+    You have no inventory of your own omissions. That is a structural
+    consequence of being finite, not an insult, and it applies to the three of
+    us teaching this as much as to anyone enrolled in it.
+  </p>
+  <p>
+    We grade every claim on this site, so it is fair to grade our own.{" "}
+    <strong>The title is <abbr class="grade grade-s" title="speculative">[S]</abbr></strong>:
+    a reasoned extension, stated provocatively, and not a finding. Hold us to it.
   </p>
 
   <h2>Why there is no week on artificial intelligence</h2>
   <p>
-    This is the most common question about the course and the answer is
-    deliberate. Every system in these twelve weeks had its compression chosen
-    for it by selection rather than by a designer, and weeks 8 to 10 work as a
-    control group only because those lineages solved the same problems
-    independently of each other and of us. An artificial system is not an
+    The most common question about the course, and the absence is deliberate
+    rather than an oversight. Every system in these twelve weeks had its
+    compression chosen
+    by selection rather than by a designer, and weeks 8 to 10 work as a control
+    group only because those lineages solved the same problems independently of
+    each other and of us. An artificial system is not an
     independent lineage; it was built by one of the systems under study, out of
     data produced by that system, which makes it evidence about us rather than
     evidence alongside us.
@@ -103,9 +116,11 @@ import { sessionLabels, siteConfig } from "../site-config";
     to <em>predict</em>, not a week of content. If the account built here is any
     good, you should be able to take it to a system it was never derived from
     and say what that system cannot represent and cannot detect about itself,
-    before looking. That is available to you in the optional closing section of
-    the cognitive profile, clearly labelled as speculation, and every year some
-    of the best work on the course is there.
+    before looking. The optional tenth section of the{" "}
+    <a href={withBase("/assessments/cognitive-profile/")}>cognitive profile</a>{" "}
+    is where you may do exactly that, labelled{" "}
+    <abbr class="grade grade-s" title="speculative">[S]</abbr>, and it is where
+    some of the best work on the course turns up.
   </p>
 
   <h2>Where to go next</h2>

@@ -54,7 +54,7 @@ textbook.
 
 ## Reading
 
-The paper this seminar turns on:
+The paper this seminar is built around:
 
 - Nagel (1974). [What is it like to be a bat?](https://doi.org/10.2307/2183914) *The Philosophical Review*.
 

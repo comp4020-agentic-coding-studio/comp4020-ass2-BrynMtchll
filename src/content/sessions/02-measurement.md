@@ -61,7 +61,7 @@ is a normal state for a claim rather than a failure of the field.
 
 ## Reading
 
-The paper this seminar turns on:
+The paper this seminar is built around:
 
 - Thoen and colleagues (2014). [A different form of color vision in mantis shrimp](https://doi.org/10.1126/science.1245824). *Science*.
 

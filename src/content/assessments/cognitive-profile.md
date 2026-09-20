@@ -50,8 +50,16 @@ section is answered and a reader can find them.
 8. **What it cannot detect about itself.**
 9. **Comparison with people.** Below.
 
-Optionally, close with one change to the organism and the consequences you can
-derive from it, clearly labelled <abbr class="grade grade-s" title="speculative">[S]</abbr>.
+10. **Optional, and speculative.** Either one change to the organism and the
+    consequences you can derive from it, or one system the model was never
+    derived from — an artificial one, or a mind that does not exist — with what
+    it could not represent and could not detect about itself, derived before you
+    look it up. Label it <abbr class="grade grade-s" title="speculative">[S]</abbr>.
+
+The tenth section is the only place on this course where you may reason past the
+evidence on purpose. It is marked on whether the derivation follows from the
+model rather than on whether the guess is right, so a confident answer that does
+not follow scores worse than a tentative one that does.
 
 ## Section 3 is the hard one
 
@@ -67,7 +75,7 @@ accurately" is not.
 
 Everything looks fixable to someone who has not understood the mechanism. The
 distinction between *fails under these conditions* and *cannot, in principle* is
-the distinction the whole course turns on, and you need at least one of the
+the distinction the whole course depends on, and you need at least one of the
 second kind with the reason attached.
 
 The ant's integrator has no independent reference against which to check its own

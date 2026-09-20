@@ -71,7 +71,7 @@ seminar is about what evidence would move either one.
 
 ## Reading
 
-The paper this seminar turns on:
+The paper this seminar is built around:
 
 - Wittlinger, Wehner and Wolf (2006). [The ant odometer: stepping on stilts and stumps](https://doi.org/10.1126/science.1126912). *Science*.
 

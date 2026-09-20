@@ -1,5 +1,5 @@
 ---
-title: The catalogue turns on itself
+title: The catalogue, graded by its own scheme
 description:
   Three separate research programmes that got merged into one slogan, and how much of the famous version did not replicate.
 week: 11

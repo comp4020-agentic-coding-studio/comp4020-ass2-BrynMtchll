@@ -68,7 +68,7 @@ piece of work in this course that is better for being uninformed.
 
 ## Reading
 
-The paper this seminar turns on:
+The paper this seminar is built around:
 
 - Shannon (1948). [A mathematical theory of communication](https://doi.org/10.1002/j.1538-7305.1948.tb01338.x). *Bell System Technical Journal*.
 

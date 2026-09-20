@@ -298,3 +298,44 @@ describe("every page has exactly one h1", () => {
     expect(wrong, `pages without exactly one h1:\n${wrong.join("\n")}`).toEqual([]);
   });
 });
+
+// The badge treatment reaches a page only if that page's template imports the
+// stylesheet, and Astro pages do not share one layout: the collection routes,
+// the MDX pages and the hand-written .astro pages each pull their own. The home
+// page carried five unstyled badges for exactly that reason — the notation was
+// in the markup and the CSS that gives it meaning was not on the page. This is
+// the assertion that the two travel together.
+describe("evidence-grade badges are styled wherever they appear", () => {
+  const stylesheetFor = (html: string): string[] =>
+    Array.from(html.matchAll(/href="([^"]*\.css)"/g)).map((m) => m[1]);
+
+  const pageFiles = (dir: string, prefix = ""): string[] => {
+    const out: string[] = [];
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      if (entry.name.startsWith("_") || entry.name === "api") continue;
+      if (entry.isDirectory()) out.push(...pageFiles(resolve(dir, entry.name), `${prefix}${entry.name}/`));
+      else if (entry.name.endsWith(".html")) out.push(`${prefix}${entry.name}`);
+    }
+    return out;
+  };
+
+  it("serves the badge rules to every page that renders one", () => {
+    const unstyled: string[] = [];
+    let pagesWithBadges = 0;
+    for (const page of pageFiles(resolve("dist"))) {
+      if (page.startsWith("decks/")) continue;
+      const html = readFileSync(resolve("dist", page), "utf8");
+      const badges = (html.match(/class="grade /g) ?? []).length;
+      if (badges === 0) continue;
+      pagesWithBadges += 1;
+      let styled = html.includes(".grade-s{") || html.includes(".grade-s {");
+      for (const href of stylesheetFor(html)) {
+        const local = resolve("dist", href.replace(/^.*?(_astro\/)/, "$1"));
+        if (existsSync(local) && readFileSync(local, "utf8").includes(".grade-s{")) styled = true;
+      }
+      if (!styled) unstyled.push(`${page} (${badges} badge(s))`);
+    }
+    expect(pagesWithBadges, "no page renders an evidence grade").toBeGreaterThan(0);
+    expect(unstyled, `badges rendered without their stylesheet:\n${unstyled.join("\n")}`).toEqual([]);
+  });
+});

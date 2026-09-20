@@ -1,7 +1,7 @@
 ---
 title: The blind spot
 description:
-  Nothing is added. The account built over eleven weeks is turned on itself, and
+  Nothing is added. You apply eleven weeks of account to your own judgement, and
   the question from week 1 comes back in a form no card will find.
 week: 12
 date: 2027-05-13
@@ -93,7 +93,7 @@ with a card.
 
 ## Reading
 
-The paper this seminar turns on:
+The paper this seminar is built around:
 
 - Krueger and Mueller (2002). [Unskilled, unaware, or both?](https://doi.org/10.1037/0022-3514.82.2.180) *Journal of Personality and Social Psychology*.
 

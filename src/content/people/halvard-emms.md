@@ -2,7 +2,8 @@
 title: Halvard Emms
 description:
   Convenor. Works on underdetermination and the epistemology of measurement,
-  and teaches the weeks where the course turns on itself.
+  and teaches weeks 1, 11 and 12 — the evidence standard, the audit of the
+  course's own sources, and the blind spot.
 affiliation: Slop University School of Invented Disciplines
 role: convenor
 email: halvard.emms@slop.university

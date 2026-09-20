@@ -1,8 +1,8 @@
 ---
 title: The self-model
 description:
-  The system turns on itself, and discovers that introspection reports a summary
-  rather than a process.
+  The modeller starts modelling itself, and finds that introspection reports a
+  summary rather than the process that produced it.
 week: 7
 date: 2027-04-08
 teachers:
@@ -59,7 +59,7 @@ philosophical question wearing a methods section.
 
 ## Reading
 
-The paper this seminar turns on:
+The paper this seminar is built around:
 
 - Johansson, Hall, Sikström and Olsson (2005). [Failure to detect mismatches between intention and outcome in a simple decision task](https://doi.org/10.1126/science.1111709). *Science*.
 

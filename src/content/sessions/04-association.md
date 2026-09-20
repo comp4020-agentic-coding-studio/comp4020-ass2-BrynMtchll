@@ -53,7 +53,7 @@ than you expect, which is the uncomfortable part.
 
 ## Reading
 
-The paper this seminar turns on:
+The paper this seminar is built around:
 
 - Skinner (1948). ['Superstition' in the pigeon](https://doi.org/10.1037/h0055873). *Journal of Experimental Psychology*.
 

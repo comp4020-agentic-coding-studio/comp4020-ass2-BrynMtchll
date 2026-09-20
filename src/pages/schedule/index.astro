@@ -1,4 +1,6 @@
 ---
+import "../../styles/figures.css";
+import "../../styles/course.css";
 import { getPublishedCollection } from "astro-course-university/content";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
 import { withBase } from "astro-theme-university/url";
@@ -137,7 +139,7 @@ const lateAssessments = assessments.filter((a) => a.data.week > 12);
     There is primary literature every week and it is listed on each
     {" "}{sessionLabels.singular.toLowerCase()} page rather than collected here,
     because which paper matters depends on what the week is doing with it. Most
-    weeks one paper is the one the seminar turns on.
+    weeks one paper is the one the seminar is built around.
   </p>
 </ContentLayout>
 
