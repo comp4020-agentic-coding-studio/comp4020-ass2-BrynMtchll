@@ -27,9 +27,8 @@ Then I wrote those into the harness instead of applying them by hand:
 
 That is [`6aeb3e4`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BrynMtchll/commit/6aeb3e4).
 The obvious alternative was to hold the standard in my head and correct the
-output when it drifted. Rules scale and corrections don't — across twelve weeks
-of content and twelve decks I would have been re-deriving the same judgement
-several dozen times.
+output when it drifted. Rules scale and corrections don't: across twelve weeks
+and twelve decks I'd have re-derived the same judgement dozens of times.
 
 The rule immediately created a problem of my own making. Four lenses per week,
 run in the same order, produces twelve pages with one shape, and a template is
@@ -48,18 +47,24 @@ That report was itself heavily agent-written, and four rules derived from it had
 come out backwards — including an em-dash ban and a spelling rule my actual
 writing doesn't follow
 ([`a60b742...7169948`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BrynMtchll/compare/a60b742...7169948)).
-Reviewing output would never have caught this, because the output was faithfully
-obeying rules that were wrong. I verified the rewrite against the three source
-documents rather than against how the prose felt, which is the only check that
-would have distinguished them.
+Reviewing output would never have caught this: the output was faithfully obeying
+rules that were wrong. I checked the rewrite against the three source documents
+rather than against how the prose felt.
 
 What went into `spec/` is what had to stay true and could be checked: that every
-week after the first declares a dependency on an earlier one, so the chain is a
-claim the build tests rather than a sentence in `CLAUDE.md`; that no public page
-addresses the builder instead of the reader, which I wrote after finding four
-that did; that each week carries at least three resolvable sources, which failed
-honestly on weeks 1 and 4 and was satisfied rather than lowered
+week after the first declares a dependency on an earlier one, so the chain the
+course claims is a thing the build tests rather than a sentence in `CLAUDE.md`;
+that no public page addresses the builder instead of the reader; that each week
+carries at least three resolvable sources, which failed honestly and got
+satisfied rather than lowered
 ([`5051fcc`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BrynMtchll/commit/5051fcc)).
+
+The rules I trust least are the ones that have never fired. A `max-height` in the
+deck stylesheet, commented as the important one, had quietly stopped matching
+anything when the figures moved from inline SVG to generated images — five slides
+were clipping their own concluding line behind a green build. So I negative-tested
+the sensor I wrote for it before believing it
+([`5b47230`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BrynMtchll/commit/5b47230)).
 
 What I deliberately left out of the harness: whether the course is genuinely
 niche, whether twelve weeks cohere into one idea, and whether the prose has a
