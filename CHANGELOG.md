@@ -466,6 +466,54 @@ an assessment, a deck. Different route, different defects.
 
 ---
 
+## Pass 8 — the decks, measured rather than eyeballed
+
+### The defect
+
+Five slides across 472 were taller than the slide box, and reveal clips rather
+than scrolls, so each one silently lost its last element. In every case that
+element was the conclusion: week 10's "thirteen orders of magnitude apart in
+substrate", week 6's "a level that predicts its input perfectly is silent",
+week 9's "two completely different conclusions", week 12's Laudan and Leplin
+counterweight.
+
+**Cause.** `theme.css` caps figures with `.fig svg { max-height }` and calls it
+"the important rule". Pass 11 moved every figure to generated matplotlib and D2
+files referenced as markdown images, which render as `<img>` outside `.fig`, so
+the rule matched nothing from that point on and said nothing about it.
+
+### Fixes
+
+- An `<img>` cap in `theme.css`, stated in px against reveal's fixed 1280x720
+  logical box. Not `vh`: inside a scaled slide that resolves against the real
+  viewport and means something different at each one.
+- Week 1's requisite-variety slide was a text overflow rather than an image
+  one, so it is split at its natural beat instead.
+
+### The sensor
+
+`pnpm check:slides` (`scripts/deck-fit.mjs`) walks every slide of every deck and
+compares content extent to the box.
+
+- **Third attempt; the first two were deleted rather than committed.** Headless
+  Chrome asked to `--dump-dom` a page that has run a few hundred timers does not
+  return. The working version stops reading the DOM: the script serves `dist/`
+  itself, so the driver POSTs measurements back, once per deck, banking each
+  result as it is produced.
+- **Negative-tested.** Loosening the cap reproduced two overflows and a non-zero
+  exit; restoring it went green. A check that has never failed is not known to
+  work.
+- **Deliberately outside `pnpm check`.** It needs a local Chrome, and CI has
+  never run on this repo, so the standard loop stays browser-free.
+
+### Not fixed
+
+Deck legibility at 390x844. The slides fit; at that width they are small, which
+is inherent to reveal on a portrait phone. Fit is viewport-independent here —
+reveal scales one fixed box — so this is the half that genuinely needs eyes.
+
+---
+
 ## Figures: the policy, and two judgement calls
 
 Every figure is generated from source — matplotlib for data and computation, D2

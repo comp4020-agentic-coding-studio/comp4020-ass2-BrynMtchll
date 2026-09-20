@@ -523,6 +523,63 @@ cannot see.
 
 ---
 
+## 15. The decks were clipping their own conclusions
+
+> continue working these plenty of budget left
+
+The blind spot has been named in this log since section 11 — *nothing checks
+whether a slide fits or stays legible; that only shows up in a browser* — and
+it turned out to be hiding five real defects across 472 slides.
+
+**What was wrong, and why nothing said so.** `src/decks/theme.css` caps figure
+height with `.fig svg { max-height: 52vh }`, and its own comment calls that
+"the important rule". Section 11 replaced inline SVG with generated matplotlib
+and D2 files referenced as markdown images. Those render as `<img>`, outside
+any `.fig` wrapper, so **the guard stopped matching anything the moment the
+implementation changed underneath it** — and stayed in the file, still
+describing itself as important. Three figures were taller than the entire
+720px slide; two were wider than its 1280px width.
+
+**In all five cases the clipped part was the payoff.** Week 10 lost "thirteen
+orders of magnitude apart in substrate", which is the whole argument of the
+cross-inhibition slide. Week 6 lost "a level that predicts its input perfectly
+is silent". Week 9 lost "two completely different conclusions". Week 12 lost
+the Laudan and Leplin counterweight, whose absence would have left the strong
+underdetermination thesis standing unopposed — which this course's own rules
+forbid. The failure mode was not cosmetic; it removed the point of each
+diagram, and left every check green.
+
+**One thing worth knowing about reveal.** Every slide is laid out in a fixed
+1280x720 logical box and scaled to the window, so *fit is
+viewport-independent*: a slide that fits at 1920x1080 fits at 390x844, just
+smaller. That halved the problem — fit can be measured once and mechanically,
+and what remains for the phone is legibility, which is a judgement call. It
+also makes `vh` inside a slide a trap, since it resolves against the real
+viewport rather than the box, so the new cap is stated in px.
+
+**Third attempt at the tool, and the first one I kept.** Two earlier versions
+were deleted rather than committed, both defeated by the same thing: headless
+Chrome asked to `--dump-dom` a page that has run a few hundred timers never
+returns. What finally worked was giving up on reading the DOM — the script
+serves `dist/` itself, so the driver page can simply POST its measurements
+back, once per deck via `sendBeacon`, banking each result as it is produced
+rather than risking one trailing request. `--screenshot` turns out to be
+load-bearing too: Chrome given an output action waits out its virtual-time
+budget and exits cleanly, where the same run without one does not.
+
+Then I broke it on purpose. Loosening the cap to 900px and re-running produced
+two overflowing slides and a non-zero exit; restoring it went green again. A
+check that has never failed is not known to work, and this one had only ever
+been run against a codebase I had already fixed.
+
+`pnpm check:slides`, deliberately outside `pnpm check`: it needs a local Chrome
+and CI has never executed once on this repo, so tomorrow is the wrong day to
+make the standard loop depend on a browser.
+
+[`5b47230`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BrynMtchll/commit/5b47230)
+
+---
+
 ## Still open
 
 - `PROCESS.md` — mine, 400-600 words, drawn from this log. Not started.
@@ -530,9 +587,11 @@ cannot see.
   `skipped`. The first public push is the first time `check` and `deploy`
   actually execute.
 - The SLOP level digit (currently 3; one character to change)
-- No automated viewport check. Pages were verified by hand at 1920x1080 and
-  390x844; deck slide fit and legibility have still only been eyeballed on
-  desktop.
+- No automated viewport check for *pages*. They were verified by hand at both
+  viewports; only deck slide fit is automated, via `pnpm check:slides`.
+- Deck *legibility* at 390x844 is still a human judgement. The slides fit; at
+  that width they are small, which is inherent to reveal on a portrait phone
+  rather than a defect.
 
 ## Closed since
 
