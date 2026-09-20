@@ -358,6 +358,75 @@ Decks now 33–65 slides, against COMP3670's 69–89.
 
 ---
 
+## Pass 6 — the site as a reader meets it
+
+The first five passes read the course. This one read the *site*, on the route a
+prospective student actually takes: home page, a couple of non-adjacent weeks,
+an assessment, a deck. Different route, different defects.
+
+### Defects
+
+- **Four listing pages were still addressing the builder.** `/assessments/`
+  said "Weights should sum to 100"; `/sessions/` said "Set the visible singular
+  and plural names once in `src/site-config.ts`"; `/lectures/` explained how
+  `related:` works; `/people/` had no prose at all. All four are on the only
+  route to a week page. None carried a `STARTER_CONTENT` marker, so
+  `check:evidence` was blind to them. Rewritten, and a spec test now asserts
+  that no public page contains builder-facing text.
+- **The policies page claimed something false.** It says "the individual briefs
+  link back to this page rather than restating it". None of the four did. Each
+  brief now closes with that link.
+- **No definition of the evidence-grading scheme existed outside week 1's
+  seminar body.** The notation appears on a dozen pages and the policies page
+  makes students accountable for grades they assign. `/evidence/` is now the
+  canonical definition, with the standing contested set as a table.
+- **No schedule.** Lectures and seminars were two parallel lists with no page
+  joining them. `/schedule/` is the twelve weeks in one table, grouped by the
+  four parts of the argument.
+- **No readings anywhere on the site**, in a course whose method is reading
+  primary literature. Seventy-four sources now, across twelve weeks, annotated.
+- **The dependency chain was absent from the graph.** 22 edges, none of them
+  session-to-session. Eighteen session-to-session edges added, each one a
+  dependency the week's prose already carried.
+
+### Judgement calls
+
+- **Readings live in the body, not in `links:` frontmatter.** `links:` is the
+  idiomatic field and `RelatedContent` renders it for free, but its shape is
+  `{label, url}` and the annotation is most of the value — which paper the
+  seminar turns on, which one is the objection you are expected to arrive with.
+  A bare link list would have been tidier and worth less.
+- **No evidence grades on the readings.** A grade belongs to a claim, not to a
+  paper, and several of these papers contain claims at two different grades.
+  Saying so on every week page is a small piece of teaching that a graded
+  bibliography would have quietly contradicted.
+- **Every DOI resolved against Crossref, none recalled.** About a third of the
+  first-pass search hits were wrong in ways that looked right: reprints in
+  edited collections for Shannon and for Nisbett & Wilson, the author response
+  rather than the article for Markel, the preprint rather than the *Cell* paper
+  for Whittington.
+- **A failing test was satisfied rather than relaxed.** The reading test
+  requires three resolvable sources per week; weeks 1 and 4 came in at two.
+  Added Ramachandran & Gregory (1991) on perceptual filling-in of induced
+  scotomas to week 1, which makes the blind-spot demonstration citable, and
+  Rescorla (1988) to week 4.
+- **Six figures moved from the decks onto the week pages.** The site is
+  otherwise image-free by design and stays so; these six are arguments rather
+  than decoration, and two of them are computations rather than depictions.
+
+### Closed decisions
+
+- **The title stays, and the home page grades it [S].** The tension between a
+  deficiency-sounding title and a course that rejects the deficiency reading is
+  real. Resolving it by applying the course's own notation to its own title is
+  better than softening either.
+- **Artificial systems stay out, and the home page says why.** They are not an
+  independent lineage — built by one of the systems under study, out of data
+  produced by it — so they are a case the model should predict, which is where
+  the cognitive profile's optional speculative close already puts them.
+
+---
+
 ## Figures: the policy, and two judgement calls
 
 Every figure is generated from source — matplotlib for data and computation, D2

@@ -336,13 +336,101 @@ discovering it at build time.
 
 ---
 
+## 12. The audit, and what the listing pages were still saying
+
+> ok i need you to assess how things are looking and what are possible directions fore imporvement
+
+> can we do another iteration on design and development of the course, lets return to the drawing board and examine whats there and whats not there
+
+> do all of it
+
+Read the site the way a marker does — home, a few non-adjacent weeks, an
+assessment, a deck — rather than the way I had been reading it, which was
+file by file in the order I wrote them.
+
+**The finding that mattered: four listing pages were still addressing me.**
+`/assessments/` said "Weights should sum to 100". `/sessions/` said "Set the
+visible singular and plural names once in `src/site-config.ts`". These are
+instructions to the person building the site, published as course prose, on
+the only route a reader has to reach a week.
+
+What makes this worth recording rather than just fixing: **it is the same gap
+I had already identified and written a test for, one level up in the page
+tree.** In section 1 I noted that `check:evidence` greps for the
+`STARTER_CONTENT` marker, so deleting the comment without replacing the prose
+passes the gate, and I wrote an assertion against the course record to close
+it. The listing pages carried no marker at all, so neither the gate nor my
+test could see them. I had generalised the lesson to exactly one collection
+and stopped. The new test is deliberately about the reader rather than about
+any one phrase.
+
+**Readings — the gap between what the site promised and what it showed.** The
+home page says "you will read primary literature every week"; every assessment
+requires reaching a primary source; the `links:` key was used zero times, and
+the bibliography lived only in this file, which is explicitly not site content.
+Seventy-four sources now sit on the twelve week pages, annotated, with the
+paper each seminar turns on named.
+
+**Every DOI was resolved against Crossref rather than recalled.** This is not
+diligence for its own sake. A course whose subject is the gap between a claim
+and its source cannot ship a fabricated DOI, and roughly a third of my first
+search hits were wrong in ways that looked right — reprints in edited
+collections for Shannon and Nisbett & Wilson, the *author response* rather than
+the article for Markel, the bioRxiv preprint rather than the *Cell* paper for
+Whittington. Every one of those would have rendered as a plausible link.
+
+Decided against `links:` frontmatter for the reading lists despite it being the
+idiomatic field, because the annotation is the point — which paper the seminar
+turns on, and why a particular one is the objection you are expected to arrive
+with — and `{label, url}` cannot carry that.
+
+**A test failed honestly and I did not relax it.** The reading test asserts
+three resolvable sources per week; weeks 1 and 4 came in at two, because both
+lean on books. The available moves were lowering the bar to two or finding the
+papers. Ramachandran and Gregory (1991) on perceptual filling-in of induced
+scotomas is now week 1's reading and it turns the blind-spot demonstration into
+a citable finding; Rescorla's 1988 "it's not what you think it is" is now week
+4's. The bar found real thinness rather than being wrong about it.
+
+**The dependency chain was not in the graph.** The API had 22 edges, all
+lecture-to-session and assessment-to-session, and not one session-to-session.
+The harness rule says a week that could be moved anywhere in the order isn't
+carrying its part of the argument, and the one machine-readable structure the
+site emits had no record of any week depending on any other. Eighteen edges
+now, each one a dependency the week's own prose already carried, and a test
+asserting week 12 still reaches back to week 1.
+
+**Two open decisions closed, on the site rather than here.** The title is now
+graded on the home page — **[S]**, a reasoned extension stated provocatively,
+not a finding — which resolves the tension between a deficiency-sounding title
+and a course that rejects the deficiency reading by applying the course's own
+method to itself. And artificial systems stay out, with the reason stated: they
+are not an independent lineage, having been built by one of the systems under
+study out of data produced by it, so they belong in the profile's optional
+speculative close as a case the model should *predict*, not as a week of
+content.
+
+[`5051fcc`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BrynMtchll/commit/5051fcc)
+
+---
+
 ## Still open
 
-- Title wording — `How and Why You're Dumb` is provisional, and the risk that
-  the blunt title licenses the deficiency reading the content rejects
+- `PROCESS.md` — mine, 400-600 words, drawn from this log. Not started.
+- Ship: the repo is still private, Pages is off, and every CI run to date is
+  `skipped`. The first public push is the first time `check` and `deploy`
+  actually execute.
 - The SLOP level digit (currently 3; one character to change)
-- Whether artificial systems appear at all — still absent by design
-- `PROCESS.md` — mine, 400-600 words, drawn from this log
-- `spec/assignment-2.test.ts` has a test named for the teaching period that only
-  checks date format. The range is covered by the shipped
-  `data-integrity.test.ts`, but the name overclaims.
+
+## Closed since
+
+- **Title wording** — kept, and graded **[S]** on the home page. The provocation
+  earns its place if the site says what it is, and grading our own title is the
+  course's method applied to itself.
+- **Whether artificial systems appear** — no, and the home page now says why
+  rather than being silent about it.
+- **The overclaiming test name.** `spec/assignment-2.test.ts` had a test called
+  "gives every assessment a due date inside the teaching period" that only
+  checked the date format. Renamed to what it asserts, with a comment pointing
+  at `data-integrity.test.ts`, which owns the range claim for every dated node
+  rather than for assessments alone.
