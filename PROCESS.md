@@ -1,53 +1,67 @@
 # Process overview
 
-<!-- TEMPLATE: this file is a shape to fill in, not a form. Replace everything
-     in it with your own overview, and delete this comment — `pnpm
-     check:evidence` will remind you if it's still here. -->
-
-Written by you, for a reader: how you got from the brief to the harness and
-agentic workflow behind this submission. Markers read this file and follow its
-citations; they don't trawl the repo for evidence you didn't point at.
-
-This file is the shape; the course site's
-[assessment page](https://comp.anu.edu.au/courses/comp4020-agentic-coding-studio/topics/assessment/#what-you-submit)
-is the requirement, and its
-[word counts](https://comp.anu.edu.au/courses/comp4020-agentic-coding-studio/topics/assessment/#word-counts)
-cover every deliverable.
-
 ## What I built
 
-One paragraph: the thing, and the idea behind it.
+**SLOP3233 — *How and Why You're Dumb***: a twelve-week course arguing that
+intelligence is lossy compression of a world too large to represent, and that
+every compression has a shape you cannot see from inside it. Twelve seminars,
+twelve lectures, twelve decks, four assessments. The curricular judgement is
+mine. Most of the words were written by an agent working to rules I wrote
+first, which is the part worth accounting for.
 
 ## How I got here
 
-The account of the process: how the work actually went, and how you knew the
-result was right. Tell it in whatever order makes it clear. A weekly prototype
-needs a paragraph or two; an assignment needs more.
+I settled three things about what a good course is before drafting any of it.
+Coherence has to come from one model rather than from coverage — if a week could
+be moved anywhere in the order without loss, it isn't carrying its part of the
+argument. A subject this full of failed replications has to grade its own
+evidence out loud. And no single discipline settles a question about
+intelligence, so four have to be pooled rather than surveyed.
 
-Cite the record as you go, as links whose text is the commit hash or range and
-whose target is this repo's commit or compare URL, so a reader clicks straight
-to the evidence:
+Then I wrote those into the harness instead of applying them by hand:
 
-- one commit: [`a1b2c3d`](https://github.com/YOUR-ORG/YOUR-REPO/commit/a1b2c3d)
-- a range:
-  [`a1b2c3d...e4f5a6b`](https://github.com/YOUR-ORG/YOUR-REPO/compare/a1b2c3d...e4f5a6b)
+> Write into claude.md that i want to focus on maticulousness and precision
+> [...] Prioritise (and add to claude.md) the necessity of pooling from
+> philosophical, neuroscientific, evolutionary and psychological angles on
+> intelligence.
 
-To pair a prompt with the commit it produced, quote the prompt (curated, not a
-full transcript) next to the citation:
+That is [`6aeb3e4`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BrynMtchll/commit/6aeb3e4).
+The obvious alternative was to hold the standard in my head and correct the
+output when it drifted. Rules scale and corrections don't — across twelve weeks
+of content and twelve decks I would have been re-deriving the same judgement
+several dozen times.
 
-> the prompt, verbatim
+The rule immediately created a problem of my own making. Four lenses per week,
+run in the same order, produces twelve pages with one shape, and a template is
+the failure this brief names explicitly. I could have dropped the rule or
+enforced it weekly. Instead I recorded the distinction: the lenses are a
+checklist for the argument, not a shape for the page, and each week leads with
+whichever one carries the weight. Hence week 3 leading on a ninety-year
+replication failure and week 9 on whether a famous question is malformed.
 
-Screenshots are welcome where one carries the point better than a sentence does.
-Commit the file to this repo and link it with a **relative** path, which is what
-makes it render on GitHub: `![alt text](docs/before.png)`. Images don't count
-towards the word count and don't replace the citation.
+The intervention that mattered most was aimed at my own inputs rather than at
+the output. Having asked for voice rules derived from my writing, I stopped it:
 
-## Before you ship
+> wait exclude comp3320 reoprt
 
-`pnpm check:evidence` verifies that this comment is gone, that your citations
-resolve to real commits, that a crit week's reflection entry is in
-`reflections/`, and that your `CLAUDE.md` is there. It checks that your account
-is traceable, not that it is good: that is the marker's call.
+That report was itself heavily agent-written, and four rules derived from it had
+come out backwards — including an em-dash ban and a spelling rule my actual
+writing doesn't follow
+([`a60b742...7169948`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BrynMtchll/compare/a60b742...7169948)).
+Reviewing output would never have caught this, because the output was faithfully
+obeying rules that were wrong. I verified the rewrite against the three source
+documents rather than against how the prose felt, which is the only check that
+would have distinguished them.
 
-Images aren't checked: unlike a citation whose SHA doesn't resolve, a broken
-image is visible the moment this file is rendered on GitHub.
+What went into `spec/` is what had to stay true and could be checked: that every
+week after the first declares a dependency on an earlier one, so the chain is a
+claim the build tests rather than a sentence in `CLAUDE.md`; that no public page
+addresses the builder instead of the reader, which I wrote after finding four
+that did; that each week carries at least three resolvable sources, which failed
+honestly on weeks 1 and 4 and was satisfied rather than lowered
+([`5051fcc`](https://github.com/comp4020-agentic-coding-studio/comp4020-ass2-BrynMtchll/commit/5051fcc)).
+
+What I deliberately left out of the harness: whether the course is genuinely
+niche, whether twelve weeks cohere into one idea, and whether the prose has a
+voice. Those belong to the crit. A test asserting them would only have measured
+my ability to write the test.
