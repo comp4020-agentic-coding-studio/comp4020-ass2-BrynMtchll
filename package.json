@@ -10,6 +10,7 @@
     "typecheck": "astro check",
     "check": "pnpm typecheck && pnpm test:decks && pnpm test",
     "check:evidence": "node scripts/check-evidence.ts",
+    "check:slides": "node scripts/deck-fit.mjs",
     "test": "pnpm build && vitest run spec",
     "test:decks": "vitest run spec/deck-tables.test.ts",
     "test:template": "vitest run scripts"
