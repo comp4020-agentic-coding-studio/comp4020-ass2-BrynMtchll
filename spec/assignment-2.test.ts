@@ -9,7 +9,7 @@
 // whether twelve weeks cohere into one idea, whether the prose has a voice, and
 // whether it reads well at both marking viewports — are deliberately absent.
 // They're settled at the crit, not here.
-import { existsSync, readFileSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 
@@ -266,5 +266,35 @@ describe("no page talks to the author instead of the reader", () => {
       }
     }
     expect(offenders, `builder-facing text on public pages:\n${offenders.join("\n")}`).toEqual([]);
+  });
+});
+
+// The theme's hero renders its <h1> only when a hero image resolves. This
+// course is image-free by design, which silently removed the page title from
+// four pages before anyone noticed — the design decision and the missing
+// heading were separated by two layers of template. Every page a reader can
+// land on needs exactly one top-level heading, so that is asserted rather than
+// trusted.
+describe("every page has exactly one h1", () => {
+  const pageFiles = (dir: string, prefix = ""): string[] => {
+    const out: string[] = [];
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      if (entry.name.startsWith("_") || entry.name === "api") continue;
+      if (entry.isDirectory()) out.push(...pageFiles(resolve(dir, entry.name), `${prefix}${entry.name}/`));
+      else if (entry.name.endsWith(".html")) out.push(`${prefix}${entry.name}`);
+    }
+    return out;
+  };
+
+  it("gives each built page one and only one top-level heading", () => {
+    const wrong: string[] = [];
+    for (const page of pageFiles(resolve("dist"))) {
+      // Decks are slide documents; their heading structure is astromotion's.
+      if (page.startsWith("decks/")) continue;
+      const html = readFileSync(resolve("dist", page), "utf8");
+      const count = (html.match(/<h1[\s>]/g) ?? []).length;
+      if (count !== 1) wrong.push(`${page} has ${count}`);
+    }
+    expect(wrong, `pages without exactly one h1:\n${wrong.join("\n")}`).toEqual([]);
   });
 });

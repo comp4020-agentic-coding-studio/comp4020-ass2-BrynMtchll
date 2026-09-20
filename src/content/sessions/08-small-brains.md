@@ -66,7 +66,7 @@ spiders, observed as unpigmented spiderlings whose retinal tubes are visible
 through the cuticle, show regular bouts of retinal movement with limb twitching
 that lengthen through the night, which looks a great deal like REM sleep.
 
-Neither result tells us what we want it to. Both are graded **[C]**, and the
+Neither result tells us what we want it to. Both are graded <abbr class="grade grade-c" title="contested">[C]</abbr>, and the
 seminar is about what evidence would move either one.
 
 ## Reading

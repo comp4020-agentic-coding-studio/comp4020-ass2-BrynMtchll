@@ -4,18 +4,33 @@ import { getPublishedCollection } from "astro-course-university/content";
 import RelatedContent from "astro-course-university/components/RelatedContent.astro";
 import SpecList from "astro-course-university/components/SpecList.astro";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
+import { withBase } from "astro-theme-university/url";
 import TeachingTeam from "../../components/TeachingTeam.astro";
 import { formatCourseDate } from "../../lib/dates";
+import { partLabel } from "../../lib/parts";
 import { graphCollections, sessionLabels, siteConfig } from "../../site-config";
 import "../../styles/figures.css";
+import "../../styles/course.css";
 
 export async function getStaticPaths() {
-  const sessions = await getPublishedCollection("sessions");
-  return sessions.map((session) => ({ params: { slug: session.id }, props: { session } }));
+  const [sessions, lectures] = await Promise.all([
+    getPublishedCollection("sessions"),
+    getPublishedCollection("lectures"),
+  ]);
+  return sessions.map((session) => ({
+    params: { slug: session.id },
+    props: {
+      session,
+      // The lecture that pairs with this seminar, so a reader landing on one
+      // can reach the other without going back through a listing page.
+      lecture: lectures.find((l) => l.data.week === session.data.week),
+    },
+  }));
 }
 
-const { session } = Astro.props;
+const { session, lecture } = Astro.props;
 const { Content } = await render(session);
+const part = partLabel(session.data.week);
 ---
 
 <ContentLayout
@@ -23,7 +38,19 @@ const { Content } = await render(session);
   description={session.data.description}
   {...siteConfig}
 >
-  <p><strong>{formatCourseDate(session.data.date)}</strong></p>
+  <p class="week-meta">
+    {part && <span class="week-meta__part">{part}</span>}
+    <span>{formatCourseDate(session.data.date)}</span>
+    <span class="week-meta__links">
+      {lecture && (
+        <a href={withBase(`/lectures/${lecture.id}/`)}>
+          Week {session.data.week} lecture
+        </a>
+      )}
+      {lecture?.data.slides && <a href={withBase(lecture.data.slides)}>Slides</a>}
+      <a href={withBase("/schedule/")}>Schedule</a>
+    </span>
+  </p>
   <Content />
   <SpecList spec={session.data.spec}>
     What you bring to the session. Written so a reader can tell whether it has

@@ -1,9 +1,31 @@
 ---
+/**
+ * The wrapper the MDX integration applies to ordinary pages.
+ *
+ * The theme's convention is description-as-lead, and on detail routes
+ * ContentLayout renders the title above that lead. Plain pages did not get the
+ * same ordering: BaseLayout renders its <h1> only inside the hero, and the hero
+ * only appears when a hero image resolves. This course is image-free by design,
+ * so those pages shipped with the lead paragraph first and no heading at all.
+ *
+ * So the lead is taken over here and rendered after an explicit <h1>, which
+ * restores the same title-then-lead order the rest of the site already has.
+ */
 import MdxPageLayout from "astro-theme-university/layouts/MdxPageLayout.astro";
 import { siteConfig } from "../site-config";
 import "../styles/figures.css";
+import "../styles/course.css";
+
+const source = (Astro.props.frontmatter ?? Astro.props) as {
+  title?: string;
+  description?: string;
+  heroImage?: unknown;
+};
+const { title, description, heroImage } = source;
 ---
 
-<MdxPageLayout siteConfig={siteConfig} {...Astro.props}>
+<MdxPageLayout siteConfig={siteConfig} {...Astro.props} lead={false}>
+  {!heroImage && title && <h1>{title}</h1>}
+  {description && <p class="lead">{description}</p>}
   <slot />
 </MdxPageLayout>

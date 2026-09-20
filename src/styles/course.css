@@ -1,0 +1,139 @@
+/* Course-specific treatment, built on the Slop brand tokens rather than
+ * replacing them. The palette, typography scale and spacing all come from the
+ * theme; what is added here is the small amount of visual vocabulary this
+ * particular course needs.
+ */
+
+/* ---- Evidence grades -------------------------------------------------------
+ * [E], [C] and [S] are the course's central apparatus: they appear on every
+ * substantive claim and students are accountable for the ones they assign. As
+ * bold text they were indistinguishable from ordinary emphasis, which made the
+ * site's most load-bearing notation its least visible.
+ *
+ * They carry a colour from the theme's semantic tokens AND a distinct border
+ * style, so the three are still tellable apart in greyscale, by a colour-blind
+ * reader, or in print. A course arguing that no single channel is sufficient
+ * should not encode its own notation in one channel.
+ *
+ * The element is <abbr>, because that is what these are — an abbreviation with
+ * an expansion — which puts the meaning one hover or one screen reader away.
+ */
+.grade {
+  display: inline-block;
+  font-family: var(--at-font-mono);
+  font-size: 0.8em;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.2em 0.42em;
+  border-radius: 0.25em;
+  vertical-align: baseline;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 1px solid currentColor;
+  background: color-mix(in srgb, currentColor 10%, transparent);
+}
+
+.grade-e {
+  color: var(--at-success);
+  border-style: solid;
+}
+
+.grade-c {
+  color: var(--at-warning);
+  border-style: solid;
+  border-width: 2px;
+  padding: calc(0.2em - 1px) calc(0.42em - 1px);
+}
+
+.grade-s {
+  color: var(--at-info);
+  border-style: dashed;
+}
+
+/* ---- Figure captions -------------------------------------------------------
+ * A caption is the italic paragraph immediately after a figure. The theme runs
+ * figures full-bleed on desktop, so the caption is pulled back to the text
+ * column deliberately: the picture may exceed the measure, the sentence about
+ * it should not.
+ */
+.at-main p:has(> img) {
+  margin-block-end: var(--at-spacing-xs);
+}
+
+.at-main p:has(> img) + p > em:only-child {
+  display: block;
+  font-style: normal;
+  font-size: var(--at-font-size-sm);
+  line-height: 1.5;
+  color: var(--at-text-secondary);
+  border-inline-start: 2px solid var(--at-border);
+  padding-inline-start: 0.85rem;
+  max-width: 62ch;
+}
+
+/* ---- Reading lists --------------------------------------------------------
+ * Every week ends with its reading. It is a reference block rather than prose,
+ * so it is set tighter and quieter than the argument above it, and the link
+ * (the title) is what the eye should land on.
+ */
+.at-main h2#reading ~ ul {
+  list-style: none;
+  padding-inline-start: 0;
+  border-inline-start: 2px solid var(--at-border);
+}
+
+.at-main h2#reading ~ ul > li {
+  font-size: var(--at-font-size-sm);
+  line-height: 1.55;
+  color: var(--at-text-secondary);
+  padding-inline-start: 1rem;
+  margin-block: 0.55rem;
+}
+
+.at-main h2#reading ~ ul > li > a:first-child {
+  font-weight: 600;
+}
+
+/* ---- Week metadata --------------------------------------------------------
+ * The orientation row at the top of a seminar or lecture page: which week,
+ * which part of the argument, the date, who teaches it, and the link to its
+ * pair. A marker reading two non-adjacent weeks should not have to reconstruct
+ * where they are.
+ */
+.week-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.4rem 0.9rem;
+  margin-block: 0 var(--at-spacing-lg);
+  padding-block-end: var(--at-spacing-sm);
+  border-block-end: 1px solid var(--at-border);
+  font-size: var(--at-font-size-sm);
+  color: var(--at-text-secondary);
+}
+
+.week-meta__part {
+  font-family: var(--at-font-mono);
+  font-size: var(--at-font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--at-text-muted);
+}
+
+.week-meta__sep {
+  color: var(--at-border);
+}
+
+.week-meta__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-inline-start: auto;
+}
+
+@media (max-width: 34rem) {
+  .week-meta__links {
+    margin-inline-start: 0;
+    width: 100%;
+  }
+}

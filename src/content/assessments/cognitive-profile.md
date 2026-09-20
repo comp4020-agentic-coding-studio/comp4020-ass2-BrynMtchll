@@ -51,7 +51,7 @@ section is answered and a reader can find them.
 9. **Comparison with people.** Below.
 
 Optionally, close with one change to the organism and the consequences you can
-derive from it, clearly labelled **[S]**.
+derive from it, clearly labelled <abbr class="grade grade-s" title="speculative">[S]</abbr>.
 
 ## Section 3 is the hard one
 

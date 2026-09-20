@@ -51,8 +51,8 @@ the blind spot you can't find with a card.
 ## The grading scheme
 
 The rest of the session sets up the notation you will use all semester. Every
-substantive claim on this site carries one of three grades — **[E]** for
-established, **[C]** for contested, **[S]** for speculative — and by week 3 you
+substantive claim on this site carries one of three grades — <abbr class="grade grade-e" title="established">[E]</abbr> for
+established, <abbr class="grade grade-c" title="contested">[C]</abbr> for contested, <abbr class="grade grade-s" title="speculative">[S]</abbr> for speculative — and by week 3 you
 will be assigning them yourself.
 
 We practise on four claims, two of which are wrong in ways that took the field a

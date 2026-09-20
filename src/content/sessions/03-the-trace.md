@@ -59,13 +59,13 @@ Gagliano and colleagues reported associative learning in pea plants in 2016.
 Markel failed to replicate it in 2020, using blinded scoring. Gagliano commented
 that the protocol was unsuitable; Markel responded that the differences could not
 account for the failure. Both exchanges are published, neither party conceded,
-and the matter is open. Grade: **[C]**.
+and the matter is open. Grade: <abbr class="grade grade-c" title="contested">[C]</abbr>.
 
 Dener, Kacelnik and Shemesh, also 2016, split pea root systems between a
 constant and a variable nutrient patch with the same mean. Plants grew more root
 into the variable patch when nutrients were low and less when they were high —
 risk-prone when poor, risk-averse when rich, which is the energy budget rule out
-of animal foraging theory. This one has held up. Grade: **[E]**.
+of animal foraging theory. This one has held up. Grade: <abbr class="grade grade-e" title="established">[E]</abbr>.
 
 Two papers, same year, same plant, same broad claim family, and they do not get
 the same grade. You will be asked to explain why in the seminar, and "one

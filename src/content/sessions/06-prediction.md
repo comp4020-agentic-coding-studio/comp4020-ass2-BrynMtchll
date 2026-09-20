@@ -45,7 +45,7 @@ no movement, and the standard reply invoking expected free energy and novelty is
 contested. Litwin and Miłkowski's "unification by fiat" is the sharper
 methodological version.
 
-Grade the framework **[C]**, and be ready to say what would move it. A theory
+Grade the framework <abbr class="grade grade-c" title="contested">[C]</abbr>, and be ready to say what would move it. A theory
 that explains everything available is in a slightly awkward position, and saying
 why is part of this week's work.
 

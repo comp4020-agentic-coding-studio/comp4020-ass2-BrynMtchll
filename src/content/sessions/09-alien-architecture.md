@@ -47,7 +47,7 @@ type. They also produce extraordinarily precise colour-matched camouflage.
 
 Stubbs and Stubbs proposed in 2016 that chromatic aberration plus a strange pupil
 shape could recover spectral information from a single channel. It is ingenious
-and it is not established. Grade **[S]** leaning **[C]**, and treat it as a
+and it is not established. Grade <abbr class="grade grade-s" title="speculative">[S]</abbr> leaning <abbr class="grade grade-c" title="contested">[C]</abbr>, and treat it as a
 worked example of what a live unsolved problem looks like from the outside —
 because most of what you will meet in a career looks like this rather than like a
 textbook.

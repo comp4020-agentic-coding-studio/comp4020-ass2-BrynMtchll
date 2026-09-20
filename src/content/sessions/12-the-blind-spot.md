@@ -35,7 +35,7 @@ shaped than the version in circulation.
 
 Which puts us in an awkward and appropriate position: the single most famous
 claim about not knowing what you don't know is itself a claim we don't fully
-know. Grade **[C]**, and notice that this is the best possible week 12 for this
+know. Grade <abbr class="grade grade-c" title="contested">[C]</abbr>, and notice that this is the best possible week 12 for this
 course rather than an embarrassment for it.
 
 ![Two panels. Left, a scatter of 2000 simulated people: actual percentile against self-estimated percentile, weakly correlated and shifted above the diagonal. Right, the same points averaged within actual-performance quartiles, reproducing the crossing lines from the previous slide.](../../decks/figures/dunning-kruger-artefact.svg)

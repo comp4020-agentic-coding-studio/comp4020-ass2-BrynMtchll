@@ -3,6 +3,7 @@ import { getPublishedCollection } from "astro-course-university/content";
 import ContentLayout from "astro-theme-university/layouts/ContentLayout.astro";
 import { withBase } from "astro-theme-university/url";
 import { courseMeta } from "../../course-config";
+import { courseParts, partLabel } from "../../lib/parts";
 import { sessionLabels, siteConfig } from "../../site-config";
 
 const [sessions, lectures, assessments] = await Promise.all([
@@ -18,17 +19,9 @@ const shortDate = new Intl.DateTimeFormat("en-AU", {
 });
 const fmt = (value: Date) => shortDate.format(value);
 
-/** The parts of the argument, as the course model declares them. */
-const parts: Record<number, string> = {
-  1: "I — The premise",
-  3: "II — Interior models",
-  8: "III — The control group",
-  11: "IV — The human case, and its limits",
-};
-
 const weeks = Array.from({ length: 12 }, (_, i) => i + 1).map((week) => ({
   week,
-  part: parts[week],
+  part: courseParts.some((p) => p.from === week) ? partLabel(week) : undefined,
   lecture: lectures.find((l) => l.data.week === week),
   session: sessions.find((s) => s.data.week === week),
   due: assessments.filter((a) => a.data.week === week),
@@ -69,7 +62,7 @@ const lateAssessments = assessments.filter((a) => a.data.week > 12);
             <>
               {row.part && (
                 <tr class="part-row">
-                  <th scope="rowgroup" colspan="4">Part {row.part}</th>
+                  <th scope="rowgroup" colspan="4">{row.part}</th>
                 </tr>
               )}
               <tr>

@@ -39,7 +39,7 @@ The objection, which you should arrive knowing, is Petitmengin and colleagues'
 2013 result: when participants are given room to examine their experience rather
 than pressure to produce an explanation, the effect largely dissolves, sometimes
 with recognition up to 45 minutes later. So the strong reading — introspection is
-simply unreliable — does not survive. Grade the strong version **[C]**, and note
+simply unreliable — does not survive. Grade the strong version <abbr class="grade grade-c" title="contested">[C]</abbr>, and note
 that the weaker version is more interesting anyway: introspection is unreliable
 *under the conditions where we usually deploy it*, which is while being asked to
 account for ourselves.

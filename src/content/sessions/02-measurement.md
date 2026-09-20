@@ -56,7 +56,7 @@ making, and the mantis shrimp committed to speed.
 Half the seminar is a structured argument, in pairs, about whether the 2014
 result licenses the sentence "the mantis shrimp has poor colour vision". It does
 not, quite, and working out why is the exercise. A 2021 review notes the
-mechanism is still unresolved, which is a good early demonstration that **[C]**
+mechanism is still unresolved, which is a good early demonstration that <abbr class="grade grade-c" title="contested">[C]</abbr>
 is a normal state for a claim rather than a failure of the field.
 
 ## Reading
