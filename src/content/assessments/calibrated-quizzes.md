@@ -15,7 +15,8 @@ related:
   - sessions/12-the-blind-spot
 ---
 
-Ten quizzes, one most weeks, ten to fifteen minutes each. Your best eight count.
+Ten quizzes, one in each of weeks 2 to 11, ten to fifteen minutes each. Your
+best eight count, so two can be missed without a reason or a form.
 
 They are marked with **certainty-based marking**, which is not a gimmick and not
 invented for this course. Gardner-Medwin developed it at UCL, where it has run

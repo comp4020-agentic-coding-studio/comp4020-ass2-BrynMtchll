@@ -17,6 +17,14 @@
 >   Ashby / rate-distortion / No Free Lunch as formal anchors in weeks 1 and 12
 >
 > `src/content/` is authoritative for what the course actually is.
+>
+> **Two of the open decisions below have since been settled, on the site
+> rather than here.** The title stays and the home page grades it **[S]**,
+> separating the noun *dumb* — a deficiency reading the course rejects — from
+> the claim that survives. Artificial systems stay out of the teaching weeks,
+> because they are not an independent lineage and so cannot serve as a control;
+> they enter as the optional tenth section of the cognitive profile, where the
+> model is used to predict rather than to describe.
 
 Working document. Not site content. This is the artefact the outline is derived
 from, per the research-before-outline rule in `CLAUDE.md`.
